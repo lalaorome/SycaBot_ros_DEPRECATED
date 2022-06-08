@@ -1,4 +1,0 @@
-source;share/jetbot_actions/local_setup.bash
-source;share/jetbot_actions/local_setup.dsv
-source;share/jetbot_actions/local_setup.sh
-source;share/jetbot_actions/local_setup.zsh

@@ -1,5 +1,0 @@
-  File "/home/sycamore/Syca_ws/install/lib/python3.8/site-packages/central_pc/OptiTrack_sub.py", line 12
-    if jbType == 'waveshare'
-                           ^
-SyntaxError: invalid syntax
-

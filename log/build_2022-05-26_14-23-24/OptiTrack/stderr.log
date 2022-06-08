@@ -1,5 +1,0 @@
-  File "/home/sycamore/Syca_ws/install/lib/python3.8/site-packages/OptiTrack/OptiTrack_link.py", line 18
-    self.subscription. = self.create_subscription(
-                       ^
-SyntaxError: invalid syntax
-

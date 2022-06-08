@@ -1,3 +1,0 @@
-[console_scripts]
-opti_link = opti_track.OptiTrack_link:main
-

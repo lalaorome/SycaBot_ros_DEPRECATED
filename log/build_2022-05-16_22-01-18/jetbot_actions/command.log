@@ -1,6 +1,0 @@
-Invoking command in '/home/sycamore/Syca_ws/build/jetbot_actions': /usr/bin/cmake /home/sycamore/Syca_ws/src/jetbot_actions -DCMAKE_INSTALL_PREFIX=/home/sycamore/Syca_ws/install
-Invoked command in '/home/sycamore/Syca_ws/build/jetbot_actions' returned '0': /usr/bin/cmake /home/sycamore/Syca_ws/src/jetbot_actions -DCMAKE_INSTALL_PREFIX=/home/sycamore/Syca_ws/install
-Invoking command in '/home/sycamore/Syca_ws/build/jetbot_actions': /usr/bin/cmake --build /home/sycamore/Syca_ws/build/jetbot_actions -- -j20 -l20
-Invoked command in '/home/sycamore/Syca_ws/build/jetbot_actions' returned '0': /usr/bin/cmake --build /home/sycamore/Syca_ws/build/jetbot_actions -- -j20 -l20
-Invoking command in '/home/sycamore/Syca_ws/build/jetbot_actions': /usr/bin/cmake --install /home/sycamore/Syca_ws/build/jetbot_actions
-Invoked command in '/home/sycamore/Syca_ws/build/jetbot_actions' returned '0': /usr/bin/cmake --install /home/sycamore/Syca_ws/build/jetbot_actions
