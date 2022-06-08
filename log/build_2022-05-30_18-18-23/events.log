@@ -1,0 +1,90 @@
+[0.000000] (-) TimerEvent: {}
+[0.000072] (-) JobUnselected: {'identifier': 'basic_pub'}
+[0.000090] (-) JobUnselected: {'identifier': 'central_pc'}
+[0.000105] (-) JobUnselected: {'identifier': 'jetbot_actions'}
+[0.000117] (-) JobUnselected: {'identifier': 'jetbot_ros2'}
+[0.000128] (-) JobUnselected: {'identifier': 'opti_track'}
+[0.000138] (-) JobUnselected: {'identifier': 'py_basicsub'}
+[0.000150] (-) JobUnselected: {'identifier': 'teleop'}
+[0.000163] (interfaces) JobQueued: {'identifier': 'interfaces', 'dependencies': OrderedDict()}
+[0.000177] (interfaces) JobStarted: {'identifier': 'interfaces'}
+[0.008889] (interfaces) JobProgress: {'identifier': 'interfaces', 'progress': 'cmake'}
+[0.008973] (interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/sycamore/Syca_ws/src/interfaces', '-DCMAKE_INSTALL_PREFIX=/home/sycamore/Syca_ws/install'], 'cwd': '/home/sycamore/Syca_ws/build/interfaces', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LANGUAGE', 'en_GB:en'), ('USER', 'sycamore'), ('LC_TIME', 'en_GB.UTF-8'), ('SSH_AGENT_PID', '1922'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/sycamore/ros2_galactic/ros2-linux/opt/yaml_cpp_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/opt/rviz_ogre_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/lib'), ('HOME', '/home/sycamore'), ('OLDPWD', '/home/sycamore'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_GB.UTF-8'), ('MANAGERPID', '1745'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/sycamore/ros2_galactic/ros2-linux'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'sycamore'), ('JOURNAL_STREAM', '8:50103'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/sycamore/ros2_galactic/ros2-linux/lib/x86_64-linux-gnu/pkgconfig:/home/sycamore/ros2_galactic/ros2-linux/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'sycamore'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/sycamore/ros2_galactic/ros2-linux/bin:/home/sycamore/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/Sycamore-CentralPC:@/tmp/.ICE-unix/1960,unix/Sycamore-CentralPC:/tmp/.ICE-unix/1960'), ('INVOCATION_ID', '2a1e31ba07f5401f85243b277c242c83'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_GB.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/ad1d4262_6e0c_41e9_9108_683733cd4987'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_GB.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_GB.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('GNOME_TERMINAL_SERVICE', ':1.2499'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/sycamore/ros2_galactic/ros2-linux'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_GB.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LC_MEASUREMENT', 'en_GB.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'en_GB.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/sycamore/Syca_ws/build/interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/sycamore/ros2_galactic/ros2-linux/lib/python3.8/site-packages'), ('LC_NUMERIC', 'en_GB.UTF-8'), ('LC_PAPER', 'en_GB.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/sycamore/ros2_galactic/ros2-linux')]), 'shell': False}
+[0.099491] (-) TimerEvent: {}
+[0.119130] (interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.186669] (interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.191536] (interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.199587] (-) TimerEvent: {}
+[0.235172] (interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.236185] (interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.283312] (interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.293029] (interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.293430] (interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.295786] (interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[0.299686] (-) TimerEvent: {}
+[0.356961] (interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[0.357632] (interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.399803] (-) TimerEvent: {}
+[0.404796] (interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.412734] (interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.413104] (interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.415753] (interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 1.1.4 (/home/sycamore/ros2_galactic/ros2-linux/share/ament_cmake/cmake)\n'}
+[0.433475] (interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.433622] (interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.488918] (interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.1.1 (/home/sycamore/ros2_galactic/ros2-linux/share/rosidl_default_generators/cmake)\n'}
+[0.491610] (interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.496715] (interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 2.2.1 (/home/sycamore/ros2_galactic/ros2-linux/share/rosidl_adapter/cmake)\n'}
+[0.499890] (-) TimerEvent: {}
+[0.549951] (interfaces) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[0.567511] (interfaces) StdoutLine: {'line': b'-- Found FastRTPS: /home/sycamore/ros2_galactic/ros2-linux/include  \n'}
+[0.599975] (-) TimerEvent: {}
+[0.629235] (interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.661737] (interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[0.700079] (-) TimerEvent: {}
+[0.769252] (interfaces) StderrLine: {'line': b'CMake Error at /home/sycamore/ros2_galactic/ros2-linux/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:60 (message):\n'}
+[0.769385] (interfaces) StderrLine: {'line': b'  execute_process(/usr/bin/python3 -m rosidl_adapter --package-name\n'}
+[0.769435] (interfaces) StderrLine: {'line': b'  interfaces --arguments-file\n'}
+[0.769481] (interfaces) StderrLine: {'line': b'  /home/sycamore/Syca_ws/build/interfaces/rosidl_adapter__arguments__interfaces.json\n'}
+[0.769555] (interfaces) StderrLine: {'line': b'  --output-dir\n'}
+[0.769596] (interfaces) StderrLine: {'line': b'  /home/sycamore/Syca_ws/build/interfaces/rosidl_adapter/interfaces\n'}
+[0.769637] (interfaces) StderrLine: {'line': b'  --output-file\n'}
+[0.769677] (interfaces) StderrLine: {'line': b'  /home/sycamore/Syca_ws/build/interfaces/rosidl_adapter/interfaces.idls)\n'}
+[0.769717] (interfaces) StderrLine: {'line': b'  returned error code 1:\n'}
+[0.769756] (interfaces) StderrLine: {'line': b'\n'}
+[0.769796] (interfaces) StderrLine: {'line': b'  Traceback (most recent call last):\n'}
+[0.769853] (interfaces) StderrLine: {'line': b'\n'}
+[0.769894] (interfaces) StderrLine: {'line': b'    File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main\n'}
+[0.769936] (interfaces) StderrLine: {'line': b'      return _run_code(code, main_globals, None,\n'}
+[0.770027] (interfaces) StderrLine: {'line': b'    File "/usr/lib/python3.8/runpy.py", line 87, in _run_code\n'}
+[0.770082] (interfaces) StderrLine: {'line': b'      exec(code, run_globals)\n'}
+[0.770140] (interfaces) StderrLine: {'line': b'    File "/home/sycamore/ros2_galactic/ros2-linux/lib/python3.8/site-packages/rosidl_adapter/__main__.py", line 19, in <module>\n'}
+[0.770204] (interfaces) StderrLine: {'line': b'      sys.exit(main())\n'}
+[0.770250] (interfaces) StderrLine: {'line': b'    File "/home/sycamore/ros2_galactic/ros2-linux/lib/python3.8/site-packages/rosidl_adapter/main.py", line 53, in main\n'}
+[0.770320] (interfaces) StderrLine: {'line': b'      abs_idl_file = convert_to_idl(\n'}
+[0.770361] (interfaces) StderrLine: {'line': b'    File "/home/sycamore/ros2_galactic/ros2-linux/lib/python3.8/site-packages/rosidl_adapter/__init__.py", line 24, in convert_to_idl\n'}
+[0.770401] (interfaces) StderrLine: {'line': b'      return convert_srv_to_idl(\n'}
+[0.770440] (interfaces) StderrLine: {'line': b'    File "/home/sycamore/ros2_galactic/ros2-linux/lib/python3.8/site-packages/rosidl_adapter/srv/__init__.py", line 28, in convert_srv_to_idl\n'}
+[0.770501] (interfaces) StderrLine: {'line': b'      srv = parse_service_string(package_name, input_file.stem, content)\n'}
+[0.770555] (interfaces) StderrLine: {'line': b'    File "/home/sycamore/ros2_galactic/ros2-linux/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 852, in parse_service_string\n'}
+[0.770595] (interfaces) StderrLine: {'line': b'      request_message = parse_message_string(\n'}
+[0.770634] (interfaces) StderrLine: {'line': b'    File "/home/sycamore/ros2_galactic/ros2-linux/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 540, in parse_message_string\n'}
+[0.770674] (interfaces) StderrLine: {'line': b'      msg = MessageSpecification(pkg_name, msg_name, fields, constants)\n'}
+[0.770714] (interfaces) StderrLine: {'line': b'    File "/home/sycamore/ros2_galactic/ros2-linux/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 387, in __init__\n'}
+[0.770758] (interfaces) StderrLine: {'line': b'      self.base_type = BaseType(\n'}
+[0.770798] (interfaces) StderrLine: {'line': b'    File "/home/sycamore/ros2_galactic/ros2-linux/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 204, in __init__\n'}
+[0.770839] (interfaces) StderrLine: {'line': b'      raise InvalidResourceName(\n'}
+[0.770878] (interfaces) StderrLine: {'line': b'\n'}
+[0.770918] (interfaces) StderrLine: {'line': b"  rosidl_adapter.parser.InvalidResourceName: 'task_Request' is an invalid\n"}
+[0.770959] (interfaces) StderrLine: {'line': b"  message name.  It should have the pattern '^[A-Z][A-Za-z0-9]*$'\n"}
+[0.770998] (interfaces) StderrLine: {'line': b'\n'}
+[0.771038] (interfaces) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.771078] (interfaces) StderrLine: {'line': b'  /home/sycamore/ros2_galactic/ros2-linux/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)\n'}
+[0.771118] (interfaces) StderrLine: {'line': b'  CMakeLists.txt:19 (rosidl_generate_interfaces)\n'}
+[0.771157] (interfaces) StderrLine: {'line': b'\n'}
+[0.771196] (interfaces) StderrLine: {'line': b'\n'}
+[0.771235] (interfaces) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.771279] (interfaces) StdoutLine: {'line': b'See also "/home/sycamore/Syca_ws/build/interfaces/CMakeFiles/CMakeOutput.log".\n'}
+[0.774879] (interfaces) CommandEnded: {'returncode': 1}
+[0.793106] (interfaces) JobEnded: {'identifier': 'interfaces', 'rc': 1}
+[0.800232] (-) TimerEvent: {}
+[0.803780] (-) EventReactorShutdown: {}

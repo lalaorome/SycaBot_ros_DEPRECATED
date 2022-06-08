@@ -1,0 +1,6 @@
+Invoking command in '/home/sycamore/Syca_ws/build/interfaces': /usr/bin/cmake /home/sycamore/Syca_ws/src/interfaces -DCMAKE_INSTALL_PREFIX=/home/sycamore/Syca_ws/install
+Invoked command in '/home/sycamore/Syca_ws/build/interfaces' returned '0': /usr/bin/cmake /home/sycamore/Syca_ws/src/interfaces -DCMAKE_INSTALL_PREFIX=/home/sycamore/Syca_ws/install
+Invoking command in '/home/sycamore/Syca_ws/build/interfaces': /usr/bin/cmake --build /home/sycamore/Syca_ws/build/interfaces -- -j20 -l20
+Invoked command in '/home/sycamore/Syca_ws/build/interfaces' returned '0': /usr/bin/cmake --build /home/sycamore/Syca_ws/build/interfaces -- -j20 -l20
+Invoking command in '/home/sycamore/Syca_ws/build/interfaces': /usr/bin/cmake --install /home/sycamore/Syca_ws/build/interfaces
+Invoked command in '/home/sycamore/Syca_ws/build/interfaces' returned '0': /usr/bin/cmake --install /home/sycamore/Syca_ws/build/interfaces

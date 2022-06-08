@@ -1,0 +1,4 @@
+[console_scripts]
+jetbot_move_clt = jetbot_ros2.basic_action_client:main
+jetbot_move_srv = jetbot_ros2.basic_action_server:main
+

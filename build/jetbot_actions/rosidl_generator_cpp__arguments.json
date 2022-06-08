@@ -1,0 +1,42 @@
+{
+  "package_name": "jetbot_actions",
+  "output_dir": "/home/sycamore/Syca_ws/build/jetbot_actions/rosidl_generator_cpp/jetbot_actions",
+  "template_dir": "/home/sycamore/ros2_galactic/ros2-linux/share/rosidl_generator_cpp/cmake/../resource",
+  "idl_tuples": [
+    "/home/sycamore/Syca_ws/build/jetbot_actions/rosidl_adapter/jetbot_actions:action/BasicControl.idl"
+  ],
+  "ros_interface_dependencies": [
+    "action_msgs:/home/sycamore/ros2_galactic/ros2-linux/share/action_msgs/msg/GoalInfo.idl",
+    "action_msgs:/home/sycamore/ros2_galactic/ros2-linux/share/action_msgs/msg/GoalStatus.idl",
+    "action_msgs:/home/sycamore/ros2_galactic/ros2-linux/share/action_msgs/msg/GoalStatusArray.idl",
+    "action_msgs:/home/sycamore/ros2_galactic/ros2-linux/share/action_msgs/srv/CancelGoal.idl",
+    "builtin_interfaces:/home/sycamore/ros2_galactic/ros2-linux/share/builtin_interfaces/msg/Duration.idl",
+    "builtin_interfaces:/home/sycamore/ros2_galactic/ros2-linux/share/builtin_interfaces/msg/Time.idl",
+    "unique_identifier_msgs:/home/sycamore/ros2_galactic/ros2-linux/share/unique_identifier_msgs/msg/UUID.idl"
+  ],
+  "target_dependencies": [
+    "/home/sycamore/ros2_galactic/ros2-linux/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp",
+    "/home/sycamore/ros2_galactic/ros2-linux/share/rosidl_generator_cpp/cmake/../../../lib/python3.8/site-packages/rosidl_generator_cpp/__init__.py",
+    "/home/sycamore/ros2_galactic/ros2-linux/share/rosidl_generator_cpp/cmake/../resource/action__builder.hpp.em",
+    "/home/sycamore/ros2_galactic/ros2-linux/share/rosidl_generator_cpp/cmake/../resource/action__struct.hpp.em",
+    "/home/sycamore/ros2_galactic/ros2-linux/share/rosidl_generator_cpp/cmake/../resource/action__traits.hpp.em",
+    "/home/sycamore/ros2_galactic/ros2-linux/share/rosidl_generator_cpp/cmake/../resource/idl.hpp.em",
+    "/home/sycamore/ros2_galactic/ros2-linux/share/rosidl_generator_cpp/cmake/../resource/idl__builder.hpp.em",
+    "/home/sycamore/ros2_galactic/ros2-linux/share/rosidl_generator_cpp/cmake/../resource/idl__struct.hpp.em",
+    "/home/sycamore/ros2_galactic/ros2-linux/share/rosidl_generator_cpp/cmake/../resource/idl__traits.hpp.em",
+    "/home/sycamore/ros2_galactic/ros2-linux/share/rosidl_generator_cpp/cmake/../resource/msg__builder.hpp.em",
+    "/home/sycamore/ros2_galactic/ros2-linux/share/rosidl_generator_cpp/cmake/../resource/msg__struct.hpp.em",
+    "/home/sycamore/ros2_galactic/ros2-linux/share/rosidl_generator_cpp/cmake/../resource/msg__traits.hpp.em",
+    "/home/sycamore/ros2_galactic/ros2-linux/share/rosidl_generator_cpp/cmake/../resource/srv__builder.hpp.em",
+    "/home/sycamore/ros2_galactic/ros2-linux/share/rosidl_generator_cpp/cmake/../resource/srv__struct.hpp.em",
+    "/home/sycamore/ros2_galactic/ros2-linux/share/rosidl_generator_cpp/cmake/../resource/srv__traits.hpp.em",
+    "/home/sycamore/Syca_ws/build/jetbot_actions/rosidl_adapter/jetbot_actions/action/BasicControl.idl",
+    "/home/sycamore/ros2_galactic/ros2-linux/share/action_msgs/msg/GoalInfo.idl",
+    "/home/sycamore/ros2_galactic/ros2-linux/share/action_msgs/msg/GoalStatus.idl",
+    "/home/sycamore/ros2_galactic/ros2-linux/share/action_msgs/msg/GoalStatusArray.idl",
+    "/home/sycamore/ros2_galactic/ros2-linux/share/action_msgs/srv/CancelGoal.idl",
+    "/home/sycamore/ros2_galactic/ros2-linux/share/builtin_interfaces/msg/Duration.idl",
+    "/home/sycamore/ros2_galactic/ros2-linux/share/builtin_interfaces/msg/Time.idl",
+    "/home/sycamore/ros2_galactic/ros2-linux/share/unique_identifier_msgs/msg/UUID.idl"
+  ]
+}

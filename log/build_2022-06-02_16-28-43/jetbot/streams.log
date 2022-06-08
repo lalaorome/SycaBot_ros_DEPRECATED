@@ -1,0 +1,24 @@
+[0.442s] Invoking command in '/home/sycamore/Syca_ws/src/jetbot': PYTHONPATH=/home/sycamore/Syca_ws/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/jetbot build --build-base /home/sycamore/Syca_ws/build/jetbot/build install --prefix /home/sycamore/Syca_ws/install --record /home/sycamore/Syca_ws/build/jetbot/install.log --single-version-externally-managed
+[0.592s] running egg_info
+[0.592s] writing ../../build/jetbot/jetbot.egg-info/PKG-INFO
+[0.592s] writing dependency_links to ../../build/jetbot/jetbot.egg-info/dependency_links.txt
+[0.592s] writing entry points to ../../build/jetbot/jetbot.egg-info/entry_points.txt
+[0.592s] writing requirements to ../../build/jetbot/jetbot.egg-info/requires.txt
+[0.592s] writing top-level names to ../../build/jetbot/jetbot.egg-info/top_level.txt
+[0.614s] reading manifest file '../../build/jetbot/jetbot.egg-info/SOURCES.txt'
+[0.615s] writing manifest file '../../build/jetbot/jetbot.egg-info/SOURCES.txt'
+[0.615s] running build
+[0.615s] running build_py
+[0.615s] copying jetbot/jb_start.py -> /home/sycamore/Syca_ws/build/jetbot/build/lib/jetbot
+[0.615s] running install
+[0.615s] running install_lib
+[0.616s] copying /home/sycamore/Syca_ws/build/jetbot/build/lib/jetbot/jb_start.py -> /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot
+[0.616s] byte-compiling /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot/jb_start.py to jb_start.cpython-38.pyc
+[0.617s] running install_data
+[0.617s] running install_egg_info
+[0.618s] removing '/home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot-0.0.0-py3.8.egg-info' (and everything under it)
+[0.618s] Copying ../../build/jetbot/jetbot.egg-info to /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot-0.0.0-py3.8.egg-info
+[0.619s] running install_scripts
+[0.629s] Installing start script to /home/sycamore/Syca_ws/install/lib/jetbot
+[0.630s] writing list of installed files to '/home/sycamore/Syca_ws/build/jetbot/install.log'
+[0.641s] Invoked command in '/home/sycamore/Syca_ws/src/jetbot' returned '0': PYTHONPATH=/home/sycamore/Syca_ws/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/jetbot build --build-base /home/sycamore/Syca_ws/build/jetbot/build install --prefix /home/sycamore/Syca_ws/install --record /home/sycamore/Syca_ws/build/jetbot/install.log --single-version-externally-managed

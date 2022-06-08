@@ -1,0 +1,3 @@
+[console_scripts]
+listener = py_basicsub.basic_subscriber:main
+

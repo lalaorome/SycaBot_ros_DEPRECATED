@@ -1,0 +1,32 @@
+In file included from [01m[K/home/sycamore/Syca_ws/build/interfaces/rosidl_generator_c/interfaces/srv/detail/task__functions.h:19[m[K,
+                 from [01m[K/home/sycamore/Syca_ws/build/interfaces/rosidl_generator_c/interfaces/srv/detail/task__functions.c:4[m[K:
+[01m[K/home/sycamore/Syca_ws/build/interfaces/rosidl_generator_c/interfaces/srv/detail/task__struct.h:41:10:[m[K [01;31m[Kfatal error: [m[Kinterfaces/msg/detail/point__struct.h: No such file or directory
+   41 | #include [01;31m[K"interfaces/msg/detail/point__struct.h"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/interfaces__rosidl_generator_c.dir/build.make:153: CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/task__functions.c.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:299: CMakeFiles/interfaces__rosidl_generator_c.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+In file included from [01m[K/home/sycamore/Syca_ws/build/interfaces/rosidl_typesupport_cpp/interfaces/srv/task__type_support.cpp:7[m[K:
+[01m[K/home/sycamore/Syca_ws/build/interfaces/rosidl_generator_cpp/interfaces/srv/detail/task__struct.hpp:133:10:[m[K [01;31m[Kfatal error: [m[Kinterfaces/msg/detail/point__struct.hpp: No such file or directory
+  133 | #include [01;31m[K"interfaces/msg/detail/point__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/build.make:134: CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/srv/task__type_support.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:415: CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/all] Error 2
+In file included from [01m[K/home/sycamore/Syca_ws/build/interfaces/rosidl_typesupport_introspection_cpp/interfaces/srv/detail/task__type_support.cpp:12[m[K:
+[01m[K/home/sycamore/Syca_ws/build/interfaces/rosidl_generator_cpp/interfaces/srv/detail/task__struct.hpp:133:10:[m[K [01;31m[Kfatal error: [m[Kinterfaces/msg/detail/point__struct.hpp: No such file or directory
+  133 | #include [01;31m[K"interfaces/msg/detail/point__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/build.make:139: CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces/srv/detail/task__type_support.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:496: CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/all] Error 2
+In file included from [01m[K/home/sycamore/Syca_ws/build/interfaces/rosidl_typesupport_fastrtps_cpp/interfaces/srv/detail/task__rosidl_typesupport_fastrtps_cpp.hpp:11[m[K,
+                 from [01m[K/home/sycamore/Syca_ws/build/interfaces/rosidl_typesupport_fastrtps_cpp/interfaces/srv/detail/dds_fastrtps/task__type_support.cpp:4[m[K:
+[01m[K/home/sycamore/Syca_ws/build/interfaces/rosidl_generator_cpp/interfaces/srv/detail/task__struct.hpp:133:10:[m[K [01;31m[Kfatal error: [m[Kinterfaces/msg/detail/point__struct.hpp: No such file or directory
+  133 | #include [01;31m[K"interfaces/msg/detail/point__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make:139: CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces/srv/detail/dds_fastrtps/task__type_support.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:442: CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

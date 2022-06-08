@@ -1,0 +1,39 @@
+[0.422s] Invoking command in '/home/sycamore/Syca_ws/src/OptiTrack': PYTHONPATH=/home/sycamore/Syca_ws/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/OptiTrack build --build-base /home/sycamore/Syca_ws/build/OptiTrack/build install --prefix /home/sycamore/Syca_ws/install --record /home/sycamore/Syca_ws/build/OptiTrack/install.log --single-version-externally-managed
+[0.566s] running egg_info
+[0.567s] creating ../../build/OptiTrack/OptiTrack.egg-info
+[0.567s] writing ../../build/OptiTrack/OptiTrack.egg-info/PKG-INFO
+[0.567s] writing dependency_links to ../../build/OptiTrack/OptiTrack.egg-info/dependency_links.txt
+[0.567s] writing entry points to ../../build/OptiTrack/OptiTrack.egg-info/entry_points.txt
+[0.567s] writing requirements to ../../build/OptiTrack/OptiTrack.egg-info/requires.txt
+[0.567s] writing top-level names to ../../build/OptiTrack/OptiTrack.egg-info/top_level.txt
+[0.568s] writing manifest file '../../build/OptiTrack/OptiTrack.egg-info/SOURCES.txt'
+[0.588s] reading manifest file '../../build/OptiTrack/OptiTrack.egg-info/SOURCES.txt'
+[0.589s] writing manifest file '../../build/OptiTrack/OptiTrack.egg-info/SOURCES.txt'
+[0.589s] running build
+[0.589s] running build_py
+[0.589s] creating /home/sycamore/Syca_ws/build/OptiTrack/build
+[0.589s] creating /home/sycamore/Syca_ws/build/OptiTrack/build/lib
+[0.589s] creating /home/sycamore/Syca_ws/build/OptiTrack/build/lib/OptiTrack
+[0.589s] copying OptiTrack/OptiTrack_link.py -> /home/sycamore/Syca_ws/build/OptiTrack/build/lib/OptiTrack
+[0.589s] copying OptiTrack/__init__.py -> /home/sycamore/Syca_ws/build/OptiTrack/build/lib/OptiTrack
+[0.589s] running install
+[0.589s] running install_lib
+[0.590s] creating /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/OptiTrack
+[0.590s] copying /home/sycamore/Syca_ws/build/OptiTrack/build/lib/OptiTrack/OptiTrack_link.py -> /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/OptiTrack
+[0.590s] copying /home/sycamore/Syca_ws/build/OptiTrack/build/lib/OptiTrack/__init__.py -> /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/OptiTrack
+[0.590s] byte-compiling /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/OptiTrack/OptiTrack_link.py to OptiTrack_link.cpython-38.pyc
+[0.591s]   File "/home/sycamore/Syca_ws/install/lib/python3.8/site-packages/OptiTrack/OptiTrack_link.py", line 18
+[0.591s]     self.subscription. = self.create_subscription(
+[0.591s]                        ^
+[0.591s] SyntaxError: invalid syntax
+[0.591s] 
+[0.591s] byte-compiling /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/OptiTrack/__init__.py to __init__.cpython-38.pyc
+[0.591s] running install_data
+[0.591s] copying resource/OptiTrack -> /home/sycamore/Syca_ws/install/share/ament_index/resource_index/packages
+[0.591s] copying package.xml -> /home/sycamore/Syca_ws/install/share/OptiTrack
+[0.592s] running install_egg_info
+[0.593s] Copying ../../build/OptiTrack/OptiTrack.egg-info to /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/OptiTrack-0.0.0-py3.8.egg-info
+[0.593s] running install_scripts
+[0.603s] Installing get_optiPos script to /home/sycamore/Syca_ws/install/lib/OptiTrack
+[0.603s] writing list of installed files to '/home/sycamore/Syca_ws/build/OptiTrack/install.log'
+[0.613s] Invoked command in '/home/sycamore/Syca_ws/src/OptiTrack' returned '0': PYTHONPATH=/home/sycamore/Syca_ws/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/OptiTrack build --build-base /home/sycamore/Syca_ws/build/OptiTrack/build install --prefix /home/sycamore/Syca_ws/install --record /home/sycamore/Syca_ws/build/OptiTrack/install.log --single-version-externally-managed

@@ -1,0 +1,26 @@
+running egg_info
+writing ../../build/central_pc/central_pc.egg-info/PKG-INFO
+writing dependency_links to ../../build/central_pc/central_pc.egg-info/dependency_links.txt
+writing entry points to ../../build/central_pc/central_pc.egg-info/entry_points.txt
+writing requirements to ../../build/central_pc/central_pc.egg-info/requires.txt
+writing top-level names to ../../build/central_pc/central_pc.egg-info/top_level.txt
+reading manifest file '../../build/central_pc/central_pc.egg-info/SOURCES.txt'
+writing manifest file '../../build/central_pc/central_pc.egg-info/SOURCES.txt'
+running build
+running build_py
+copying central_pc/utils.py -> /home/sycamore/Syca_ws/build/central_pc/build/lib/central_pc
+copying central_pc/centralPC.py -> /home/sycamore/Syca_ws/build/central_pc/build/lib/central_pc
+running install
+running install_lib
+copying /home/sycamore/Syca_ws/build/central_pc/build/lib/central_pc/utils.py -> /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/central_pc
+copying /home/sycamore/Syca_ws/build/central_pc/build/lib/central_pc/centralPC.py -> /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/central_pc
+byte-compiling /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/central_pc/utils.py to utils.cpython-38.pyc
+Sorry: IndentationError: unindent does not match any outer indentation level (utils.py, line 15)
+byte-compiling /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/central_pc/centralPC.py to centralPC.cpython-38.pyc
+running install_data
+running install_egg_info
+removing '/home/sycamore/Syca_ws/install/lib/python3.8/site-packages/central_pc-0.0.0-py3.8.egg-info' (and everything under it)
+Copying ../../build/central_pc/central_pc.egg-info to /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/central_pc-0.0.0-py3.8.egg-info
+running install_scripts
+Installing centralPC script to /home/sycamore/Syca_ws/install/lib/central_pc
+writing list of installed files to '/home/sycamore/Syca_ws/build/central_pc/install.log'

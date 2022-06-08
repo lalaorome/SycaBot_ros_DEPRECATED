@@ -1,0 +1,38 @@
+[0.453s] Invoking command in '/home/sycamore/Syca_ws/src/jetbot_ros2': AMENT_PREFIX_PATH=/home/sycamore/Syca_ws/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/sycamore/Syca_ws/install:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/sycamore/Syca_ws/install/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/sycamore/Syca_ws/install/lib/python3.8/site-packages:/home/sycamore/Syca_ws/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/jetbot_ros2 build --build-base /home/sycamore/Syca_ws/build/jetbot_ros2/build install --prefix /home/sycamore/Syca_ws/install --record /home/sycamore/Syca_ws/build/jetbot_ros2/install.log --single-version-externally-managed
+[0.597s] running egg_info
+[0.597s] creating ../../build/jetbot_ros2/jetbot_ros2.egg-info
+[0.597s] writing ../../build/jetbot_ros2/jetbot_ros2.egg-info/PKG-INFO
+[0.598s] writing dependency_links to ../../build/jetbot_ros2/jetbot_ros2.egg-info/dependency_links.txt
+[0.598s] writing entry points to ../../build/jetbot_ros2/jetbot_ros2.egg-info/entry_points.txt
+[0.598s] writing requirements to ../../build/jetbot_ros2/jetbot_ros2.egg-info/requires.txt
+[0.598s] writing top-level names to ../../build/jetbot_ros2/jetbot_ros2.egg-info/top_level.txt
+[0.598s] writing manifest file '../../build/jetbot_ros2/jetbot_ros2.egg-info/SOURCES.txt'
+[0.619s] reading manifest file '../../build/jetbot_ros2/jetbot_ros2.egg-info/SOURCES.txt'
+[0.619s] writing manifest file '../../build/jetbot_ros2/jetbot_ros2.egg-info/SOURCES.txt'
+[0.619s] running build
+[0.620s] running build_py
+[0.620s] creating /home/sycamore/Syca_ws/build/jetbot_ros2/build
+[0.620s] creating /home/sycamore/Syca_ws/build/jetbot_ros2/build/lib
+[0.620s] creating /home/sycamore/Syca_ws/build/jetbot_ros2/build/lib/jetbot_ros2
+[0.620s] copying jetbot_ros2/__init__.py -> /home/sycamore/Syca_ws/build/jetbot_ros2/build/lib/jetbot_ros2
+[0.620s] copying jetbot_ros2/basic_action_server.py -> /home/sycamore/Syca_ws/build/jetbot_ros2/build/lib/jetbot_ros2
+[0.622s] copying jetbot_ros2/basic_action_client.py -> /home/sycamore/Syca_ws/build/jetbot_ros2/build/lib/jetbot_ros2
+[0.622s] running install
+[0.622s] running install_lib
+[0.623s] creating /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot_ros2
+[0.623s] copying /home/sycamore/Syca_ws/build/jetbot_ros2/build/lib/jetbot_ros2/__init__.py -> /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot_ros2
+[0.623s] copying /home/sycamore/Syca_ws/build/jetbot_ros2/build/lib/jetbot_ros2/basic_action_server.py -> /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot_ros2
+[0.623s] copying /home/sycamore/Syca_ws/build/jetbot_ros2/build/lib/jetbot_ros2/basic_action_client.py -> /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot_ros2
+[0.623s] byte-compiling /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot_ros2/__init__.py to __init__.cpython-38.pyc
+[0.624s] byte-compiling /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot_ros2/basic_action_server.py to basic_action_server.cpython-38.pyc
+[0.624s] byte-compiling /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot_ros2/basic_action_client.py to basic_action_client.cpython-38.pyc
+[0.624s] running install_data
+[0.625s] copying resource/jetbot_ros2 -> /home/sycamore/Syca_ws/install/share/ament_index/resource_index/packages
+[0.625s] copying package.xml -> /home/sycamore/Syca_ws/install/share/jetbot_ros2
+[0.625s] running install_egg_info
+[0.626s] Copying ../../build/jetbot_ros2/jetbot_ros2.egg-info to /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot_ros2-0.0.0-py3.8.egg-info
+[0.626s] running install_scripts
+[0.636s] Installing jetbot_move_clt script to /home/sycamore/Syca_ws/install/lib/jetbot_ros2
+[0.636s] Installing jetbot_move_srv script to /home/sycamore/Syca_ws/install/lib/jetbot_ros2
+[0.636s] writing list of installed files to '/home/sycamore/Syca_ws/build/jetbot_ros2/install.log'
+[0.648s] Invoked command in '/home/sycamore/Syca_ws/src/jetbot_ros2' returned '0': AMENT_PREFIX_PATH=/home/sycamore/Syca_ws/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/sycamore/Syca_ws/install:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/sycamore/Syca_ws/install/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/sycamore/Syca_ws/install/lib/python3.8/site-packages:/home/sycamore/Syca_ws/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/jetbot_ros2 build --build-base /home/sycamore/Syca_ws/build/jetbot_ros2/build install --prefix /home/sycamore/Syca_ws/install --record /home/sycamore/Syca_ws/build/jetbot_ros2/install.log --single-version-externally-managed

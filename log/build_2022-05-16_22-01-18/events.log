@@ -1,0 +1,419 @@
+[0.000000] (-) TimerEvent: {}
+[0.000136] (basic_pub) JobQueued: {'identifier': 'basic_pub', 'dependencies': OrderedDict()}
+[0.000159] (jetbot_actions) JobQueued: {'identifier': 'jetbot_actions', 'dependencies': OrderedDict()}
+[0.000175] (py_basicsub) JobQueued: {'identifier': 'py_basicsub', 'dependencies': OrderedDict()}
+[0.000189] (teleop) JobQueued: {'identifier': 'teleop', 'dependencies': OrderedDict()}
+[0.000309] (jetbot_ros2) JobQueued: {'identifier': 'jetbot_ros2', 'dependencies': OrderedDict([('jetbot_actions', '/home/sycamore/Syca_ws/install')])}
+[0.000341] (jetbot_actions) JobStarted: {'identifier': 'jetbot_actions'}
+[0.007272] (basic_pub) JobStarted: {'identifier': 'basic_pub'}
+[0.015470] (py_basicsub) JobStarted: {'identifier': 'py_basicsub'}
+[0.021271] (teleop) JobStarted: {'identifier': 'teleop'}
+[0.029659] (jetbot_actions) JobProgress: {'identifier': 'jetbot_actions', 'progress': 'cmake'}
+[0.029946] (jetbot_actions) Command: {'cmd': ['/usr/bin/cmake', '/home/sycamore/Syca_ws/src/jetbot_actions', '-DCMAKE_INSTALL_PREFIX=/home/sycamore/Syca_ws/install'], 'cwd': '/home/sycamore/Syca_ws/build/jetbot_actions', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LANGUAGE', 'en_GB:en'), ('USER', 'sycamore'), ('LC_TIME', 'en_GB.UTF-8'), ('SSH_AGENT_PID', '45804'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/sycamore/ros2_galactic/ros2-linux/opt/yaml_cpp_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/opt/rviz_ogre_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/lib'), ('HOME', '/home/sycamore'), ('OLDPWD', '/home/sycamore'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_GB.UTF-8'), ('MANAGERPID', '45626'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/sycamore/ros2_galactic/ros2-linux'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'sycamore'), ('JOURNAL_STREAM', '8:192195'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/sycamore/ros2_galactic/ros2-linux/lib/x86_64-linux-gnu/pkgconfig:/home/sycamore/ros2_galactic/ros2-linux/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'sycamore'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/sycamore/ros2_galactic/ros2-linux/bin:/home/sycamore/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/Sycamore-CentralPC:@/tmp/.ICE-unix/45842,unix/Sycamore-CentralPC:/tmp/.ICE-unix/45842'), ('INVOCATION_ID', '7134623f636f495eb0e62efe8485ebb0'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_GB.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/f4d5e761_56ea_43f1_a2e1_32120f1e7b76'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_GB.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_GB.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('GNOME_TERMINAL_SERVICE', ':1.619'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/sycamore/ros2_galactic/ros2-linux'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_GB.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LC_MEASUREMENT', 'en_GB.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'en_GB.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/sycamore/Syca_ws/build/jetbot_actions'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/sycamore/ros2_galactic/ros2-linux/lib/python3.8/site-packages'), ('LC_NUMERIC', 'en_GB.UTF-8'), ('LC_PAPER', 'en_GB.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/sycamore/ros2_galactic/ros2-linux')]), 'shell': False}
+[0.099218] (-) TimerEvent: {}
+[0.199641] (-) TimerEvent: {}
+[0.299880] (-) TimerEvent: {}
+[0.400200] (-) TimerEvent: {}
+[0.500488] (-) TimerEvent: {}
+[0.529497] (jetbot_actions) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.529972] (jetbot_actions) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.530312] (jetbot_actions) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.530788] (jetbot_actions) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.530962] (jetbot_actions) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.531090] (jetbot_actions) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.531430] (jetbot_actions) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.531582] (jetbot_actions) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.531650] (jetbot_actions) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[0.531710] (jetbot_actions) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[0.531834] (jetbot_actions) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.532533] (jetbot_actions) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.532583] (jetbot_actions) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.532790] (jetbot_actions) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.533168] (jetbot_actions) StdoutLine: {'line': b'-- Found ament_cmake: 1.1.4 (/home/sycamore/ros2_galactic/ros2-linux/share/ament_cmake/cmake)\n'}
+[0.533276] (jetbot_actions) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.533337] (jetbot_actions) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.534529] (jetbot_actions) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.10.6 (/home/sycamore/ros2_galactic/ros2-linux/share/ament_lint_auto/cmake)\n'}
+[0.534844] (jetbot_actions) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.1.1 (/home/sycamore/ros2_galactic/ros2-linux/share/rosidl_default_generators/cmake)\n'}
+[0.534965] (jetbot_actions) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.535062] (jetbot_actions) StdoutLine: {'line': b'-- Found rosidl_adapter: 2.2.1 (/home/sycamore/ros2_galactic/ros2-linux/share/rosidl_adapter/cmake)\n'}
+[0.546322] (jetbot_actions) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[0.565163] (jetbot_actions) StdoutLine: {'line': b'-- Found FastRTPS: /home/sycamore/ros2_galactic/ros2-linux/include  \n'}
+[0.600605] (-) TimerEvent: {}
+[0.631863] (jetbot_actions) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.666197] (jetbot_actions) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[0.700717] (-) TimerEvent: {}
+[0.758072] (jetbot_actions) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/home/sycamore/ros2_galactic/ros2-linux/share/ament_cmake_ros/cmake)\n'}
+[0.800849] (-) TimerEvent: {}
+[0.812263] (py_basicsub) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/py_basicsub', 'build', '--build-base', '/home/sycamore/Syca_ws/build/py_basicsub/build', 'install', '--prefix', '/home/sycamore/Syca_ws/install', '--record', '/home/sycamore/Syca_ws/build/py_basicsub/install.log', '--single-version-externally-managed'], 'cwd': '/home/sycamore/Syca_ws/src/py_basicsub', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LANGUAGE': 'en_GB:en', 'USER': 'sycamore', 'LC_TIME': 'en_GB.UTF-8', 'SSH_AGENT_PID': '45804', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/sycamore/ros2_galactic/ros2-linux/opt/yaml_cpp_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/opt/rviz_ogre_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/lib', 'HOME': '/home/sycamore', 'OLDPWD': '/home/sycamore', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'en_GB.UTF-8', 'MANAGERPID': '45626', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/sycamore/ros2_galactic/ros2-linux', 'ROS_DISTRO': 'galactic', 'LOGNAME': 'sycamore', 'JOURNAL_STREAM': '8:192195', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/home/sycamore/ros2_galactic/ros2-linux/lib/x86_64-linux-gnu/pkgconfig:/home/sycamore/ros2_galactic/ros2-linux/lib/pkgconfig', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'sycamore', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/home/sycamore/ros2_galactic/ros2-linux/bin:/home/sycamore/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/Sycamore-CentralPC:@/tmp/.ICE-unix/45842,unix/Sycamore-CentralPC:/tmp/.ICE-unix/45842', 'INVOCATION_ID': '7134623f636f495eb0e62efe8485ebb0', 'PAPERSIZE': 'a4', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'en_GB.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/f4d5e761_56ea_43f1_a2e1_32120f1e7b76', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_GB.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'en_GB.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'GNOME_TERMINAL_SERVICE': ':1.619', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/sycamore/ros2_galactic/ros2-linux', 'SHELL': '/bin/bash', 'LC_NAME': 'en_GB.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LC_MEASUREMENT': 'en_GB.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'en_GB.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sycamore/Syca_ws/build/py_basicsub', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/sycamore/Syca_ws/install/lib/python3.8/site-packages:/home/sycamore/ros2_galactic/ros2-linux/lib/python3.8/site-packages', 'LC_NUMERIC': 'en_GB.UTF-8', 'LC_PAPER': 'en_GB.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003', 'CMAKE_PREFIX_PATH': '/home/sycamore/ros2_galactic/ros2-linux'}, 'shell': False}
+[0.814498] (teleop) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/teleop', 'build', '--build-base', '/home/sycamore/Syca_ws/build/teleop/build', 'install', '--prefix', '/home/sycamore/Syca_ws/install', '--record', '/home/sycamore/Syca_ws/build/teleop/install.log', '--single-version-externally-managed'], 'cwd': '/home/sycamore/Syca_ws/src/teleop', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LANGUAGE': 'en_GB:en', 'USER': 'sycamore', 'LC_TIME': 'en_GB.UTF-8', 'SSH_AGENT_PID': '45804', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/sycamore/ros2_galactic/ros2-linux/opt/yaml_cpp_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/opt/rviz_ogre_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/lib', 'HOME': '/home/sycamore', 'OLDPWD': '/home/sycamore', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'en_GB.UTF-8', 'MANAGERPID': '45626', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/sycamore/ros2_galactic/ros2-linux', 'ROS_DISTRO': 'galactic', 'LOGNAME': 'sycamore', 'JOURNAL_STREAM': '8:192195', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/home/sycamore/ros2_galactic/ros2-linux/lib/x86_64-linux-gnu/pkgconfig:/home/sycamore/ros2_galactic/ros2-linux/lib/pkgconfig', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'sycamore', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/home/sycamore/ros2_galactic/ros2-linux/bin:/home/sycamore/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/Sycamore-CentralPC:@/tmp/.ICE-unix/45842,unix/Sycamore-CentralPC:/tmp/.ICE-unix/45842', 'INVOCATION_ID': '7134623f636f495eb0e62efe8485ebb0', 'PAPERSIZE': 'a4', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'en_GB.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/f4d5e761_56ea_43f1_a2e1_32120f1e7b76', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_GB.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'en_GB.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'GNOME_TERMINAL_SERVICE': ':1.619', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/sycamore/ros2_galactic/ros2-linux', 'SHELL': '/bin/bash', 'LC_NAME': 'en_GB.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LC_MEASUREMENT': 'en_GB.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'en_GB.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sycamore/Syca_ws/build/teleop', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/sycamore/Syca_ws/install/lib/python3.8/site-packages:/home/sycamore/ros2_galactic/ros2-linux/lib/python3.8/site-packages', 'LC_NUMERIC': 'en_GB.UTF-8', 'LC_PAPER': 'en_GB.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003', 'CMAKE_PREFIX_PATH': '/home/sycamore/ros2_galactic/ros2-linux'}, 'shell': False}
+[0.817728] (basic_pub) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/basic_pub', 'build', '--build-base', '/home/sycamore/Syca_ws/build/basic_pub/build', 'install', '--prefix', '/home/sycamore/Syca_ws/install', '--record', '/home/sycamore/Syca_ws/build/basic_pub/install.log', '--single-version-externally-managed'], 'cwd': '/home/sycamore/Syca_ws/src/basic_pub', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LANGUAGE': 'en_GB:en', 'USER': 'sycamore', 'LC_TIME': 'en_GB.UTF-8', 'SSH_AGENT_PID': '45804', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/sycamore/ros2_galactic/ros2-linux/opt/yaml_cpp_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/opt/rviz_ogre_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/lib', 'HOME': '/home/sycamore', 'OLDPWD': '/home/sycamore', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'en_GB.UTF-8', 'MANAGERPID': '45626', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/sycamore/ros2_galactic/ros2-linux', 'ROS_DISTRO': 'galactic', 'LOGNAME': 'sycamore', 'JOURNAL_STREAM': '8:192195', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/home/sycamore/ros2_galactic/ros2-linux/lib/x86_64-linux-gnu/pkgconfig:/home/sycamore/ros2_galactic/ros2-linux/lib/pkgconfig', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'sycamore', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/home/sycamore/ros2_galactic/ros2-linux/bin:/home/sycamore/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/Sycamore-CentralPC:@/tmp/.ICE-unix/45842,unix/Sycamore-CentralPC:/tmp/.ICE-unix/45842', 'INVOCATION_ID': '7134623f636f495eb0e62efe8485ebb0', 'PAPERSIZE': 'a4', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'en_GB.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/f4d5e761_56ea_43f1_a2e1_32120f1e7b76', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_GB.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'en_GB.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'GNOME_TERMINAL_SERVICE': ':1.619', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/sycamore/ros2_galactic/ros2-linux', 'SHELL': '/bin/bash', 'LC_NAME': 'en_GB.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LC_MEASUREMENT': 'en_GB.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'en_GB.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sycamore/Syca_ws/build/basic_pub', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/sycamore/Syca_ws/install/lib/python3.8/site-packages:/home/sycamore/ros2_galactic/ros2-linux/lib/python3.8/site-packages', 'LC_NUMERIC': 'en_GB.UTF-8', 'LC_PAPER': 'en_GB.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003', 'CMAKE_PREFIX_PATH': '/home/sycamore/ros2_galactic/ros2-linux'}, 'shell': False}
+[0.846430] (jetbot_actions) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.863353] (jetbot_actions) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.879526] (jetbot_actions) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[0.880617] (jetbot_actions) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/home/sycamore/ros2_galactic/ros2-linux/share/python_cmake_module/cmake)\n'}
+[0.898761] (jetbot_actions) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[0.898970] (jetbot_actions) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.899039] (jetbot_actions) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[0.899088] (jetbot_actions) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so\n'}
+[0.900901] (-) TimerEvent: {}
+[0.912009] (jetbot_actions) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[0.946189] (jetbot_actions) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[0.947431] (jetbot_actions) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[0.948272] (jetbot_actions) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[0.954198] (jetbot_actions) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.966276] (teleop) StdoutLine: {'line': b'running egg_info\n'}
+[0.966715] (teleop) StdoutLine: {'line': b'creating ../../build/teleop/teleop.egg-info\n'}
+[0.966844] (py_basicsub) StdoutLine: {'line': b'running egg_info\n'}
+[0.967080] (teleop) StdoutLine: {'line': b'writing ../../build/teleop/teleop.egg-info/PKG-INFO\n'}
+[0.967230] (teleop) StdoutLine: {'line': b'writing dependency_links to ../../build/teleop/teleop.egg-info/dependency_links.txt\n'}
+[0.967325] (teleop) StdoutLine: {'line': b'writing entry points to ../../build/teleop/teleop.egg-info/entry_points.txt\n'}
+[0.967377] (teleop) StdoutLine: {'line': b'writing requirements to ../../build/teleop/teleop.egg-info/requires.txt\n'}
+[0.967425] (teleop) StdoutLine: {'line': b'writing top-level names to ../../build/teleop/teleop.egg-info/top_level.txt\n'}
+[0.967536] (py_basicsub) StdoutLine: {'line': b'creating ../../build/py_basicsub/py_basicsub.egg-info\n'}
+[0.967607] (py_basicsub) StdoutLine: {'line': b'writing ../../build/py_basicsub/py_basicsub.egg-info/PKG-INFO\n'}
+[0.967720] (py_basicsub) StdoutLine: {'line': b'writing dependency_links to ../../build/py_basicsub/py_basicsub.egg-info/dependency_links.txt\n'}
+[0.967796] (py_basicsub) StdoutLine: {'line': b'writing entry points to ../../build/py_basicsub/py_basicsub.egg-info/entry_points.txt\n'}
+[0.967851] (py_basicsub) StdoutLine: {'line': b'writing requirements to ../../build/py_basicsub/py_basicsub.egg-info/requires.txt\n'}
+[0.967896] (py_basicsub) StdoutLine: {'line': b'writing top-level names to ../../build/py_basicsub/py_basicsub.egg-info/top_level.txt\n'}
+[0.967982] (teleop) StdoutLine: {'line': b"writing manifest file '../../build/teleop/teleop.egg-info/SOURCES.txt'\n"}
+[0.968437] (py_basicsub) StdoutLine: {'line': b"writing manifest file '../../build/py_basicsub/py_basicsub.egg-info/SOURCES.txt'\n"}
+[0.969047] (basic_pub) StdoutLine: {'line': b'running egg_info\n'}
+[0.969489] (basic_pub) StdoutLine: {'line': b'creating ../../build/basic_pub/basic_pub.egg-info\n'}
+[0.969627] (basic_pub) StdoutLine: {'line': b'writing ../../build/basic_pub/basic_pub.egg-info/PKG-INFO\n'}
+[0.969766] (basic_pub) StdoutLine: {'line': b'writing dependency_links to ../../build/basic_pub/basic_pub.egg-info/dependency_links.txt\n'}
+[0.969891] (basic_pub) StdoutLine: {'line': b'writing entry points to ../../build/basic_pub/basic_pub.egg-info/entry_points.txt\n'}
+[0.970099] (basic_pub) StdoutLine: {'line': b'writing requirements to ../../build/basic_pub/basic_pub.egg-info/requires.txt\n'}
+[0.970165] (basic_pub) StdoutLine: {'line': b'writing top-level names to ../../build/basic_pub/basic_pub.egg-info/top_level.txt\n'}
+[0.970777] (basic_pub) StdoutLine: {'line': b"writing manifest file '../../build/basic_pub/basic_pub.egg-info/SOURCES.txt'\n"}
+[0.985995] (jetbot_actions) StdoutLine: {'line': b'-- Generating done\n'}
+[0.987696] (jetbot_actions) StdoutLine: {'line': b'-- Build files have been written to: /home/sycamore/Syca_ws/build/jetbot_actions\n'}
+[0.989708] (teleop) StdoutLine: {'line': b"reading manifest file '../../build/teleop/teleop.egg-info/SOURCES.txt'\n"}
+[0.990268] (teleop) StdoutLine: {'line': b"writing manifest file '../../build/teleop/teleop.egg-info/SOURCES.txt'\n"}
+[0.990526] (py_basicsub) StdoutLine: {'line': b"reading manifest file '../../build/py_basicsub/py_basicsub.egg-info/SOURCES.txt'\n"}
+[0.990771] (teleop) StdoutLine: {'line': b'running build\n'}
+[0.990841] (teleop) StdoutLine: {'line': b'running build_py\n'}
+[0.990915] (teleop) StdoutLine: {'line': b'creating /home/sycamore/Syca_ws/build/teleop/build\n'}
+[0.990966] (teleop) StdoutLine: {'line': b'creating /home/sycamore/Syca_ws/build/teleop/build/lib\n'}
+[0.991089] (teleop) StdoutLine: {'line': b'creating /home/sycamore/Syca_ws/build/teleop/build/lib/teleop\n'}
+[0.991231] (teleop) StdoutLine: {'line': b'copying teleop/teleop_keyboard.py -> /home/sycamore/Syca_ws/build/teleop/build/lib/teleop\n'}
+[0.991322] (teleop) StdoutLine: {'line': b'copying teleop/__init__.py -> /home/sycamore/Syca_ws/build/teleop/build/lib/teleop\n'}
+[0.991373] (teleop) StdoutLine: {'line': b'running install\n'}
+[0.991417] (py_basicsub) StdoutLine: {'line': b"writing manifest file '../../build/py_basicsub/py_basicsub.egg-info/SOURCES.txt'\n"}
+[0.991462] (py_basicsub) StdoutLine: {'line': b'running build\n'}
+[0.991505] (py_basicsub) StdoutLine: {'line': b'running build_py\n'}
+[0.991577] (py_basicsub) StdoutLine: {'line': b'creating /home/sycamore/Syca_ws/build/py_basicsub/build\n'}
+[0.991622] (py_basicsub) StdoutLine: {'line': b'creating /home/sycamore/Syca_ws/build/py_basicsub/build/lib\n'}
+[0.991666] (py_basicsub) StdoutLine: {'line': b'creating /home/sycamore/Syca_ws/build/py_basicsub/build/lib/py_basicsub\n'}
+[0.991709] (py_basicsub) StdoutLine: {'line': b'copying py_basicsub/basic_subscriber.py -> /home/sycamore/Syca_ws/build/py_basicsub/build/lib/py_basicsub\n'}
+[0.991767] (py_basicsub) StdoutLine: {'line': b'copying py_basicsub/__init__.py -> /home/sycamore/Syca_ws/build/py_basicsub/build/lib/py_basicsub\n'}
+[0.991811] (py_basicsub) StdoutLine: {'line': b'running install\n'}
+[0.991863] (teleop) StdoutLine: {'line': b'running install_lib\n'}
+[0.991907] (py_basicsub) StdoutLine: {'line': b'running install_lib\n'}
+[0.991953] (teleop) StdoutLine: {'line': b'creating /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/teleop\n'}
+[0.992022] (teleop) StdoutLine: {'line': b'copying /home/sycamore/Syca_ws/build/teleop/build/lib/teleop/teleop_keyboard.py -> /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/teleop\n'}
+[0.992094] (teleop) StdoutLine: {'line': b'copying /home/sycamore/Syca_ws/build/teleop/build/lib/teleop/__init__.py -> /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/teleop\n'}
+[0.992274] (teleop) StdoutLine: {'line': b'byte-compiling /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/teleop/teleop_keyboard.py to teleop_keyboard.cpython-38.pyc\n'}
+[0.992333] (py_basicsub) StdoutLine: {'line': b'creating /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/py_basicsub\n'}
+[0.992407] (py_basicsub) StdoutLine: {'line': b'copying /home/sycamore/Syca_ws/build/py_basicsub/build/lib/py_basicsub/basic_subscriber.py -> /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/py_basicsub\n'}
+[0.992468] (py_basicsub) StdoutLine: {'line': b'copying /home/sycamore/Syca_ws/build/py_basicsub/build/lib/py_basicsub/__init__.py -> /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/py_basicsub\n'}
+[0.992526] (basic_pub) StdoutLine: {'line': b"reading manifest file '../../build/basic_pub/basic_pub.egg-info/SOURCES.txt'\n"}
+[0.992693] (py_basicsub) StdoutLine: {'line': b'byte-compiling /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/py_basicsub/basic_subscriber.py to basic_subscriber.cpython-38.pyc\n'}
+[0.993256] (basic_pub) StdoutLine: {'line': b"writing manifest file '../../build/basic_pub/basic_pub.egg-info/SOURCES.txt'\n"}
+[0.993486] (basic_pub) StdoutLine: {'line': b'running build\n'}
+[0.993686] (basic_pub) StdoutLine: {'line': b'running build_py\n'}
+[0.993928] (basic_pub) StdoutLine: {'line': b'creating /home/sycamore/Syca_ws/build/basic_pub/build\n'}
+[0.995681] (basic_pub) StdoutLine: {'line': b'creating /home/sycamore/Syca_ws/build/basic_pub/build/lib\n'}
+[0.995966] (basic_pub) StdoutLine: {'line': b'creating /home/sycamore/Syca_ws/build/basic_pub/build/lib/basic_pub\n'}
+[0.996020] (basic_pub) StdoutLine: {'line': b'copying basic_pub/basic_pub.py -> /home/sycamore/Syca_ws/build/basic_pub/build/lib/basic_pub\n'}
+[0.996235] (basic_pub) StdoutLine: {'line': b'copying basic_pub/__init__.py -> /home/sycamore/Syca_ws/build/basic_pub/build/lib/basic_pub\n'}
+[0.996551] (basic_pub) StdoutLine: {'line': b'running install\n'}
+[0.996603] (jetbot_actions) CommandEnded: {'returncode': 0}
+[0.996952] (py_basicsub) StdoutLine: {'line': b'byte-compiling /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/py_basicsub/__init__.py to __init__.cpython-38.pyc\n'}
+[0.997012] (py_basicsub) StdoutLine: {'line': b'running install_data\n'}
+[0.997060] (teleop) StdoutLine: {'line': b'byte-compiling /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/teleop/__init__.py to __init__.cpython-38.pyc\n'}
+[0.997111] (teleop) StdoutLine: {'line': b'running install_data\n'}
+[0.997156] (jetbot_actions) JobProgress: {'identifier': 'jetbot_actions', 'progress': 'build'}
+[0.997173] (basic_pub) StdoutLine: {'line': b'running install_lib\n'}
+[0.997233] (jetbot_actions) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/sycamore/Syca_ws/build/jetbot_actions', '--', '-j20', '-l20'], 'cwd': '/home/sycamore/Syca_ws/build/jetbot_actions', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LANGUAGE', 'en_GB:en'), ('USER', 'sycamore'), ('LC_TIME', 'en_GB.UTF-8'), ('SSH_AGENT_PID', '45804'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/sycamore/ros2_galactic/ros2-linux/opt/yaml_cpp_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/opt/rviz_ogre_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/lib'), ('HOME', '/home/sycamore'), ('OLDPWD', '/home/sycamore'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_GB.UTF-8'), ('MANAGERPID', '45626'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/sycamore/ros2_galactic/ros2-linux'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'sycamore'), ('JOURNAL_STREAM', '8:192195'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/sycamore/ros2_galactic/ros2-linux/lib/x86_64-linux-gnu/pkgconfig:/home/sycamore/ros2_galactic/ros2-linux/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'sycamore'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/sycamore/ros2_galactic/ros2-linux/bin:/home/sycamore/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/Sycamore-CentralPC:@/tmp/.ICE-unix/45842,unix/Sycamore-CentralPC:/tmp/.ICE-unix/45842'), ('INVOCATION_ID', '7134623f636f495eb0e62efe8485ebb0'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_GB.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/f4d5e761_56ea_43f1_a2e1_32120f1e7b76'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_GB.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_GB.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('GNOME_TERMINAL_SERVICE', ':1.619'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/sycamore/ros2_galactic/ros2-linux'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_GB.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LC_MEASUREMENT', 'en_GB.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'en_GB.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/sycamore/Syca_ws/build/jetbot_actions'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/sycamore/ros2_galactic/ros2-linux/lib/python3.8/site-packages'), ('LC_NUMERIC', 'en_GB.UTF-8'), ('LC_PAPER', 'en_GB.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/sycamore/ros2_galactic/ros2-linux')]), 'shell': False}
+[0.997452] (py_basicsub) StdoutLine: {'line': b'creating /home/sycamore/Syca_ws/install/share/ament_index\n'}
+[0.997505] (py_basicsub) StdoutLine: {'line': b'creating /home/sycamore/Syca_ws/install/share/ament_index/resource_index\n'}
+[0.997557] (py_basicsub) StdoutLine: {'line': b'creating /home/sycamore/Syca_ws/install/share/ament_index/resource_index/packages\n'}
+[0.997602] (py_basicsub) StdoutLine: {'line': b'copying resource/py_basicsub -> /home/sycamore/Syca_ws/install/share/ament_index/resource_index/packages\n'}
+[0.997646] (py_basicsub) StdoutLine: {'line': b'copying package.xml -> /home/sycamore/Syca_ws/install/share/py_basicsub\n'}
+[0.997702] (py_basicsub) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.997749] (teleop) StdoutLine: {'line': b'copying resource/teleop -> /home/sycamore/Syca_ws/install/share/ament_index/resource_index/packages\n'}
+[0.997796] (basic_pub) StdoutLine: {'line': b'creating /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/basic_pub\n'}
+[0.997843] (basic_pub) StdoutLine: {'line': b'copying /home/sycamore/Syca_ws/build/basic_pub/build/lib/basic_pub/basic_pub.py -> /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/basic_pub\n'}
+[0.997886] (basic_pub) StdoutLine: {'line': b'copying /home/sycamore/Syca_ws/build/basic_pub/build/lib/basic_pub/__init__.py -> /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/basic_pub\n'}
+[0.997929] (teleop) StdoutLine: {'line': b'copying package.xml -> /home/sycamore/Syca_ws/install/share/teleop\n'}
+[0.997972] (teleop) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.998014] (py_basicsub) StdoutLine: {'line': b'Copying ../../build/py_basicsub/py_basicsub.egg-info to /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/py_basicsub-0.0.0-py3.8.egg-info\n'}
+[0.998057] (basic_pub) StdoutLine: {'line': b'byte-compiling /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/basic_pub/basic_pub.py to basic_pub.cpython-38.pyc\n'}
+[0.998103] (teleop) StdoutLine: {'line': b'Copying ../../build/teleop/teleop.egg-info to /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/teleop-0.0.0-py3.8.egg-info\n'}
+[0.998146] (py_basicsub) StdoutLine: {'line': b'running install_scripts\n'}
+[0.998187] (basic_pub) StdoutLine: {'line': b'byte-compiling /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/basic_pub/__init__.py to __init__.cpython-38.pyc\n'}
+[0.998230] (basic_pub) StdoutLine: {'line': b'running install_data\n'}
+[0.998271] (teleop) StdoutLine: {'line': b'running install_scripts\n'}
+[0.998313] (basic_pub) StdoutLine: {'line': b'copying resource/basic_pub -> /home/sycamore/Syca_ws/install/share/ament_index/resource_index/packages\n'}
+[0.998355] (basic_pub) StdoutLine: {'line': b'copying package.xml -> /home/sycamore/Syca_ws/install/share/basic_pub\n'}
+[0.998396] (basic_pub) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.998436] (basic_pub) StdoutLine: {'line': b'Copying ../../build/basic_pub/basic_pub.egg-info to /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/basic_pub-0.0.0-py3.8.egg-info\n'}
+[0.998477] (basic_pub) StdoutLine: {'line': b'running install_scripts\n'}
+[1.000964] (-) TimerEvent: {}
+[1.006658] (teleop) StdoutLine: {'line': b'Installing teleop script to /home/sycamore/Syca_ws/install/lib/teleop\n'}
+[1.006777] (py_basicsub) StdoutLine: {'line': b'Installing listener script to /home/sycamore/Syca_ws/install/lib/py_basicsub\n'}
+[1.006931] (teleop) StdoutLine: {'line': b"writing list of installed files to '/home/sycamore/Syca_ws/build/teleop/install.log'\n"}
+[1.006998] (py_basicsub) StdoutLine: {'line': b"writing list of installed files to '/home/sycamore/Syca_ws/build/py_basicsub/install.log'\n"}
+[1.008592] (basic_pub) StdoutLine: {'line': b'Installing publisher script to /home/sycamore/Syca_ws/install/lib/basic_pub\n'}
+[1.008808] (basic_pub) StdoutLine: {'line': b"writing list of installed files to '/home/sycamore/Syca_ws/build/basic_pub/install.log'\n"}
+[1.023221] (jetbot_actions) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[1.023579] (jetbot_actions) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target jetbot_actions__cpp\x1b[0m\n'}
+[1.024270] (teleop) CommandEnded: {'returncode': 0}
+[1.029718] (jetbot_actions) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[1.032711] (teleop) JobEnded: {'identifier': 'teleop', 'rc': 0}
+[1.033093] (py_basicsub) CommandEnded: {'returncode': 0}
+[1.036496] (py_basicsub) JobEnded: {'identifier': 'py_basicsub', 'rc': 0}
+[1.037703] (basic_pub) CommandEnded: {'returncode': 0}
+[1.041503] (basic_pub) JobEnded: {'identifier': 'basic_pub', 'rc': 0}
+[1.101082] (-) TimerEvent: {}
+[1.201281] (-) TimerEvent: {}
+[1.252108] (jetbot_actions) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target jetbot_actions__rosidl_generator_c\x1b[0m\n'}
+[1.260302] (jetbot_actions) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/jetbot_actions__rosidl_generator_c.dir/rosidl_generator_c/jetbot_actions/action/detail/basic_control__functions.c.o\x1b[0m\n'}
+[1.265261] (jetbot_actions) StdoutLine: {'line': b'[  9%] Built target jetbot_actions__cpp\n'}
+[1.271000] (jetbot_actions) StdoutLine: {'line': b'[ 19%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[1.271120] (jetbot_actions) StdoutLine: {'line': b'[ 19%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.271173] (jetbot_actions) StdoutLine: {'line': b'[ 16%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.301394] (-) TimerEvent: {}
+[1.319777] (jetbot_actions) StdoutLine: {'line': b'[ 22%] \x1b[32m\x1b[1mLinking C shared library libjetbot_actions__rosidl_generator_c.so\x1b[0m\n'}
+[1.347153] (jetbot_actions) StdoutLine: {'line': b'[ 22%] Built target jetbot_actions__rosidl_generator_c\n'}
+[1.353349] (jetbot_actions) StdoutLine: {'line': b'[ 29%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[1.353465] (jetbot_actions) StdoutLine: {'line': b'[ 29%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.401503] (-) TimerEvent: {}
+[1.429252] (jetbot_actions) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target jetbot_actions__rosidl_typesupport_cpp\x1b[0m\n'}
+[1.441246] (jetbot_actions) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/jetbot_actions__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/jetbot_actions/action/basic_control__type_support.cpp.o\x1b[0m\n'}
+[1.452331] (jetbot_actions) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target jetbot_actions__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[1.461359] (jetbot_actions) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/jetbot_actions__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/jetbot_actions/action/detail/basic_control__type_support.cpp.o\x1b[0m\n'}
+[1.490215] (jetbot_actions) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target jetbot_actions__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[1.501610] (-) TimerEvent: {}
+[1.506784] (jetbot_actions) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target jetbot_actions__rosidl_typesupport_c\x1b[0m\n'}
+[1.507379] (jetbot_actions) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/jetbot_actions__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/jetbot_actions/action/detail/dds_fastrtps/basic_control__type_support.cpp.o\x1b[0m\n'}
+[1.516062] (jetbot_actions) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/jetbot_actions__rosidl_typesupport_c.dir/rosidl_typesupport_c/jetbot_actions/action/basic_control__type_support.cpp.o\x1b[0m\n'}
+[1.546424] (jetbot_actions) StdoutLine: {'line': b'[ 45%] \x1b[32m\x1b[1mLinking CXX shared library libjetbot_actions__rosidl_typesupport_c.so\x1b[0m\n'}
+[1.552960] (jetbot_actions) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target jetbot_actions__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[1.562247] (jetbot_actions) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding C object CMakeFiles/jetbot_actions__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/jetbot_actions/action/detail/basic_control__type_support.c.o\x1b[0m\n'}
+[1.572105] (jetbot_actions) StdoutLine: {'line': b'[ 48%] Built target jetbot_actions__rosidl_typesupport_c\n'}
+[1.591111] (jetbot_actions) StdoutLine: {'line': b'[ 51%] \x1b[32m\x1b[1mLinking C shared library libjetbot_actions__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[1.601701] (-) TimerEvent: {}
+[1.610304] (jetbot_actions) StdoutLine: {'line': b'[ 51%] Built target jetbot_actions__rosidl_typesupport_introspection_c\n'}
+[1.701825] (-) TimerEvent: {}
+[1.781379] (jetbot_actions) StdoutLine: {'line': b'[ 54%] \x1b[32m\x1b[1mLinking CXX shared library libjetbot_actions__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[1.790264] (jetbot_actions) StdoutLine: {'line': b'[ 58%] \x1b[32m\x1b[1mLinking CXX shared library libjetbot_actions__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[1.801920] (-) TimerEvent: {}
+[1.807439] (jetbot_actions) StdoutLine: {'line': b'[ 58%] Built target jetbot_actions__rosidl_typesupport_cpp\n'}
+[1.831495] (jetbot_actions) StdoutLine: {'line': b'[ 58%] Built target jetbot_actions__rosidl_typesupport_introspection_cpp\n'}
+[1.890301] (jetbot_actions) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX shared library libjetbot_actions__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[1.901982] (-) TimerEvent: {}
+[1.944323] (jetbot_actions) StdoutLine: {'line': b'[ 61%] Built target jetbot_actions__rosidl_typesupport_fastrtps_cpp\n'}
+[1.950168] (jetbot_actions) StdoutLine: {'line': b'[ 64%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[2.002051] (-) TimerEvent: {}
+[2.102212] (-) TimerEvent: {}
+[2.160776] (jetbot_actions) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target jetbot_actions__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[2.171537] (jetbot_actions) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/jetbot_actions__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/jetbot_actions/action/detail/basic_control__type_support_c.cpp.o\x1b[0m\n'}
+[2.202313] (-) TimerEvent: {}
+[2.302529] (-) TimerEvent: {}
+[2.402774] (-) TimerEvent: {}
+[2.418307] (jetbot_actions) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library libjetbot_actions__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[2.468604] (jetbot_actions) StdoutLine: {'line': b'[ 70%] Built target jetbot_actions__rosidl_typesupport_fastrtps_c\n'}
+[2.474083] (jetbot_actions) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target jetbot_actions\x1b[0m\n'}
+[2.479594] (jetbot_actions) StdoutLine: {'line': b'[ 70%] Built target jetbot_actions\n'}
+[2.484849] (jetbot_actions) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target jetbot_actions__py\x1b[0m\n'}
+[2.490495] (jetbot_actions) StdoutLine: {'line': b'[ 74%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[2.502873] (-) TimerEvent: {}
+[2.603058] (-) TimerEvent: {}
+[2.703272] (-) TimerEvent: {}
+[2.803459] (-) TimerEvent: {}
+[2.903619] (-) TimerEvent: {}
+[2.973598] (jetbot_actions) StdoutLine: {'line': b'[ 74%] Built target jetbot_actions__py\n'}
+[2.979332] (jetbot_actions) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target jetbot_actions__python\x1b[0m\n'}
+[3.000204] (jetbot_actions) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding C object CMakeFiles/jetbot_actions__python.dir/rosidl_generator_py/jetbot_actions/action/_basic_control_s.c.o\x1b[0m\n'}
+[3.003715] (-) TimerEvent: {}
+[3.084955] (jetbot_actions) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/jetbot_actions/libjetbot_actions__python.so\x1b[0m\n'}
+[3.103823] (-) TimerEvent: {}
+[3.110845] (jetbot_actions) StdoutLine: {'line': b'[ 80%] Built target jetbot_actions__python\n'}
+[3.116639] (jetbot_actions) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target jetbot_actions__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[3.116778] (jetbot_actions) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target jetbot_actions__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[3.116855] (jetbot_actions) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target jetbot_actions__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[3.126684] (jetbot_actions) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/jetbot_actions__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/jetbot_actions/_jetbot_actions_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[3.126787] (jetbot_actions) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/jetbot_actions__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/jetbot_actions/_jetbot_actions_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[3.127274] (jetbot_actions) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/jetbot_actions__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/jetbot_actions/_jetbot_actions_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[3.189477] (jetbot_actions) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/jetbot_actions/jetbot_actions_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[3.189621] (jetbot_actions) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/jetbot_actions/jetbot_actions_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[3.191986] (jetbot_actions) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library rosidl_generator_py/jetbot_actions/jetbot_actions_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[3.203942] (-) TimerEvent: {}
+[3.212906] (jetbot_actions) StdoutLine: {'line': b'[100%] Built target jetbot_actions__rosidl_typesupport_c__pyext\n'}
+[3.213039] (jetbot_actions) StdoutLine: {'line': b'[100%] Built target jetbot_actions__rosidl_typesupport_introspection_c__pyext\n'}
+[3.234588] (jetbot_actions) StdoutLine: {'line': b'[100%] Built target jetbot_actions__rosidl_typesupport_fastrtps_c__pyext\n'}
+[3.240883] (jetbot_actions) CommandEnded: {'returncode': 0}
+[3.263924] (jetbot_actions) JobProgress: {'identifier': 'jetbot_actions', 'progress': 'install'}
+[3.269627] (jetbot_actions) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/sycamore/Syca_ws/build/jetbot_actions'], 'cwd': '/home/sycamore/Syca_ws/build/jetbot_actions', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LANGUAGE', 'en_GB:en'), ('USER', 'sycamore'), ('LC_TIME', 'en_GB.UTF-8'), ('SSH_AGENT_PID', '45804'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/sycamore/ros2_galactic/ros2-linux/opt/yaml_cpp_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/opt/rviz_ogre_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/lib'), ('HOME', '/home/sycamore'), ('OLDPWD', '/home/sycamore'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_GB.UTF-8'), ('MANAGERPID', '45626'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/sycamore/ros2_galactic/ros2-linux'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'sycamore'), ('JOURNAL_STREAM', '8:192195'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/sycamore/ros2_galactic/ros2-linux/lib/x86_64-linux-gnu/pkgconfig:/home/sycamore/ros2_galactic/ros2-linux/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'sycamore'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/sycamore/ros2_galactic/ros2-linux/bin:/home/sycamore/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/Sycamore-CentralPC:@/tmp/.ICE-unix/45842,unix/Sycamore-CentralPC:/tmp/.ICE-unix/45842'), ('INVOCATION_ID', '7134623f636f495eb0e62efe8485ebb0'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_GB.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/f4d5e761_56ea_43f1_a2e1_32120f1e7b76'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_GB.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_GB.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('GNOME_TERMINAL_SERVICE', ':1.619'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/sycamore/ros2_galactic/ros2-linux'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_GB.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LC_MEASUREMENT', 'en_GB.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'en_GB.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/sycamore/Syca_ws/build/jetbot_actions'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/sycamore/ros2_galactic/ros2-linux/lib/python3.8/site-packages'), ('LC_NUMERIC', 'en_GB.UTF-8'), ('LC_PAPER', 'en_GB.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/sycamore/ros2_galactic/ros2-linux')]), 'shell': False}
+[3.275335] (jetbot_actions) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[3.275526] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/ament_index/resource_index/rosidl_interfaces/jetbot_actions\n'}
+[3.275660] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/include/jetbot_actions\n'}
+[3.275757] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/include/jetbot_actions/action\n'}
+[3.275842] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/include/jetbot_actions/action/basic_control.h\n'}
+[3.275906] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/include/jetbot_actions/action/detail\n'}
+[3.275970] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/include/jetbot_actions/action/detail/basic_control__struct.h\n'}
+[3.276019] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/include/jetbot_actions/action/detail/basic_control__type_support.h\n'}
+[3.276080] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/include/jetbot_actions/action/detail/basic_control__functions.c\n'}
+[3.276128] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/include/jetbot_actions/action/detail/basic_control__functions.h\n'}
+[3.276185] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/include/jetbot_actions/msg\n'}
+[3.276230] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/include/jetbot_actions/msg/rosidl_generator_c__visibility_control.h\n'}
+[3.276275] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/environment/library_path.sh\n'}
+[3.276331] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/environment/library_path.dsv\n'}
+[3.276412] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/lib/libjetbot_actions__rosidl_generator_c.so\n'}
+[3.276483] (jetbot_actions) StdoutLine: {'line': b'-- Set runtime path of "/home/sycamore/Syca_ws/install/lib/libjetbot_actions__rosidl_generator_c.so" to ""\n'}
+[3.276539] (jetbot_actions) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/jetbot_actions\n'}
+[3.276586] (jetbot_actions) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/jetbot_actions/action\n'}
+[3.276642] (jetbot_actions) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/jetbot_actions/action/detail\n'}
+[3.276686] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/include/jetbot_actions/action/detail/basic_control__rosidl_typesupport_fastrtps_c.h\n'}
+[3.276735] (jetbot_actions) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/jetbot_actions/msg\n'}
+[3.276791] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/include/jetbot_actions/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[3.276879] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/lib/libjetbot_actions__rosidl_typesupport_fastrtps_c.so\n'}
+[3.276938] (jetbot_actions) StdoutLine: {'line': b'-- Set runtime path of "/home/sycamore/Syca_ws/install/lib/libjetbot_actions__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[3.276988] (jetbot_actions) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/jetbot_actions\n'}
+[3.277049] (jetbot_actions) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/jetbot_actions/action\n'}
+[3.277105] (jetbot_actions) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/jetbot_actions/action/detail\n'}
+[3.277150] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/include/jetbot_actions/action/detail/dds_fastrtps\n'}
+[3.277194] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/include/jetbot_actions/action/detail/basic_control__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.277237] (jetbot_actions) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/jetbot_actions/msg\n'}
+[3.277280] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/include/jetbot_actions/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[3.277341] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/lib/libjetbot_actions__rosidl_typesupport_fastrtps_cpp.so\n'}
+[3.277410] (jetbot_actions) StdoutLine: {'line': b'-- Set runtime path of "/home/sycamore/Syca_ws/install/lib/libjetbot_actions__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[3.277467] (jetbot_actions) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/jetbot_actions\n'}
+[3.277530] (jetbot_actions) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/jetbot_actions/action\n'}
+[3.277575] (jetbot_actions) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/jetbot_actions/action/detail\n'}
+[3.277630] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/include/jetbot_actions/action/detail/basic_control__rosidl_typesupport_introspection_c.h\n'}
+[3.277676] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/include/jetbot_actions/action/detail/basic_control__type_support.c\n'}
+[3.277720] (jetbot_actions) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/jetbot_actions/msg\n'}
+[3.277772] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/include/jetbot_actions/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[3.277875] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/lib/libjetbot_actions__rosidl_typesupport_introspection_c.so\n'}
+[3.277937] (jetbot_actions) StdoutLine: {'line': b'-- Set runtime path of "/home/sycamore/Syca_ws/install/lib/libjetbot_actions__rosidl_typesupport_introspection_c.so" to ""\n'}
+[3.277993] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/lib/libjetbot_actions__rosidl_typesupport_c.so\n'}
+[3.278119] (jetbot_actions) StdoutLine: {'line': b'-- Set runtime path of "/home/sycamore/Syca_ws/install/lib/libjetbot_actions__rosidl_typesupport_c.so" to ""\n'}
+[3.278183] (jetbot_actions) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/jetbot_actions\n'}
+[3.278240] (jetbot_actions) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/jetbot_actions/action\n'}
+[3.278301] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/include/jetbot_actions/action/basic_control.hpp\n'}
+[3.278358] (jetbot_actions) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/jetbot_actions/action/detail\n'}
+[3.278415] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/include/jetbot_actions/action/detail/basic_control__traits.hpp\n'}
+[3.278463] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/include/jetbot_actions/action/detail/basic_control__builder.hpp\n'}
+[3.278531] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/include/jetbot_actions/action/detail/basic_control__struct.hpp\n'}
+[3.278576] (jetbot_actions) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/jetbot_actions\n'}
+[3.278632] (jetbot_actions) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/jetbot_actions/action\n'}
+[3.278676] (jetbot_actions) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/jetbot_actions/action/detail\n'}
+[3.278732] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/include/jetbot_actions/action/detail/basic_control__type_support.cpp\n'}
+[3.278776] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/include/jetbot_actions/action/detail/basic_control__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.278820] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/lib/libjetbot_actions__rosidl_typesupport_introspection_cpp.so\n'}
+[3.278891] (jetbot_actions) StdoutLine: {'line': b'-- Set runtime path of "/home/sycamore/Syca_ws/install/lib/libjetbot_actions__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[3.278960] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/lib/libjetbot_actions__rosidl_typesupport_cpp.so\n'}
+[3.279126] (jetbot_actions) StdoutLine: {'line': b'-- Set runtime path of "/home/sycamore/Syca_ws/install/lib/libjetbot_actions__rosidl_typesupport_cpp.so" to ""\n'}
+[3.279189] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/environment/pythonpath.sh\n'}
+[3.279250] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/environment/pythonpath.dsv\n'}
+[3.279336] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot_actions/__init__.py\n'}
+[3.298249] (jetbot_actions) StdoutLine: {'line': b"Compiling '/home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot_actions/__init__.py'...\n"}
+[3.300432] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot_actions/action\n'}
+[3.300504] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot_actions/action/_basic_control.py\n'}
+[3.300615] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot_actions/action/__init__.py\n'}
+[3.300683] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot_actions/action/_basic_control_s.c\n'}
+[3.300765] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot_actions/jetbot_actions_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[3.301034] (jetbot_actions) StdoutLine: {'line': b'-- Set runtime path of "/home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot_actions/jetbot_actions_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[3.301172] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot_actions/jetbot_actions_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[3.301455] (jetbot_actions) StdoutLine: {'line': b'-- Set runtime path of "/home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot_actions/jetbot_actions_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[3.301544] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot_actions/jetbot_actions_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[3.301805] (jetbot_actions) StdoutLine: {'line': b'-- Set runtime path of "/home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot_actions/jetbot_actions_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[3.302048] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/lib/libjetbot_actions__python.so\n'}
+[3.302201] (jetbot_actions) StdoutLine: {'line': b'-- Set runtime path of "/home/sycamore/Syca_ws/install/lib/libjetbot_actions__python.so" to ""\n'}
+[3.302326] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/action/BasicControl.idl\n'}
+[3.302381] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/action/BasicControl.action\n'}
+[3.302456] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/ament_index/resource_index/package_run_dependencies/jetbot_actions\n'}
+[3.302519] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/ament_index/resource_index/parent_prefix_path/jetbot_actions\n'}
+[3.302580] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/environment/ament_prefix_path.sh\n'}
+[3.302641] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/environment/ament_prefix_path.dsv\n'}
+[3.302703] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/environment/path.sh\n'}
+[3.302768] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/environment/path.dsv\n'}
+[3.302836] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/local_setup.bash\n'}
+[3.302903] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/local_setup.sh\n'}
+[3.302969] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/local_setup.zsh\n'}
+[3.303035] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/local_setup.dsv\n'}
+[3.303103] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/package.dsv\n'}
+[3.303175] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/ament_index/resource_index/packages/jetbot_actions\n'}
+[3.303284] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/cmake/jetbot_actions__rosidl_generator_cExport.cmake\n'}
+[3.303361] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/cmake/jetbot_actions__rosidl_generator_cExport-noconfig.cmake\n'}
+[3.303468] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/cmake/jetbot_actions__rosidl_typesupport_introspection_cExport.cmake\n'}
+[3.303545] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/cmake/jetbot_actions__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[3.303646] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/cmake/jetbot_actions__rosidl_typesupport_cExport.cmake\n'}
+[3.303721] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/cmake/jetbot_actions__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[3.303820] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/cmake/jetbot_actions__rosidl_generator_cppExport.cmake\n'}
+[3.303927] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/cmake/jetbot_actions__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[3.303971] (-) TimerEvent: {}
+[3.304066] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/cmake/jetbot_actions__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[3.304131] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/cmake/jetbot_actions__rosidl_typesupport_cppExport.cmake\n'}
+[3.304195] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/cmake/jetbot_actions__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[3.304257] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/cmake/rosidl_cmake-extras.cmake\n'}
+[3.304322] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[3.304400] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[3.304473] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[3.304544] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[3.304614] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[3.304683] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[3.304753] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/cmake/jetbot_actionsConfig.cmake\n'}
+[3.304813] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/cmake/jetbot_actionsConfig-version.cmake\n'}
+[3.304873] (jetbot_actions) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/jetbot_actions/package.xml\n'}
+[3.306075] (jetbot_actions) CommandEnded: {'returncode': 0}
+[3.344267] (jetbot_actions) JobEnded: {'identifier': 'jetbot_actions', 'rc': 0}
+[3.345091] (jetbot_ros2) JobStarted: {'identifier': 'jetbot_ros2'}
+[3.404121] (-) TimerEvent: {}
+[3.504396] (-) TimerEvent: {}
+[3.604752] (-) TimerEvent: {}
+[3.705001] (-) TimerEvent: {}
+[3.796541] (jetbot_ros2) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/jetbot_ros2', 'build', '--build-base', '/home/sycamore/Syca_ws/build/jetbot_ros2/build', 'install', '--prefix', '/home/sycamore/Syca_ws/install', '--record', '/home/sycamore/Syca_ws/build/jetbot_ros2/install.log', '--single-version-externally-managed'], 'cwd': '/home/sycamore/Syca_ws/src/jetbot_ros2', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LANGUAGE': 'en_GB:en', 'USER': 'sycamore', 'LC_TIME': 'en_GB.UTF-8', 'SSH_AGENT_PID': '45804', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/sycamore/Syca_ws/install/lib:/home/sycamore/ros2_galactic/ros2-linux/opt/yaml_cpp_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/opt/rviz_ogre_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/lib', 'HOME': '/home/sycamore', 'OLDPWD': '/home/sycamore', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'en_GB.UTF-8', 'MANAGERPID': '45626', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/sycamore/ros2_galactic/ros2-linux', 'ROS_DISTRO': 'galactic', 'LOGNAME': 'sycamore', 'JOURNAL_STREAM': '8:192195', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/home/sycamore/ros2_galactic/ros2-linux/lib/x86_64-linux-gnu/pkgconfig:/home/sycamore/ros2_galactic/ros2-linux/lib/pkgconfig', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'sycamore', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/home/sycamore/ros2_galactic/ros2-linux/bin:/home/sycamore/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/Sycamore-CentralPC:@/tmp/.ICE-unix/45842,unix/Sycamore-CentralPC:/tmp/.ICE-unix/45842', 'INVOCATION_ID': '7134623f636f495eb0e62efe8485ebb0', 'PAPERSIZE': 'a4', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'en_GB.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/f4d5e761_56ea_43f1_a2e1_32120f1e7b76', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_GB.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'en_GB.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'GNOME_TERMINAL_SERVICE': ':1.619', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/sycamore/Syca_ws/install:/home/sycamore/ros2_galactic/ros2-linux', 'SHELL': '/bin/bash', 'LC_NAME': 'en_GB.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LC_MEASUREMENT': 'en_GB.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'en_GB.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sycamore/Syca_ws/build/jetbot_ros2', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/sycamore/Syca_ws/install/lib/python3.8/site-packages:/home/sycamore/Syca_ws/install/lib/python3.8/site-packages:/home/sycamore/ros2_galactic/ros2-linux/lib/python3.8/site-packages', 'LC_NUMERIC': 'en_GB.UTF-8', 'LC_PAPER': 'en_GB.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003', 'CMAKE_PREFIX_PATH': '/home/sycamore/Syca_ws/install:/home/sycamore/ros2_galactic/ros2-linux'}, 'shell': False}
+[3.805103] (-) TimerEvent: {}
+[3.905302] (-) TimerEvent: {}
+[3.941697] (jetbot_ros2) StdoutLine: {'line': b'running egg_info\n'}
+[3.942125] (jetbot_ros2) StdoutLine: {'line': b'creating ../../build/jetbot_ros2/jetbot_ros2.egg-info\n'}
+[3.942293] (jetbot_ros2) StdoutLine: {'line': b'writing ../../build/jetbot_ros2/jetbot_ros2.egg-info/PKG-INFO\n'}
+[3.942547] (jetbot_ros2) StdoutLine: {'line': b'writing dependency_links to ../../build/jetbot_ros2/jetbot_ros2.egg-info/dependency_links.txt\n'}
+[3.942719] (jetbot_ros2) StdoutLine: {'line': b'writing entry points to ../../build/jetbot_ros2/jetbot_ros2.egg-info/entry_points.txt\n'}
+[3.942775] (jetbot_ros2) StdoutLine: {'line': b'writing requirements to ../../build/jetbot_ros2/jetbot_ros2.egg-info/requires.txt\n'}
+[3.942821] (jetbot_ros2) StdoutLine: {'line': b'writing top-level names to ../../build/jetbot_ros2/jetbot_ros2.egg-info/top_level.txt\n'}
+[3.943306] (jetbot_ros2) StdoutLine: {'line': b"writing manifest file '../../build/jetbot_ros2/jetbot_ros2.egg-info/SOURCES.txt'\n"}
+[3.963856] (jetbot_ros2) StdoutLine: {'line': b"reading manifest file '../../build/jetbot_ros2/jetbot_ros2.egg-info/SOURCES.txt'\n"}
+[3.964273] (jetbot_ros2) StdoutLine: {'line': b"writing manifest file '../../build/jetbot_ros2/jetbot_ros2.egg-info/SOURCES.txt'\n"}
+[3.964474] (jetbot_ros2) StdoutLine: {'line': b'running build\n'}
+[3.964616] (jetbot_ros2) StdoutLine: {'line': b'running build_py\n'}
+[3.964739] (jetbot_ros2) StdoutLine: {'line': b'creating /home/sycamore/Syca_ws/build/jetbot_ros2/build\n'}
+[3.964790] (jetbot_ros2) StdoutLine: {'line': b'creating /home/sycamore/Syca_ws/build/jetbot_ros2/build/lib\n'}
+[3.964836] (jetbot_ros2) StdoutLine: {'line': b'creating /home/sycamore/Syca_ws/build/jetbot_ros2/build/lib/jetbot_ros2\n'}
+[3.964880] (jetbot_ros2) StdoutLine: {'line': b'copying jetbot_ros2/__init__.py -> /home/sycamore/Syca_ws/build/jetbot_ros2/build/lib/jetbot_ros2\n'}
+[3.964923] (jetbot_ros2) StdoutLine: {'line': b'copying jetbot_ros2/basic_action_server.py -> /home/sycamore/Syca_ws/build/jetbot_ros2/build/lib/jetbot_ros2\n'}
+[3.966883] (jetbot_ros2) StdoutLine: {'line': b'copying jetbot_ros2/basic_action_client.py -> /home/sycamore/Syca_ws/build/jetbot_ros2/build/lib/jetbot_ros2\n'}
+[3.967088] (jetbot_ros2) StdoutLine: {'line': b'running install\n'}
+[3.967556] (jetbot_ros2) StdoutLine: {'line': b'running install_lib\n'}
+[3.968106] (jetbot_ros2) StdoutLine: {'line': b'creating /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot_ros2\n'}
+[3.968242] (jetbot_ros2) StdoutLine: {'line': b'copying /home/sycamore/Syca_ws/build/jetbot_ros2/build/lib/jetbot_ros2/__init__.py -> /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot_ros2\n'}
+[3.968314] (jetbot_ros2) StdoutLine: {'line': b'copying /home/sycamore/Syca_ws/build/jetbot_ros2/build/lib/jetbot_ros2/basic_action_server.py -> /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot_ros2\n'}
+[3.968365] (jetbot_ros2) StdoutLine: {'line': b'copying /home/sycamore/Syca_ws/build/jetbot_ros2/build/lib/jetbot_ros2/basic_action_client.py -> /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot_ros2\n'}
+[3.968458] (jetbot_ros2) StdoutLine: {'line': b'byte-compiling /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot_ros2/__init__.py to __init__.cpython-38.pyc\n'}
+[3.969089] (jetbot_ros2) StdoutLine: {'line': b'byte-compiling /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot_ros2/basic_action_server.py to basic_action_server.cpython-38.pyc\n'}
+[3.969323] (jetbot_ros2) StdoutLine: {'line': b'byte-compiling /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot_ros2/basic_action_client.py to basic_action_client.cpython-38.pyc\n'}
+[3.969506] (jetbot_ros2) StdoutLine: {'line': b'running install_data\n'}
+[3.969758] (jetbot_ros2) StdoutLine: {'line': b'copying resource/jetbot_ros2 -> /home/sycamore/Syca_ws/install/share/ament_index/resource_index/packages\n'}
+[3.969938] (jetbot_ros2) StdoutLine: {'line': b'copying package.xml -> /home/sycamore/Syca_ws/install/share/jetbot_ros2\n'}
+[3.970006] (jetbot_ros2) StdoutLine: {'line': b'running install_egg_info\n'}
+[3.971059] (jetbot_ros2) StdoutLine: {'line': b'Copying ../../build/jetbot_ros2/jetbot_ros2.egg-info to /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot_ros2-0.0.0-py3.8.egg-info\n'}
+[3.971527] (jetbot_ros2) StdoutLine: {'line': b'running install_scripts\n'}
+[3.981306] (jetbot_ros2) StdoutLine: {'line': b'Installing jetbot_move_clt script to /home/sycamore/Syca_ws/install/lib/jetbot_ros2\n'}
+[3.981412] (jetbot_ros2) StdoutLine: {'line': b'Installing jetbot_move_srv script to /home/sycamore/Syca_ws/install/lib/jetbot_ros2\n'}
+[3.981496] (jetbot_ros2) StdoutLine: {'line': b"writing list of installed files to '/home/sycamore/Syca_ws/build/jetbot_ros2/install.log'\n"}
+[3.992709] (jetbot_ros2) CommandEnded: {'returncode': 0}
+[3.998855] (jetbot_ros2) JobEnded: {'identifier': 'jetbot_ros2', 'rc': 0}
+[3.999513] (-) EventReactorShutdown: {}

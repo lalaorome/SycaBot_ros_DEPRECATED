@@ -1,0 +1,5 @@
+  File "/home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot/jb_start.py", line 54
+    'State of robot is : (x=%f, y=%f, theta=%f)\n %
+                                                  ^
+SyntaxError: EOL while scanning string literal
+

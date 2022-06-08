@@ -1,0 +1,2 @@
+Invoking command in '/home/sycamore/Syca_ws/build/interfaces': /usr/bin/cmake --build /home/sycamore/Syca_ws/build/interfaces -- -j20 -l20
+Invoked command in '/home/sycamore/Syca_ws/build/interfaces' returned '2': /usr/bin/cmake --build /home/sycamore/Syca_ws/build/interfaces -- -j20 -l20

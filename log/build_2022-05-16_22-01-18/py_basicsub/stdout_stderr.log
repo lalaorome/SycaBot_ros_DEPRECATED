@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/py_basicsub/py_basicsub.egg-info
+writing ../../build/py_basicsub/py_basicsub.egg-info/PKG-INFO
+writing dependency_links to ../../build/py_basicsub/py_basicsub.egg-info/dependency_links.txt
+writing entry points to ../../build/py_basicsub/py_basicsub.egg-info/entry_points.txt
+writing requirements to ../../build/py_basicsub/py_basicsub.egg-info/requires.txt
+writing top-level names to ../../build/py_basicsub/py_basicsub.egg-info/top_level.txt
+writing manifest file '../../build/py_basicsub/py_basicsub.egg-info/SOURCES.txt'
+reading manifest file '../../build/py_basicsub/py_basicsub.egg-info/SOURCES.txt'
+writing manifest file '../../build/py_basicsub/py_basicsub.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/sycamore/Syca_ws/build/py_basicsub/build
+creating /home/sycamore/Syca_ws/build/py_basicsub/build/lib
+creating /home/sycamore/Syca_ws/build/py_basicsub/build/lib/py_basicsub
+copying py_basicsub/basic_subscriber.py -> /home/sycamore/Syca_ws/build/py_basicsub/build/lib/py_basicsub
+copying py_basicsub/__init__.py -> /home/sycamore/Syca_ws/build/py_basicsub/build/lib/py_basicsub
+running install
+running install_lib
+creating /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/py_basicsub
+copying /home/sycamore/Syca_ws/build/py_basicsub/build/lib/py_basicsub/basic_subscriber.py -> /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/py_basicsub
+copying /home/sycamore/Syca_ws/build/py_basicsub/build/lib/py_basicsub/__init__.py -> /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/py_basicsub
+byte-compiling /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/py_basicsub/basic_subscriber.py to basic_subscriber.cpython-38.pyc
+byte-compiling /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/py_basicsub/__init__.py to __init__.cpython-38.pyc
+running install_data
+creating /home/sycamore/Syca_ws/install/share/ament_index
+creating /home/sycamore/Syca_ws/install/share/ament_index/resource_index
+creating /home/sycamore/Syca_ws/install/share/ament_index/resource_index/packages
+copying resource/py_basicsub -> /home/sycamore/Syca_ws/install/share/ament_index/resource_index/packages
+copying package.xml -> /home/sycamore/Syca_ws/install/share/py_basicsub
+running install_egg_info
+Copying ../../build/py_basicsub/py_basicsub.egg-info to /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/py_basicsub-0.0.0-py3.8.egg-info
+running install_scripts
+Installing listener script to /home/sycamore/Syca_ws/install/lib/py_basicsub
+writing list of installed files to '/home/sycamore/Syca_ws/build/py_basicsub/install.log'

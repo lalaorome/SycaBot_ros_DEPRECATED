@@ -1,0 +1,24 @@
+[0.429s] Invoking command in '/home/sycamore/Syca_ws/src/central_pc': PYTHONPATH=/home/sycamore/Syca_ws/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/central_pc build --build-base /home/sycamore/Syca_ws/build/central_pc/build install --prefix /home/sycamore/Syca_ws/install --record /home/sycamore/Syca_ws/build/central_pc/install.log --single-version-externally-managed
+[0.575s] running egg_info
+[0.575s] writing ../../build/central_pc/central_pc.egg-info/PKG-INFO
+[0.575s] writing dependency_links to ../../build/central_pc/central_pc.egg-info/dependency_links.txt
+[0.575s] writing entry points to ../../build/central_pc/central_pc.egg-info/entry_points.txt
+[0.576s] writing requirements to ../../build/central_pc/central_pc.egg-info/requires.txt
+[0.576s] writing top-level names to ../../build/central_pc/central_pc.egg-info/top_level.txt
+[0.597s] reading manifest file '../../build/central_pc/central_pc.egg-info/SOURCES.txt'
+[0.598s] writing manifest file '../../build/central_pc/central_pc.egg-info/SOURCES.txt'
+[0.598s] running build
+[0.598s] running build_py
+[0.598s] copying central_pc/centralPC.py -> /home/sycamore/Syca_ws/build/central_pc/build/lib/central_pc
+[0.598s] running install
+[0.599s] running install_lib
+[0.599s] copying /home/sycamore/Syca_ws/build/central_pc/build/lib/central_pc/centralPC.py -> /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/central_pc
+[0.600s] byte-compiling /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/central_pc/centralPC.py to centralPC.cpython-38.pyc
+[0.601s] running install_data
+[0.601s] running install_egg_info
+[0.602s] removing '/home/sycamore/Syca_ws/install/lib/python3.8/site-packages/central_pc-0.0.0-py3.8.egg-info' (and everything under it)
+[0.602s] Copying ../../build/central_pc/central_pc.egg-info to /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/central_pc-0.0.0-py3.8.egg-info
+[0.603s] running install_scripts
+[0.612s] Installing centralPC script to /home/sycamore/Syca_ws/install/lib/central_pc
+[0.613s] writing list of installed files to '/home/sycamore/Syca_ws/build/central_pc/install.log'
+[0.624s] Invoked command in '/home/sycamore/Syca_ws/src/central_pc' returned '0': PYTHONPATH=/home/sycamore/Syca_ws/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/central_pc build --build-base /home/sycamore/Syca_ws/build/central_pc/build install --prefix /home/sycamore/Syca_ws/install --record /home/sycamore/Syca_ws/build/central_pc/install.log --single-version-externally-managed

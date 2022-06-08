@@ -1,0 +1,3 @@
+[console_scripts]
+get_optiPos = central_pc.OptiTrack_sub:main
+

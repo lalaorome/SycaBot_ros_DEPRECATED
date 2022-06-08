@@ -1,0 +1,3 @@
+[console_scripts]
+publisher = basic_pub.basic_pub:main
+

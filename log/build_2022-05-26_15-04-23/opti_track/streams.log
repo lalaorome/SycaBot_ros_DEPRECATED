@@ -1,0 +1,24 @@
+[0.420s] Invoking command in '/home/sycamore/Syca_ws/src/opti_track': PYTHONPATH=/home/sycamore/Syca_ws/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/opti_track build --build-base /home/sycamore/Syca_ws/build/opti_track/build install --prefix /home/sycamore/Syca_ws/install --record /home/sycamore/Syca_ws/build/opti_track/install.log --single-version-externally-managed
+[0.565s] running egg_info
+[0.565s] writing ../../build/opti_track/opti_track.egg-info/PKG-INFO
+[0.565s] writing dependency_links to ../../build/opti_track/opti_track.egg-info/dependency_links.txt
+[0.565s] writing entry points to ../../build/opti_track/opti_track.egg-info/entry_points.txt
+[0.565s] writing requirements to ../../build/opti_track/opti_track.egg-info/requires.txt
+[0.566s] writing top-level names to ../../build/opti_track/opti_track.egg-info/top_level.txt
+[0.586s] reading manifest file '../../build/opti_track/opti_track.egg-info/SOURCES.txt'
+[0.587s] writing manifest file '../../build/opti_track/opti_track.egg-info/SOURCES.txt'
+[0.587s] running build
+[0.587s] running build_py
+[0.587s] copying opti_track/OptiTrack_link.py -> /home/sycamore/Syca_ws/build/opti_track/build/lib/opti_track
+[0.587s] running install
+[0.588s] running install_lib
+[0.588s] copying /home/sycamore/Syca_ws/build/opti_track/build/lib/opti_track/OptiTrack_link.py -> /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/opti_track
+[0.588s] byte-compiling /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/opti_track/OptiTrack_link.py to OptiTrack_link.cpython-38.pyc
+[0.589s] running install_data
+[0.589s] running install_egg_info
+[0.590s] removing '/home/sycamore/Syca_ws/install/lib/python3.8/site-packages/opti_track-0.0.0-py3.8.egg-info' (and everything under it)
+[0.591s] Copying ../../build/opti_track/opti_track.egg-info to /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/opti_track-0.0.0-py3.8.egg-info
+[0.591s] running install_scripts
+[0.601s] Installing opti_link script to /home/sycamore/Syca_ws/install/lib/opti_track
+[0.601s] writing list of installed files to '/home/sycamore/Syca_ws/build/opti_track/install.log'
+[0.611s] Invoked command in '/home/sycamore/Syca_ws/src/opti_track' returned '0': PYTHONPATH=/home/sycamore/Syca_ws/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/opti_track build --build-base /home/sycamore/Syca_ws/build/opti_track/build install --prefix /home/sycamore/Syca_ws/install --record /home/sycamore/Syca_ws/build/opti_track/install.log --single-version-externally-managed

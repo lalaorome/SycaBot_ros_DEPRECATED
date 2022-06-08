@@ -1,0 +1,42 @@
+[0.000000] (-) TimerEvent: {}
+[0.000073] (-) JobUnselected: {'identifier': 'basic_pub'}
+[0.000092] (-) JobUnselected: {'identifier': 'central_pc'}
+[0.000107] (-) JobUnselected: {'identifier': 'jetbot_actions'}
+[0.000155] (-) JobUnselected: {'identifier': 'jetbot_ros2'}
+[0.000168] (-) JobUnselected: {'identifier': 'py_basicsub'}
+[0.000180] (-) JobUnselected: {'identifier': 'teleop'}
+[0.000194] (opti_track) JobQueued: {'identifier': 'opti_track', 'dependencies': OrderedDict()}
+[0.000208] (opti_track) JobStarted: {'identifier': 'opti_track'}
+[0.099541] (-) TimerEvent: {}
+[0.199780] (-) TimerEvent: {}
+[0.300015] (-) TimerEvent: {}
+[0.400224] (-) TimerEvent: {}
+[0.427805] (opti_track) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/opti_track', 'build', '--build-base', '/home/sycamore/Syca_ws/build/opti_track/build', 'install', '--prefix', '/home/sycamore/Syca_ws/install', '--record', '/home/sycamore/Syca_ws/build/opti_track/install.log', '--single-version-externally-managed'], 'cwd': '/home/sycamore/Syca_ws/src/opti_track', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LANGUAGE': 'en_GB:en', 'USER': 'sycamore', 'LC_TIME': 'en_GB.UTF-8', 'SSH_AGENT_PID': '1902', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/sycamore/ros2_galactic/ros2-linux/opt/yaml_cpp_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/opt/rviz_ogre_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/lib', 'HOME': '/home/sycamore', 'OLDPWD': '/home/sycamore', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'en_GB.UTF-8', 'MANAGERPID': '1718', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/sycamore/ros2_galactic/ros2-linux', 'ROS_DISTRO': 'galactic', 'LOGNAME': 'sycamore', 'JOURNAL_STREAM': '8:59420', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/home/sycamore/ros2_galactic/ros2-linux/lib/x86_64-linux-gnu/pkgconfig:/home/sycamore/ros2_galactic/ros2-linux/lib/pkgconfig', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'sycamore', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/home/sycamore/ros2_galactic/ros2-linux/bin:/home/sycamore/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/Sycamore-CentralPC:@/tmp/.ICE-unix/1940,unix/Sycamore-CentralPC:/tmp/.ICE-unix/1940', 'INVOCATION_ID': '8bf3ef82faee48288e6ec5cc9da8f3b6', 'PAPERSIZE': 'a4', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'en_GB.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/ad6f2464_a4ca_4998_a8f0_46ecb954452f', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_GB.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'en_GB.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'GNOME_TERMINAL_SERVICE': ':1.478', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/sycamore/ros2_galactic/ros2-linux', 'SHELL': '/bin/bash', 'LC_NAME': 'en_GB.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LC_MEASUREMENT': 'en_GB.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'en_GB.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sycamore/Syca_ws/build/opti_track', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/sycamore/Syca_ws/install/lib/python3.8/site-packages:/home/sycamore/ros2_galactic/ros2-linux/lib/python3.8/site-packages', 'LC_NUMERIC': 'en_GB.UTF-8', 'LC_PAPER': 'en_GB.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003', 'CMAKE_PREFIX_PATH': '/home/sycamore/ros2_galactic/ros2-linux'}, 'shell': False}
+[0.500336] (-) TimerEvent: {}
+[0.575432] (opti_track) StdoutLine: {'line': b'running egg_info\n'}
+[0.575758] (opti_track) StdoutLine: {'line': b'writing ../../build/opti_track/opti_track.egg-info/PKG-INFO\n'}
+[0.575954] (opti_track) StdoutLine: {'line': b'writing dependency_links to ../../build/opti_track/opti_track.egg-info/dependency_links.txt\n'}
+[0.576056] (opti_track) StdoutLine: {'line': b'writing entry points to ../../build/opti_track/opti_track.egg-info/entry_points.txt\n'}
+[0.576262] (opti_track) StdoutLine: {'line': b'writing requirements to ../../build/opti_track/opti_track.egg-info/requires.txt\n'}
+[0.576318] (opti_track) StdoutLine: {'line': b'writing top-level names to ../../build/opti_track/opti_track.egg-info/top_level.txt\n'}
+[0.597472] (opti_track) StdoutLine: {'line': b"reading manifest file '../../build/opti_track/opti_track.egg-info/SOURCES.txt'\n"}
+[0.597956] (opti_track) StdoutLine: {'line': b"writing manifest file '../../build/opti_track/opti_track.egg-info/SOURCES.txt'\n"}
+[0.598092] (opti_track) StdoutLine: {'line': b'running build\n'}
+[0.598161] (opti_track) StdoutLine: {'line': b'running build_py\n'}
+[0.598223] (opti_track) StdoutLine: {'line': b'copying opti_track/OptiTrack_link.py -> /home/sycamore/Syca_ws/build/opti_track/build/lib/opti_track\n'}
+[0.598273] (opti_track) StdoutLine: {'line': b'running install\n'}
+[0.598626] (opti_track) StdoutLine: {'line': b'running install_lib\n'}
+[0.599172] (opti_track) StdoutLine: {'line': b'copying /home/sycamore/Syca_ws/build/opti_track/build/lib/opti_track/OptiTrack_link.py -> /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/opti_track\n'}
+[0.599466] (opti_track) StdoutLine: {'line': b'byte-compiling /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/opti_track/OptiTrack_link.py to OptiTrack_link.cpython-38.pyc\n'}
+[0.600231] (opti_track) StdoutLine: {'line': b'running install_data\n'}
+[0.600385] (-) TimerEvent: {}
+[0.600539] (opti_track) StdoutLine: {'line': b'copying launch/establish_link.launch.py -> /home/sycamore/Syca_ws/install/share/opti_track\n'}
+[0.600667] (opti_track) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.601506] (opti_track) StdoutLine: {'line': b"removing '/home/sycamore/Syca_ws/install/lib/python3.8/site-packages/opti_track-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[0.601652] (opti_track) StdoutLine: {'line': b'Copying ../../build/opti_track/opti_track.egg-info to /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/opti_track-0.0.0-py3.8.egg-info\n'}
+[0.602115] (opti_track) StdoutLine: {'line': b'running install_scripts\n'}
+[0.612105] (opti_track) StdoutLine: {'line': b'Installing opti_link script to /home/sycamore/Syca_ws/install/lib/opti_track\n'}
+[0.612253] (opti_track) StdoutLine: {'line': b"writing list of installed files to '/home/sycamore/Syca_ws/build/opti_track/install.log'\n"}
+[0.623088] (opti_track) CommandEnded: {'returncode': 0}
+[0.633016] (opti_track) JobEnded: {'identifier': 'opti_track', 'rc': 0}
+[0.633632] (-) EventReactorShutdown: {}

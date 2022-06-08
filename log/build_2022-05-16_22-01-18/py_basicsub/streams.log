@@ -1,0 +1,37 @@
+[0.797s] Invoking command in '/home/sycamore/Syca_ws/src/py_basicsub': PYTHONPATH=/home/sycamore/Syca_ws/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/py_basicsub build --build-base /home/sycamore/Syca_ws/build/py_basicsub/build install --prefix /home/sycamore/Syca_ws/install --record /home/sycamore/Syca_ws/build/py_basicsub/install.log --single-version-externally-managed
+[0.951s] running egg_info
+[0.952s] creating ../../build/py_basicsub/py_basicsub.egg-info
+[0.952s] writing ../../build/py_basicsub/py_basicsub.egg-info/PKG-INFO
+[0.952s] writing dependency_links to ../../build/py_basicsub/py_basicsub.egg-info/dependency_links.txt
+[0.952s] writing entry points to ../../build/py_basicsub/py_basicsub.egg-info/entry_points.txt
+[0.952s] writing requirements to ../../build/py_basicsub/py_basicsub.egg-info/requires.txt
+[0.952s] writing top-level names to ../../build/py_basicsub/py_basicsub.egg-info/top_level.txt
+[0.953s] writing manifest file '../../build/py_basicsub/py_basicsub.egg-info/SOURCES.txt'
+[0.975s] reading manifest file '../../build/py_basicsub/py_basicsub.egg-info/SOURCES.txt'
+[0.976s] writing manifest file '../../build/py_basicsub/py_basicsub.egg-info/SOURCES.txt'
+[0.976s] running build
+[0.976s] running build_py
+[0.976s] creating /home/sycamore/Syca_ws/build/py_basicsub/build
+[0.976s] creating /home/sycamore/Syca_ws/build/py_basicsub/build/lib
+[0.976s] creating /home/sycamore/Syca_ws/build/py_basicsub/build/lib/py_basicsub
+[0.976s] copying py_basicsub/basic_subscriber.py -> /home/sycamore/Syca_ws/build/py_basicsub/build/lib/py_basicsub
+[0.976s] copying py_basicsub/__init__.py -> /home/sycamore/Syca_ws/build/py_basicsub/build/lib/py_basicsub
+[0.976s] running install
+[0.976s] running install_lib
+[0.977s] creating /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/py_basicsub
+[0.977s] copying /home/sycamore/Syca_ws/build/py_basicsub/build/lib/py_basicsub/basic_subscriber.py -> /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/py_basicsub
+[0.977s] copying /home/sycamore/Syca_ws/build/py_basicsub/build/lib/py_basicsub/__init__.py -> /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/py_basicsub
+[0.977s] byte-compiling /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/py_basicsub/basic_subscriber.py to basic_subscriber.cpython-38.pyc
+[0.981s] byte-compiling /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/py_basicsub/__init__.py to __init__.cpython-38.pyc
+[0.982s] running install_data
+[0.982s] creating /home/sycamore/Syca_ws/install/share/ament_index
+[0.982s] creating /home/sycamore/Syca_ws/install/share/ament_index/resource_index
+[0.982s] creating /home/sycamore/Syca_ws/install/share/ament_index/resource_index/packages
+[0.982s] copying resource/py_basicsub -> /home/sycamore/Syca_ws/install/share/ament_index/resource_index/packages
+[0.982s] copying package.xml -> /home/sycamore/Syca_ws/install/share/py_basicsub
+[0.982s] running install_egg_info
+[0.983s] Copying ../../build/py_basicsub/py_basicsub.egg-info to /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/py_basicsub-0.0.0-py3.8.egg-info
+[0.983s] running install_scripts
+[0.991s] Installing listener script to /home/sycamore/Syca_ws/install/lib/py_basicsub
+[0.992s] writing list of installed files to '/home/sycamore/Syca_ws/build/py_basicsub/install.log'
+[1.018s] Invoked command in '/home/sycamore/Syca_ws/src/py_basicsub' returned '0': PYTHONPATH=/home/sycamore/Syca_ws/install/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/py_basicsub build --build-base /home/sycamore/Syca_ws/build/py_basicsub/build install --prefix /home/sycamore/Syca_ws/install --record /home/sycamore/Syca_ws/build/py_basicsub/install.log --single-version-externally-managed

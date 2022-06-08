@@ -1,0 +1,191 @@
+[0.000000] (-) TimerEvent: {}
+[0.000204] (-) JobUnselected: {'identifier': 'basic_pub'}
+[0.000241] (-) JobUnselected: {'identifier': 'opti_track'}
+[0.000259] (-) JobUnselected: {'identifier': 'py_basicsub'}
+[0.000273] (-) JobUnselected: {'identifier': 'teleop'}
+[0.000295] (central_pc) JobQueued: {'identifier': 'central_pc', 'dependencies': OrderedDict()}
+[0.000315] (interfaces) JobQueued: {'identifier': 'interfaces', 'dependencies': OrderedDict()}
+[0.000331] (jetbot) JobQueued: {'identifier': 'jetbot', 'dependencies': OrderedDict()}
+[0.000842] (central_pc) JobStarted: {'identifier': 'central_pc'}
+[0.014888] (interfaces) JobStarted: {'identifier': 'interfaces'}
+[0.025718] (jetbot) JobStarted: {'identifier': 'jetbot'}
+[0.099876] (-) TimerEvent: {}
+[0.200149] (-) TimerEvent: {}
+[0.246259] (interfaces) JobProgress: {'identifier': 'interfaces', 'progress': 'cmake'}
+[0.246881] (interfaces) JobProgress: {'identifier': 'interfaces', 'progress': 'build'}
+[0.247499] (interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/sycamore/Syca_ws/build/interfaces', '--', '-j20', '-l20'], 'cwd': '/home/sycamore/Syca_ws/build/interfaces', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LANGUAGE', 'en_GB:en'), ('USER', 'sycamore'), ('LC_TIME', 'en_GB.UTF-8'), ('SSH_AGENT_PID', '1922'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/sycamore/Syca_ws/install/lib:/home/sycamore/ros2_galactic/ros2-linux/opt/yaml_cpp_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/opt/rviz_ogre_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/lib'), ('HOME', '/home/sycamore'), ('OLDPWD', '/home/sycamore'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_GB.UTF-8'), ('MANAGERPID', '1745'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/sycamore/Syca_ws/install:/home/sycamore/ros2_galactic/ros2-linux'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'sycamore'), ('JOURNAL_STREAM', '8:50103'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/sycamore/ros2_galactic/ros2-linux/lib/x86_64-linux-gnu/pkgconfig:/home/sycamore/ros2_galactic/ros2-linux/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'sycamore'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/sycamore/ros2_galactic/ros2-linux/bin:/home/sycamore/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/Sycamore-CentralPC:@/tmp/.ICE-unix/1960,unix/Sycamore-CentralPC:/tmp/.ICE-unix/1960'), ('INVOCATION_ID', '2a1e31ba07f5401f85243b277c242c83'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_GB.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/abc859f7_9b39_4442_a831_9375ca414ae6'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_GB.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_GB.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('GNOME_TERMINAL_SERVICE', ':1.4157'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/sycamore/Syca_ws/install:/home/sycamore/ros2_galactic/ros2-linux'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_GB.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LC_MEASUREMENT', 'en_GB.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'en_GB.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/sycamore/Syca_ws/build/interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/sycamore/Syca_ws/install/lib/python3.8/site-packages:/home/sycamore/ros2_galactic/ros2-linux/lib/python3.8/site-packages'), ('LC_NUMERIC', 'en_GB.UTF-8'), ('LC_PAPER', 'en_GB.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/sycamore/Syca_ws/install:/home/sycamore/ros2_galactic/ros2-linux')]), 'shell': False}
+[0.300284] (-) TimerEvent: {}
+[0.400623] (-) TimerEvent: {}
+[0.439697] (interfaces) StdoutLine: {'line': b'[  6%] Built target interfaces__cpp\n'}
+[0.440175] (interfaces) StdoutLine: {'line': b'[ 12%] Built target interfaces__rosidl_generator_c\n'}
+[0.440502] (interfaces) StdoutLine: {'line': b'[ 29%] Built target interfaces__rosidl_typesupport_introspection_c\n'}
+[0.440582] (interfaces) StdoutLine: {'line': b'[ 41%] Built target interfaces__rosidl_typesupport_cpp\n'}
+[0.440809] (interfaces) StdoutLine: {'line': b'[ 41%] Built target interfaces__rosidl_typesupport_c\n'}
+[0.441500] (interfaces) StdoutLine: {'line': b'[ 51%] Built target interfaces__rosidl_typesupport_introspection_cpp\n'}
+[0.441719] (interfaces) StdoutLine: {'line': b'[ 61%] Built target interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[0.441902] (interfaces) StdoutLine: {'line': b'[ 70%] Built target interfaces__rosidl_typesupport_fastrtps_c\n'}
+[0.442268] (interfaces) StdoutLine: {'line': b'[ 70%] Built target interfaces\n'}
+[0.442378] (interfaces) StdoutLine: {'line': b'[ 74%] Built target interfaces__py\n'}
+[0.442437] (interfaces) StdoutLine: {'line': b'[ 80%] Built target interfaces__python\n'}
+[0.442631] (interfaces) StdoutLine: {'line': b'[100%] Built target interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.442720] (interfaces) StdoutLine: {'line': b'[100%] Built target interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[0.442840] (interfaces) StdoutLine: {'line': b'[100%] Built target interfaces__rosidl_typesupport_c__pyext\n'}
+[0.442896] (interfaces) CommandEnded: {'returncode': 0}
+[0.468858] (interfaces) JobProgress: {'identifier': 'interfaces', 'progress': 'install'}
+[0.477436] (interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/sycamore/Syca_ws/build/interfaces'], 'cwd': '/home/sycamore/Syca_ws/build/interfaces', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LANGUAGE', 'en_GB:en'), ('USER', 'sycamore'), ('LC_TIME', 'en_GB.UTF-8'), ('SSH_AGENT_PID', '1922'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/sycamore/Syca_ws/install/lib:/home/sycamore/ros2_galactic/ros2-linux/opt/yaml_cpp_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/opt/rviz_ogre_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/lib'), ('HOME', '/home/sycamore'), ('OLDPWD', '/home/sycamore'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_GB.UTF-8'), ('MANAGERPID', '1745'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/sycamore/Syca_ws/install:/home/sycamore/ros2_galactic/ros2-linux'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'sycamore'), ('JOURNAL_STREAM', '8:50103'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/sycamore/ros2_galactic/ros2-linux/lib/x86_64-linux-gnu/pkgconfig:/home/sycamore/ros2_galactic/ros2-linux/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'sycamore'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/sycamore/ros2_galactic/ros2-linux/bin:/home/sycamore/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/Sycamore-CentralPC:@/tmp/.ICE-unix/1960,unix/Sycamore-CentralPC:/tmp/.ICE-unix/1960'), ('INVOCATION_ID', '2a1e31ba07f5401f85243b277c242c83'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_GB.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/abc859f7_9b39_4442_a831_9375ca414ae6'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_GB.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_GB.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('GNOME_TERMINAL_SERVICE', ':1.4157'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/sycamore/Syca_ws/install:/home/sycamore/ros2_galactic/ros2-linux'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_GB.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LC_MEASUREMENT', 'en_GB.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'en_GB.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/sycamore/Syca_ws/build/interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/sycamore/Syca_ws/install/lib/python3.8/site-packages:/home/sycamore/ros2_galactic/ros2-linux/lib/python3.8/site-packages'), ('LC_NUMERIC', 'en_GB.UTF-8'), ('LC_PAPER', 'en_GB.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/sycamore/Syca_ws/install:/home/sycamore/ros2_galactic/ros2-linux')]), 'shell': False}
+[0.483168] (interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.483352] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/ament_index/resource_index/rosidl_interfaces/interfaces\n'}
+[0.483420] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces\n'}
+[0.483471] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/msg\n'}
+[0.483529] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.483575] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/srv\n'}
+[0.483670] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/srv/task.h\n'}
+[0.483716] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/srv/detail\n'}
+[0.483763] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/srv/detail/task__type_support.h\n'}
+[0.483821] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/srv/detail/task__functions.h\n'}
+[0.483866] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/srv/detail/task__functions.c\n'}
+[0.483959] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/srv/detail/task__struct.h\n'}
+[0.484021] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/environment/library_path.sh\n'}
+[0.484066] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/environment/library_path.dsv\n'}
+[0.484125] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/lib/libinterfaces__rosidl_generator_c.so\n'}
+[0.484169] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces\n'}
+[0.484224] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/msg\n'}
+[0.484324] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.484369] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/srv\n'}
+[0.484416] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/srv/detail\n'}
+[0.484474] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/srv/detail/task__rosidl_typesupport_fastrtps_c.h\n'}
+[0.484518] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/lib/libinterfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[0.484569] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces\n'}
+[0.484618] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/msg\n'}
+[0.484668] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.484716] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/srv\n'}
+[0.484791] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/srv/detail\n'}
+[0.484843] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/srv/detail/task__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.484921] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/srv/detail/dds_fastrtps\n'}
+[0.484998] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/lib/libinterfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.485061] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces\n'}
+[0.485107] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/msg\n'}
+[0.485151] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.485198] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/srv\n'}
+[0.485256] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/srv/detail\n'}
+[0.485303] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/srv/detail/task__rosidl_typesupport_introspection_c.h\n'}
+[0.485373] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/srv/detail/task__type_support.c\n'}
+[0.485429] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/lib/libinterfaces__rosidl_typesupport_introspection_c.so\n'}
+[0.485473] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/lib/libinterfaces__rosidl_typesupport_c.so\n'}
+[0.485523] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces\n'}
+[0.485567] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/srv\n'}
+[0.485611] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/srv/task.hpp\n'}
+[0.485655] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/srv/detail\n'}
+[0.485699] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/srv/detail/task__builder.hpp\n'}
+[0.485744] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/srv/detail/task__traits.hpp\n'}
+[0.485788] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/srv/detail/task__struct.hpp\n'}
+[0.485832] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces\n'}
+[0.485876] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/srv\n'}
+[0.485919] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/srv/detail\n'}
+[0.485963] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/srv/detail/task__type_support.cpp\n'}
+[0.486006] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/include/interfaces/srv/detail/task__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.486053] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/lib/libinterfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[0.486097] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/lib/libinterfaces__rosidl_typesupport_cpp.so\n'}
+[0.486140] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/environment/pythonpath.sh\n'}
+[0.486185] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/environment/pythonpath.dsv\n'}
+[0.486230] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/interfaces/__init__.py\n'}
+[0.500708] (-) TimerEvent: {}
+[0.508850] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/interfaces/srv\n'}
+[0.508977] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/interfaces/srv/__init__.py\n'}
+[0.509036] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/interfaces/srv/_task.py\n'}
+[0.509149] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/interfaces/srv/_task_s.c\n'}
+[0.509219] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[0.509519] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/interfaces/interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[0.509882] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/interfaces/interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[0.510134] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/lib/libinterfaces__python.so\n'}
+[0.510231] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/srv/Task.idl\n'}
+[0.510310] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/srv/Task.srv\n'}
+[0.510374] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/srv/Task_Request.msg\n'}
+[0.510449] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/srv/Task_Response.msg\n'}
+[0.510517] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/ament_index/resource_index/package_run_dependencies/interfaces\n'}
+[0.510594] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/ament_index/resource_index/parent_prefix_path/interfaces\n'}
+[0.510674] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/environment/ament_prefix_path.sh\n'}
+[0.510729] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/environment/ament_prefix_path.dsv\n'}
+[0.510778] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/environment/path.sh\n'}
+[0.510836] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/environment/path.dsv\n'}
+[0.510903] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/local_setup.bash\n'}
+[0.510950] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/local_setup.sh\n'}
+[0.510997] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/local_setup.zsh\n'}
+[0.511065] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/local_setup.dsv\n'}
+[0.511113] (interfaces) StdoutLine: {'line': b'-- Installing: /home/sycamore/Syca_ws/install/share/interfaces/package.dsv\n'}
+[0.511182] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/ament_index/resource_index/packages/interfaces\n'}
+[0.511228] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/cmake/interfaces__rosidl_generator_cExport.cmake\n'}
+[0.511274] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/cmake/interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.511333] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.511403] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.511453] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/cmake/interfaces__rosidl_typesupport_cExport.cmake\n'}
+[0.511528] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/cmake/interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.511589] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/cmake/interfaces__rosidl_generator_cppExport.cmake\n'}
+[0.511642] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.511719] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.511791] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/cmake/interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[0.511837] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/cmake/interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.511882] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[0.511927] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.511972] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.512016] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.512062] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.512107] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.512152] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.512208] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/cmake/interfacesConfig.cmake\n'}
+[0.512256] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/cmake/interfacesConfig-version.cmake\n'}
+[0.512301] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/sycamore/Syca_ws/install/share/interfaces/package.xml\n'}
+[0.513310] (interfaces) CommandEnded: {'returncode': 0}
+[0.558428] (interfaces) JobEnded: {'identifier': 'interfaces', 'rc': 0}
+[0.600786] (-) TimerEvent: {}
+[0.701103] (-) TimerEvent: {}
+[0.722057] (central_pc) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/central_pc', 'build', '--build-base', '/home/sycamore/Syca_ws/build/central_pc/build', 'install', '--prefix', '/home/sycamore/Syca_ws/install', '--record', '/home/sycamore/Syca_ws/build/central_pc/install.log', '--single-version-externally-managed'], 'cwd': '/home/sycamore/Syca_ws/src/central_pc', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LANGUAGE': 'en_GB:en', 'USER': 'sycamore', 'LC_TIME': 'en_GB.UTF-8', 'SSH_AGENT_PID': '1922', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/sycamore/Syca_ws/install/lib:/home/sycamore/ros2_galactic/ros2-linux/opt/yaml_cpp_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/opt/rviz_ogre_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/lib', 'HOME': '/home/sycamore', 'OLDPWD': '/home/sycamore', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'en_GB.UTF-8', 'MANAGERPID': '1745', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/sycamore/Syca_ws/install:/home/sycamore/ros2_galactic/ros2-linux', 'ROS_DISTRO': 'galactic', 'LOGNAME': 'sycamore', 'JOURNAL_STREAM': '8:50103', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/home/sycamore/ros2_galactic/ros2-linux/lib/x86_64-linux-gnu/pkgconfig:/home/sycamore/ros2_galactic/ros2-linux/lib/pkgconfig', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'sycamore', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/home/sycamore/ros2_galactic/ros2-linux/bin:/home/sycamore/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/Sycamore-CentralPC:@/tmp/.ICE-unix/1960,unix/Sycamore-CentralPC:/tmp/.ICE-unix/1960', 'INVOCATION_ID': '2a1e31ba07f5401f85243b277c242c83', 'PAPERSIZE': 'a4', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'en_GB.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/abc859f7_9b39_4442_a831_9375ca414ae6', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_GB.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'en_GB.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'GNOME_TERMINAL_SERVICE': ':1.4157', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/sycamore/Syca_ws/install:/home/sycamore/ros2_galactic/ros2-linux', 'SHELL': '/bin/bash', 'LC_NAME': 'en_GB.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LC_MEASUREMENT': 'en_GB.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'en_GB.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sycamore/Syca_ws/build/central_pc', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/sycamore/Syca_ws/install/lib/python3.8/site-packages:/home/sycamore/Syca_ws/install/lib/python3.8/site-packages:/home/sycamore/ros2_galactic/ros2-linux/lib/python3.8/site-packages', 'LC_NUMERIC': 'en_GB.UTF-8', 'LC_PAPER': 'en_GB.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003', 'CMAKE_PREFIX_PATH': '/home/sycamore/Syca_ws/install:/home/sycamore/ros2_galactic/ros2-linux'}, 'shell': False}
+[0.728207] (jetbot) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/jetbot', 'build', '--build-base', '/home/sycamore/Syca_ws/build/jetbot/build', 'install', '--prefix', '/home/sycamore/Syca_ws/install', '--record', '/home/sycamore/Syca_ws/build/jetbot/install.log', '--single-version-externally-managed'], 'cwd': '/home/sycamore/Syca_ws/src/jetbot', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LANGUAGE': 'en_GB:en', 'USER': 'sycamore', 'LC_TIME': 'en_GB.UTF-8', 'SSH_AGENT_PID': '1922', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/sycamore/Syca_ws/install/lib:/home/sycamore/ros2_galactic/ros2-linux/opt/yaml_cpp_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/opt/rviz_ogre_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/lib', 'HOME': '/home/sycamore', 'OLDPWD': '/home/sycamore', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'en_GB.UTF-8', 'MANAGERPID': '1745', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/sycamore/Syca_ws/install:/home/sycamore/ros2_galactic/ros2-linux', 'ROS_DISTRO': 'galactic', 'LOGNAME': 'sycamore', 'JOURNAL_STREAM': '8:50103', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/home/sycamore/ros2_galactic/ros2-linux/lib/x86_64-linux-gnu/pkgconfig:/home/sycamore/ros2_galactic/ros2-linux/lib/pkgconfig', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'sycamore', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/home/sycamore/ros2_galactic/ros2-linux/bin:/home/sycamore/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/Sycamore-CentralPC:@/tmp/.ICE-unix/1960,unix/Sycamore-CentralPC:/tmp/.ICE-unix/1960', 'INVOCATION_ID': '2a1e31ba07f5401f85243b277c242c83', 'PAPERSIZE': 'a4', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'en_GB.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/abc859f7_9b39_4442_a831_9375ca414ae6', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_GB.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'en_GB.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'GNOME_TERMINAL_SERVICE': ':1.4157', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/sycamore/Syca_ws/install:/home/sycamore/ros2_galactic/ros2-linux', 'SHELL': '/bin/bash', 'LC_NAME': 'en_GB.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LC_MEASUREMENT': 'en_GB.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'en_GB.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sycamore/Syca_ws/build/jetbot', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/sycamore/Syca_ws/install/lib/python3.8/site-packages:/home/sycamore/Syca_ws/install/lib/python3.8/site-packages:/home/sycamore/ros2_galactic/ros2-linux/lib/python3.8/site-packages', 'LC_NUMERIC': 'en_GB.UTF-8', 'LC_PAPER': 'en_GB.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003', 'CMAKE_PREFIX_PATH': '/home/sycamore/Syca_ws/install:/home/sycamore/ros2_galactic/ros2-linux'}, 'shell': False}
+[0.801199] (-) TimerEvent: {}
+[0.877329] (central_pc) StdoutLine: {'line': b'running egg_info\n'}
+[0.877678] (central_pc) StdoutLine: {'line': b'writing ../../build/central_pc/central_pc.egg-info/PKG-INFO\n'}
+[0.877804] (central_pc) StdoutLine: {'line': b'writing dependency_links to ../../build/central_pc/central_pc.egg-info/dependency_links.txt\n'}
+[0.877928] (central_pc) StdoutLine: {'line': b'writing entry points to ../../build/central_pc/central_pc.egg-info/entry_points.txt\n'}
+[0.878059] (central_pc) StdoutLine: {'line': b'writing requirements to ../../build/central_pc/central_pc.egg-info/requires.txt\n'}
+[0.878188] (central_pc) StdoutLine: {'line': b'writing top-level names to ../../build/central_pc/central_pc.egg-info/top_level.txt\n'}
+[0.878492] (jetbot) StdoutLine: {'line': b'running egg_info\n'}
+[0.878994] (jetbot) StdoutLine: {'line': b'writing ../../build/jetbot/jetbot.egg-info/PKG-INFO\n'}
+[0.879111] (jetbot) StdoutLine: {'line': b'writing dependency_links to ../../build/jetbot/jetbot.egg-info/dependency_links.txt\n'}
+[0.879196] (jetbot) StdoutLine: {'line': b'writing entry points to ../../build/jetbot/jetbot.egg-info/entry_points.txt\n'}
+[0.879324] (jetbot) StdoutLine: {'line': b'writing requirements to ../../build/jetbot/jetbot.egg-info/requires.txt\n'}
+[0.879378] (jetbot) StdoutLine: {'line': b'writing top-level names to ../../build/jetbot/jetbot.egg-info/top_level.txt\n'}
+[0.900398] (central_pc) StdoutLine: {'line': b"reading manifest file '../../build/central_pc/central_pc.egg-info/SOURCES.txt'\n"}
+[0.900881] (central_pc) StdoutLine: {'line': b"writing manifest file '../../build/central_pc/central_pc.egg-info/SOURCES.txt'\n"}
+[0.900944] (central_pc) StdoutLine: {'line': b'running build\n'}
+[0.900994] (central_pc) StdoutLine: {'line': b'running build_py\n'}
+[0.901098] (central_pc) StdoutLine: {'line': b'copying central_pc/centralPC.py -> /home/sycamore/Syca_ws/build/central_pc/build/lib/central_pc\n'}
+[0.901244] (-) TimerEvent: {}
+[0.901392] (central_pc) StdoutLine: {'line': b'running install\n'}
+[0.901464] (jetbot) StdoutLine: {'line': b"reading manifest file '../../build/jetbot/jetbot.egg-info/SOURCES.txt'\n"}
+[0.901750] (central_pc) StdoutLine: {'line': b'running install_lib\n'}
+[0.901915] (jetbot) StdoutLine: {'line': b"writing manifest file '../../build/jetbot/jetbot.egg-info/SOURCES.txt'\n"}
+[0.901988] (jetbot) StdoutLine: {'line': b'running build\n'}
+[0.902041] (jetbot) StdoutLine: {'line': b'running build_py\n'}
+[0.902116] (jetbot) StdoutLine: {'line': b'running install\n'}
+[0.902384] (central_pc) StdoutLine: {'line': b'copying /home/sycamore/Syca_ws/build/central_pc/build/lib/central_pc/centralPC.py -> /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/central_pc\n'}
+[0.902569] (jetbot) StdoutLine: {'line': b'running install_lib\n'}
+[0.902744] (central_pc) StdoutLine: {'line': b'byte-compiling /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/central_pc/centralPC.py to centralPC.cpython-38.pyc\n'}
+[0.903396] (jetbot) StdoutLine: {'line': b'running install_data\n'}
+[0.903677] (jetbot) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.903992] (central_pc) StdoutLine: {'line': b'running install_data\n'}
+[0.904364] (central_pc) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.904636] (jetbot) StdoutLine: {'line': b"removing '/home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[0.904802] (jetbot) StdoutLine: {'line': b'Copying ../../build/jetbot/jetbot.egg-info to /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/jetbot-0.0.0-py3.8.egg-info\n'}
+[0.905242] (jetbot) StdoutLine: {'line': b'running install_scripts\n'}
+[0.905503] (central_pc) StdoutLine: {'line': b"removing '/home/sycamore/Syca_ws/install/lib/python3.8/site-packages/central_pc-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[0.905662] (central_pc) StdoutLine: {'line': b'Copying ../../build/central_pc/central_pc.egg-info to /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/central_pc-0.0.0-py3.8.egg-info\n'}
+[0.906148] (central_pc) StdoutLine: {'line': b'running install_scripts\n'}
+[0.916003] (jetbot) StdoutLine: {'line': b'Installing start script to /home/sycamore/Syca_ws/install/lib/jetbot\n'}
+[0.916172] (jetbot) StdoutLine: {'line': b"writing list of installed files to '/home/sycamore/Syca_ws/build/jetbot/install.log'\n"}
+[0.916496] (central_pc) StdoutLine: {'line': b'Installing centralPC script to /home/sycamore/Syca_ws/install/lib/central_pc\n'}
+[0.916734] (central_pc) StdoutLine: {'line': b"writing list of installed files to '/home/sycamore/Syca_ws/build/central_pc/install.log'\n"}
+[0.929919] (jetbot) CommandEnded: {'returncode': 0}
+[0.937068] (jetbot) JobEnded: {'identifier': 'jetbot', 'rc': 0}
+[0.938339] (central_pc) CommandEnded: {'returncode': 0}
+[0.944861] (central_pc) JobEnded: {'identifier': 'central_pc', 'rc': 0}
+[0.945258] (-) EventReactorShutdown: {}

@@ -1,0 +1,40 @@
+[0.000000] (-) TimerEvent: {}
+[0.000201] (-) JobUnselected: {'identifier': 'basic_pub'}
+[0.000268] (-) JobUnselected: {'identifier': 'jetbot_actions'}
+[0.000285] (-) JobUnselected: {'identifier': 'jetbot_ros2'}
+[0.000299] (-) JobUnselected: {'identifier': 'py_basicsub'}
+[0.000314] (-) JobUnselected: {'identifier': 'teleop'}
+[0.000333] (central_pc) JobQueued: {'identifier': 'central_pc', 'dependencies': OrderedDict()}
+[0.000380] (central_pc) JobStarted: {'identifier': 'central_pc'}
+[0.099071] (-) TimerEvent: {}
+[0.199350] (-) TimerEvent: {}
+[0.299591] (-) TimerEvent: {}
+[0.362350] (central_pc) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/central_pc', 'build', '--build-base', '/home/sycamore/Syca_ws/build/central_pc/build', 'install', '--prefix', '/home/sycamore/Syca_ws/install', '--record', '/home/sycamore/Syca_ws/build/central_pc/install.log', '--single-version-externally-managed'], 'cwd': '/home/sycamore/Syca_ws/src/central_pc', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LANGUAGE': 'en_GB:en', 'USER': 'sycamore', 'LC_TIME': 'en_GB.UTF-8', 'SSH_AGENT_PID': '1902', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'HOME': '/home/sycamore', 'OLDPWD': '/home/sycamore', 'DESKTOP_SESSION': 'ubuntu', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'en_GB.UTF-8', 'MANAGERPID': '1718', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'LOGNAME': 'sycamore', 'JOURNAL_STREAM': '8:59420', '_': '/usr/bin/colcon', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'sycamore', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/home/sycamore/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/Sycamore-CentralPC:@/tmp/.ICE-unix/1940,unix/Sycamore-CentralPC:/tmp/.ICE-unix/1940', 'INVOCATION_ID': '8bf3ef82faee48288e6ec5cc9da8f3b6', 'PAPERSIZE': 'a4', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'en_GB.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/e4b6bfa7_885e_40fe_b40e_18a4e48e1b9a', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_GB.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'en_GB.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'GNOME_TERMINAL_SERVICE': ':1.478', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'SHELL': '/bin/bash', 'LC_NAME': 'en_GB.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LC_MEASUREMENT': 'en_GB.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'en_GB.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sycamore/Syca_ws/build/central_pc', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'LC_NUMERIC': 'en_GB.UTF-8', 'LC_PAPER': 'en_GB.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003', 'PYTHONPATH': '/home/sycamore/Syca_ws/install/lib/python3.8/site-packages:'}, 'shell': False}
+[0.399701] (-) TimerEvent: {}
+[0.482464] (central_pc) StdoutLine: {'line': b'running egg_info\n'}
+[0.482745] (central_pc) StdoutLine: {'line': b'writing ../../build/central_pc/central_pc.egg-info/PKG-INFO\n'}
+[0.482952] (central_pc) StdoutLine: {'line': b'writing dependency_links to ../../build/central_pc/central_pc.egg-info/dependency_links.txt\n'}
+[0.483055] (central_pc) StdoutLine: {'line': b'writing entry points to ../../build/central_pc/central_pc.egg-info/entry_points.txt\n'}
+[0.483271] (central_pc) StdoutLine: {'line': b'writing requirements to ../../build/central_pc/central_pc.egg-info/requires.txt\n'}
+[0.483341] (central_pc) StdoutLine: {'line': b'writing top-level names to ../../build/central_pc/central_pc.egg-info/top_level.txt\n'}
+[0.499789] (-) TimerEvent: {}
+[0.504999] (central_pc) StdoutLine: {'line': b"reading manifest file '../../build/central_pc/central_pc.egg-info/SOURCES.txt'\n"}
+[0.505564] (central_pc) StdoutLine: {'line': b"writing manifest file '../../build/central_pc/central_pc.egg-info/SOURCES.txt'\n"}
+[0.505724] (central_pc) StdoutLine: {'line': b'running build\n'}
+[0.505893] (central_pc) StdoutLine: {'line': b'running build_py\n'}
+[0.505984] (central_pc) StdoutLine: {'line': b'copying central_pc/OptiTrack_sub.py -> /home/sycamore/Syca_ws/build/central_pc/build/lib/central_pc\n'}
+[0.506101] (central_pc) StdoutLine: {'line': b'running install\n'}
+[0.506420] (central_pc) StdoutLine: {'line': b'running install_lib\n'}
+[0.506992] (central_pc) StdoutLine: {'line': b'copying /home/sycamore/Syca_ws/build/central_pc/build/lib/central_pc/OptiTrack_sub.py -> /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/central_pc\n'}
+[0.507303] (central_pc) StdoutLine: {'line': b'byte-compiling /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/central_pc/OptiTrack_sub.py to OptiTrack_sub.cpython-38.pyc\n'}
+[0.508114] (central_pc) StdoutLine: {'line': b'running install_data\n'}
+[0.508372] (central_pc) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.509199] (central_pc) StdoutLine: {'line': b"removing '/home/sycamore/Syca_ws/install/lib/python3.8/site-packages/central_pc-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[0.509395] (central_pc) StdoutLine: {'line': b'Copying ../../build/central_pc/central_pc.egg-info to /home/sycamore/Syca_ws/install/lib/python3.8/site-packages/central_pc-0.0.0-py3.8.egg-info\n'}
+[0.509829] (central_pc) StdoutLine: {'line': b'running install_scripts\n'}
+[0.519473] (central_pc) StdoutLine: {'line': b'Installing centralPC script to /home/sycamore/Syca_ws/install/lib/central_pc\n'}
+[0.519688] (central_pc) StdoutLine: {'line': b'Installing get_optiPos script to /home/sycamore/Syca_ws/install/lib/central_pc\n'}
+[0.519881] (central_pc) StdoutLine: {'line': b"writing list of installed files to '/home/sycamore/Syca_ws/build/central_pc/install.log'\n"}
+[0.529886] (central_pc) CommandEnded: {'returncode': 0}
+[0.539896] (central_pc) JobEnded: {'identifier': 'central_pc', 'rc': 0}
+[0.540511] (-) EventReactorShutdown: {}
