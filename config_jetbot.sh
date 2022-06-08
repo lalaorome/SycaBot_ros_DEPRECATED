@@ -1,6 +1,9 @@
 #!/bin/bash
 
-sudo addgroup --system robot
-sudo adduser --system --no-create-home --disabled-login --disabled-password --ingroup robot robot
-sudo adduser robot video
-sudo adduser robot gpio
+cp robot_boot.service /lib/systemd/system
+sudo systemctl daemon-reload
+sudo docker build . -t syca_jb
+cd ~/jetbot
+source docker/disable.sh
+cd ~/syca_ws
+sudo systemctl start robot_boot
