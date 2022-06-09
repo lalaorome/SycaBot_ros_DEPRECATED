@@ -13,7 +13,7 @@ COPY src/interfaces /syca_ws/src/interfaces
 
 RUN cd /syca_ws &&\
     source ${ROS_ROOT}/install/setup.bash && \
-    colcon build --packages-select interfaces jetbot
+    colcon build
 COPY entrypoint.sh /
 
 RUN cat /entrypoint.sh
