@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cd home/jetbot/syca_ws
-source Docker/run.sh
+source docker/run.sh

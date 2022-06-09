@@ -1,12 +1,12 @@
 #!/bin/bash
 
 #Create the good directory
-sudo cp ./ ../syca_ws/
+sudo cp -r ./. ../syca_ws/
 
 # Copy service file and make systemctl recgonize it
 echo 'Copying service and boot file'
 sudo cp robot_boot.service /lib/systemd/system/
-sudo cp boot_init /usr/local/bin/
+sudo cp boot_init.sh /usr/local/bin/
 echo 'chown /usr/local/bin/boot_init.sh'
 sudo chown root:root /usr/local/bin/boot_init.sh
 echo 'chmod 755 /usr/local/bin/boot_init.sh'
