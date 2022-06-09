@@ -3,7 +3,7 @@
 ROS_DISTRO="foxy"
 
 # where the project resides inside docker
-DOCKER_ROOT="/syca_ws"
+DOCKER_ROOT="/syca_ws/src"
 
 # generate mount commands
 DEV_VOLUME="--volume $PWD:$DOCKER_ROOT"
@@ -11,8 +11,7 @@ DEV_VOLUME="--volume $PWD:$DOCKER_ROOT"
 # check for V4L2 devices
 V4L2_DEVICES=" "
 
-CONTAINER_IMAGE="syca_jb:latest
-"
+CONTAINER_IMAGE="syca_jb:latest"
 
 # find container tag from os version
 source docker/tag.sh
