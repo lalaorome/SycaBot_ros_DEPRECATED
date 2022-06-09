@@ -25,9 +25,4 @@ cd ~/syca_ws
 echo 'Building docker'
 sudo docker build . -t syca_jb
 
-# disable jupyter docker
-echo 'disabling Jupyter docker'
-cd ~/jetbot
-source docker/disable.sh
-cd ~/syca_ws
 sudo systemctl start robot_boot
