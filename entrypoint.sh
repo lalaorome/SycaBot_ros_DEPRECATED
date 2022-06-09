@@ -10,7 +10,6 @@ echo "sourcing   $ros_workspace_setup"
 source "$ros_workspace_setup"
 
 ros_workspace_setup="/syca_ws/install/local_setup.bash"
-echo "hey"
 echo "sourcing   $ros_workspace_setup"
 source "$ros_workspace_setup"
 
