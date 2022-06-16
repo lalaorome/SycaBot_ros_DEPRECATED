@@ -1,0 +1,257 @@
+[0.000000] (-) TimerEvent: {}
+[0.000076] (interfaces) JobQueued: {'identifier': 'interfaces', 'dependencies': OrderedDict()}
+[0.000097] (jetbot) JobQueued: {'identifier': 'jetbot', 'dependencies': OrderedDict()}
+[0.000113] (interfaces) JobStarted: {'identifier': 'interfaces'}
+[0.008641] (jetbot) JobStarted: {'identifier': 'jetbot'}
+[0.016024] (interfaces) JobProgress: {'identifier': 'interfaces', 'progress': 'cmake'}
+[0.016332] (interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/sycamore/SycaBot_ros/src/interfaces', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/sycamore/SycaBot_ros/install/interfaces'], 'cwd': '/home/sycamore/SycaBot_ros/build/interfaces', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LANGUAGE', 'en_GB:en'), ('USER', 'sycamore'), ('LC_TIME', 'en_GB.UTF-8'), ('SSH_AGENT_PID', '1972'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/sycamore/ros2_galactic/ros2-linux/opt/yaml_cpp_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/opt/rviz_ogre_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/lib'), ('HOME', '/home/sycamore'), ('OLDPWD', '/home/sycamore'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_GB.UTF-8'), ('MANAGERPID', '1793'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/sycamore/ros2_galactic/ros2-linux'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'sycamore'), ('JOURNAL_STREAM', '8:57549'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/sycamore/ros2_galactic/ros2-linux/lib/x86_64-linux-gnu/pkgconfig:/home/sycamore/ros2_galactic/ros2-linux/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'sycamore'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/sycamore/ros2_galactic/ros2-linux/bin:/home/sycamore/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/Sycamore-CentralPC:@/tmp/.ICE-unix/2011,unix/Sycamore-CentralPC:/tmp/.ICE-unix/2011'), ('INVOCATION_ID', 'df421e6e4f43445b9add259335c7cddd'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_GB.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/2be768c9_38f4_4011_a782_810ffc2eb814'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_GB.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_GB.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('GNOME_TERMINAL_SERVICE', ':1.2505'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/sycamore/ros2_galactic/ros2-linux'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_GB.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LC_MEASUREMENT', 'en_GB.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'en_GB.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/sycamore/SycaBot_ros/build/interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/sycamore/ros2_galactic/ros2-linux/lib/python3.8/site-packages'), ('LC_NUMERIC', 'en_GB.UTF-8'), ('LC_PAPER', 'en_GB.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/sycamore/ros2_galactic/ros2-linux')]), 'shell': False}
+[0.099492] (-) TimerEvent: {}
+[0.184621] (interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.185060] (interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.185594] (interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.185699] (interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.185947] (interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.186012] (interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.186344] (interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.186512] (interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.186562] (interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[0.199566] (-) TimerEvent: {}
+[0.223279] (interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[0.224017] (interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.271611] (interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.279600] (interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.279984] (interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.281133] (interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 1.1.4 (/home/sycamore/ros2_galactic/ros2-linux/share/ament_cmake/cmake)\n'}
+[0.296146] (interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.296333] (interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.299612] (-) TimerEvent: {}
+[0.330981] (interfaces) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.343653] (interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.1.1 (/home/sycamore/ros2_galactic/ros2-linux/share/rosidl_default_generators/cmake)\n'}
+[0.345487] (interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.349404] (interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 2.2.1 (/home/sycamore/ros2_galactic/ros2-linux/share/rosidl_adapter/cmake)\n'}
+[0.399695] (-) TimerEvent: {}
+[0.402087] (interfaces) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[0.420371] (interfaces) StdoutLine: {'line': b'-- Found FastRTPS: /home/sycamore/ros2_galactic/ros2-linux/include  \n'}
+[0.469482] (jetbot) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'develop', '--prefix', '/home/sycamore/SycaBot_ros/install/jetbot', '--editable', '--build-directory', '/home/sycamore/SycaBot_ros/build/jetbot/build', '--no-deps', 'install_data', '--install-dir', '/home/sycamore/SycaBot_ros/install/jetbot'], 'cwd': '/home/sycamore/SycaBot_ros/build/jetbot', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LANGUAGE': 'en_GB:en', 'USER': 'sycamore', 'LC_TIME': 'en_GB.UTF-8', 'SSH_AGENT_PID': '1972', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/sycamore/ros2_galactic/ros2-linux/opt/yaml_cpp_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/opt/rviz_ogre_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/lib', 'HOME': '/home/sycamore', 'OLDPWD': '/home/sycamore', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'en_GB.UTF-8', 'MANAGERPID': '1793', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/sycamore/ros2_galactic/ros2-linux', 'ROS_DISTRO': 'galactic', 'LOGNAME': 'sycamore', 'JOURNAL_STREAM': '8:57549', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/home/sycamore/ros2_galactic/ros2-linux/lib/x86_64-linux-gnu/pkgconfig:/home/sycamore/ros2_galactic/ros2-linux/lib/pkgconfig', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'sycamore', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/home/sycamore/ros2_galactic/ros2-linux/bin:/home/sycamore/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/Sycamore-CentralPC:@/tmp/.ICE-unix/2011,unix/Sycamore-CentralPC:/tmp/.ICE-unix/2011', 'INVOCATION_ID': 'df421e6e4f43445b9add259335c7cddd', 'PAPERSIZE': 'a4', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'en_GB.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/2be768c9_38f4_4011_a782_810ffc2eb814', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_GB.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'en_GB.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'GNOME_TERMINAL_SERVICE': ':1.2505', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/sycamore/ros2_galactic/ros2-linux', 'SHELL': '/bin/bash', 'LC_NAME': 'en_GB.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LC_MEASUREMENT': 'en_GB.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'en_GB.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sycamore/SycaBot_ros/build/jetbot', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/sycamore/SycaBot_ros/install/jetbot/lib/python3.8/site-packages:/home/sycamore/ros2_galactic/ros2-linux/lib/python3.8/site-packages', 'LC_NUMERIC': 'en_GB.UTF-8', 'LC_PAPER': 'en_GB.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003', 'CMAKE_PREFIX_PATH': '/home/sycamore/ros2_galactic/ros2-linux'}, 'shell': False}
+[0.478797] (interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.497151] (interfaces) StdoutLine: {'line': b'-- Found geometry_msgs: 2.2.3 (/home/sycamore/ros2_galactic/ros2-linux/share/geometry_msgs/cmake)\n'}
+[0.499757] (-) TimerEvent: {}
+[0.563035] (interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[0.599844] (-) TimerEvent: {}
+[0.634029] (jetbot) StdoutLine: {'line': b'running develop\n'}
+[0.674687] (interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/home/sycamore/ros2_galactic/ros2-linux/share/ament_cmake_ros/cmake)\n'}
+[0.699925] (-) TimerEvent: {}
+[0.744703] (jetbot) StdoutLine: {'line': b'running egg_info\n'}
+[0.744817] (jetbot) StdoutLine: {'line': b'creating jetbot.egg-info\n'}
+[0.744954] (jetbot) StdoutLine: {'line': b'writing jetbot.egg-info/PKG-INFO\n'}
+[0.745021] (jetbot) StdoutLine: {'line': b'writing dependency_links to jetbot.egg-info/dependency_links.txt\n'}
+[0.745150] (jetbot) StdoutLine: {'line': b'writing entry points to jetbot.egg-info/entry_points.txt\n'}
+[0.745217] (jetbot) StdoutLine: {'line': b'writing requirements to jetbot.egg-info/requires.txt\n'}
+[0.745265] (jetbot) StdoutLine: {'line': b'writing top-level names to jetbot.egg-info/top_level.txt\n'}
+[0.745921] (jetbot) StdoutLine: {'line': b"writing manifest file 'jetbot.egg-info/SOURCES.txt'\n"}
+[0.766616] (jetbot) StdoutLine: {'line': b"reading manifest file 'jetbot.egg-info/SOURCES.txt'\n"}
+[0.767001] (jetbot) StdoutLine: {'line': b"writing manifest file 'jetbot.egg-info/SOURCES.txt'\n"}
+[0.788438] (jetbot) StdoutLine: {'line': b'running build_ext\n'}
+[0.788610] (jetbot) StdoutLine: {'line': b'Creating /home/sycamore/SycaBot_ros/install/jetbot/lib/python3.8/site-packages/site.py\n'}
+[0.789763] (jetbot) StdoutLine: {'line': b'Creating /home/sycamore/SycaBot_ros/install/jetbot/lib/python3.8/site-packages/jetbot.egg-link (link to .)\n'}
+[0.790245] (jetbot) StdoutLine: {'line': b'Installing motors script to /home/sycamore/SycaBot_ros/install/jetbot/lib/jetbot\n'}
+[0.790382] (jetbot) StdoutLine: {'line': b'Installing start script to /home/sycamore/SycaBot_ros/install/jetbot/lib/jetbot\n'}
+[0.790547] (jetbot) StdoutLine: {'line': b'\n'}
+[0.790650] (jetbot) StdoutLine: {'line': b'Installed /home/sycamore/SycaBot_ros/build/jetbot\n'}
+[0.790719] (jetbot) StdoutLine: {'line': b'running install_data\n'}
+[0.790765] (jetbot) StdoutLine: {'line': b'creating /home/sycamore/SycaBot_ros/install/jetbot/share/ament_index\n'}
+[0.790815] (jetbot) StdoutLine: {'line': b'creating /home/sycamore/SycaBot_ros/install/jetbot/share/ament_index/resource_index\n'}
+[0.790858] (jetbot) StdoutLine: {'line': b'creating /home/sycamore/SycaBot_ros/install/jetbot/share/ament_index/resource_index/packages\n'}
+[0.790900] (jetbot) StdoutLine: {'line': b'copying resource/jetbot -> /home/sycamore/SycaBot_ros/install/jetbot/share/ament_index/resource_index/packages\n'}
+[0.790942] (jetbot) StdoutLine: {'line': b'copying package.xml -> /home/sycamore/SycaBot_ros/install/jetbot/share/jetbot\n'}
+[0.790983] (jetbot) StdoutLine: {'line': b'copying launch/init.launch.py -> /home/sycamore/SycaBot_ros/install/jetbot/share/jetbot\n'}
+[0.799992] (-) TimerEvent: {}
+[0.805181] (jetbot) CommandEnded: {'returncode': 0}
+[0.814189] (jetbot) JobEnded: {'identifier': 'jetbot', 'rc': 0}
+[0.843817] (interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.900086] (-) TimerEvent: {}
+[0.925109] (interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.941683] (interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[0.942405] (interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/home/sycamore/ros2_galactic/ros2-linux/share/python_cmake_module/cmake)\n'}
+[0.959426] (interfaces) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[0.959651] (interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.959722] (interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[0.959770] (interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so\n'}
+[0.972714] (interfaces) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[1.000165] (-) TimerEvent: {}
+[1.028407] (interfaces) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.10.6 (/home/sycamore/ros2_galactic/ros2-linux/share/ament_lint_auto/cmake)\n'}
+[1.041505] (interfaces) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[1.042541] (interfaces) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.043176] (interfaces) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.047200] (interfaces) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.078023] (interfaces) StdoutLine: {'line': b'-- Generating done\n'}
+[1.079754] (interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/sycamore/SycaBot_ros/build/interfaces\n'}
+[1.085104] (interfaces) CommandEnded: {'returncode': 0}
+[1.087995] (interfaces) JobProgress: {'identifier': 'interfaces', 'progress': 'build'}
+[1.088272] (interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/sycamore/SycaBot_ros/build/interfaces', '--', '-j20', '-l20'], 'cwd': '/home/sycamore/SycaBot_ros/build/interfaces', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LANGUAGE', 'en_GB:en'), ('USER', 'sycamore'), ('LC_TIME', 'en_GB.UTF-8'), ('SSH_AGENT_PID', '1972'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/sycamore/ros2_galactic/ros2-linux/opt/yaml_cpp_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/opt/rviz_ogre_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/lib'), ('HOME', '/home/sycamore'), ('OLDPWD', '/home/sycamore'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_GB.UTF-8'), ('MANAGERPID', '1793'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/sycamore/ros2_galactic/ros2-linux'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'sycamore'), ('JOURNAL_STREAM', '8:57549'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/sycamore/ros2_galactic/ros2-linux/lib/x86_64-linux-gnu/pkgconfig:/home/sycamore/ros2_galactic/ros2-linux/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'sycamore'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/sycamore/ros2_galactic/ros2-linux/bin:/home/sycamore/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/Sycamore-CentralPC:@/tmp/.ICE-unix/2011,unix/Sycamore-CentralPC:/tmp/.ICE-unix/2011'), ('INVOCATION_ID', 'df421e6e4f43445b9add259335c7cddd'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_GB.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/2be768c9_38f4_4011_a782_810ffc2eb814'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_GB.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_GB.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('GNOME_TERMINAL_SERVICE', ':1.2505'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/sycamore/ros2_galactic/ros2-linux'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_GB.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LC_MEASUREMENT', 'en_GB.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'en_GB.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/sycamore/SycaBot_ros/build/interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/sycamore/ros2_galactic/ros2-linux/lib/python3.8/site-packages'), ('LC_NUMERIC', 'en_GB.UTF-8'), ('LC_PAPER', 'en_GB.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/sycamore/ros2_galactic/ros2-linux')]), 'shell': False}
+[1.100251] (-) TimerEvent: {}
+[1.113359] (interfaces) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[1.113496] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target interfaces__cpp\x1b[0m\n'}
+[1.119865] (interfaces) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[1.200355] (-) TimerEvent: {}
+[1.271454] (interfaces) StdoutLine: {'line': b'[  6%] Built target interfaces__cpp\n'}
+[1.274887] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target interfaces__rosidl_generator_c\x1b[0m\n'}
+[1.277955] (interfaces) StdoutLine: {'line': b'[ 16%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[1.278139] (interfaces) StdoutLine: {'line': b'[ 16%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.278233] (interfaces) StdoutLine: {'line': b'[ 16%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.282379] (interfaces) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/task__functions.c.o\x1b[0m\n'}
+[1.300447] (-) TimerEvent: {}
+[1.309996] (interfaces) StdoutLine: {'line': b'[ 22%] \x1b[32m\x1b[1mLinking C shared library libinterfaces__rosidl_generator_c.so\x1b[0m\n'}
+[1.334600] (interfaces) StdoutLine: {'line': b'[ 22%] Built target interfaces__rosidl_generator_c\n'}
+[1.341436] (interfaces) StdoutLine: {'line': b'[ 29%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.341617] (interfaces) StdoutLine: {'line': b'[ 29%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[1.400536] (-) TimerEvent: {}
+[1.407068] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target interfaces__rosidl_typesupport_cpp\x1b[0m\n'}
+[1.414827] (interfaces) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/srv/task__type_support.cpp.o\x1b[0m\n'}
+[1.419449] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target interfaces__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[1.427916] (interfaces) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces/srv/detail/task__type_support.cpp.o\x1b[0m\n'}
+[1.436319] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target interfaces__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[1.446974] (interfaces) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces/srv/detail/dds_fastrtps/task__type_support.cpp.o\x1b[0m\n'}
+[1.468614] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target interfaces__rosidl_typesupport_c\x1b[0m\n'}
+[1.477015] (interfaces) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/srv/task__type_support.cpp.o\x1b[0m\n'}
+[1.489304] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target interfaces__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[1.497591] (interfaces) StdoutLine: {'line': b'[ 48%] \x1b[32m\x1b[1mLinking CXX shared library libinterfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[1.497793] (interfaces) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interfaces/srv/detail/task__type_support.c.o\x1b[0m\n'}
+[1.500622] (-) TimerEvent: {}
+[1.520726] (interfaces) StdoutLine: {'line': b'[ 51%] \x1b[32m\x1b[1mLinking C shared library libinterfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[1.524282] (interfaces) StdoutLine: {'line': b'[ 51%] Built target interfaces__rosidl_typesupport_c\n'}
+[1.540494] (interfaces) StdoutLine: {'line': b'[ 51%] Built target interfaces__rosidl_typesupport_introspection_c\n'}
+[1.600715] (-) TimerEvent: {}
+[1.605012] (interfaces) StdoutLine: {'line': b'[ 54%] \x1b[32m\x1b[1mLinking CXX shared library libinterfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[1.622207] (interfaces) StdoutLine: {'line': b'[ 58%] \x1b[32m\x1b[1mLinking CXX shared library libinterfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[1.630914] (interfaces) StdoutLine: {'line': b'[ 58%] Built target interfaces__rosidl_typesupport_cpp\n'}
+[1.660012] (interfaces) StdoutLine: {'line': b'[ 58%] Built target interfaces__rosidl_typesupport_introspection_cpp\n'}
+[1.700800] (-) TimerEvent: {}
+[1.725647] (interfaces) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX shared library libinterfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[1.781215] (interfaces) StdoutLine: {'line': b'[ 61%] Built target interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[1.787784] (interfaces) StdoutLine: {'line': b'[ 64%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.800902] (-) TimerEvent: {}
+[1.901108] (-) TimerEvent: {}
+[1.933697] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target interfaces__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[1.945178] (interfaces) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interfaces/srv/detail/task__type_support_c.cpp.o\x1b[0m\n'}
+[2.001217] (-) TimerEvent: {}
+[2.101442] (-) TimerEvent: {}
+[2.179547] (interfaces) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library libinterfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[2.201548] (-) TimerEvent: {}
+[2.231801] (interfaces) StdoutLine: {'line': b'[ 70%] Built target interfaces__rosidl_typesupport_fastrtps_c\n'}
+[2.237643] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target interfaces\x1b[0m\n'}
+[2.243507] (interfaces) StdoutLine: {'line': b'[ 70%] Built target interfaces\n'}
+[2.249171] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target interfaces__py\x1b[0m\n'}
+[2.255339] (interfaces) StdoutLine: {'line': b'[ 74%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[2.301635] (-) TimerEvent: {}
+[2.401849] (-) TimerEvent: {}
+[2.502079] (-) TimerEvent: {}
+[2.524885] (interfaces) StdoutLine: {'line': b'[ 74%] Built target interfaces__py\n'}
+[2.531084] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target interfaces__python\x1b[0m\n'}
+[2.542551] (interfaces) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding C object CMakeFiles/interfaces__python.dir/rosidl_generator_py/interfaces/srv/_task_s.c.o\x1b[0m\n'}
+[2.599484] (interfaces) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/interfaces/libinterfaces__python.so\x1b[0m\n'}
+[2.602171] (-) TimerEvent: {}
+[2.626965] (interfaces) StdoutLine: {'line': b'[ 80%] Built target interfaces__python\n'}
+[2.633336] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target interfaces__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[2.633462] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target interfaces__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[2.633511] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target interfaces__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[2.643825] (interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[2.643945] (interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[2.644073] (interfaces) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[2.694943] (interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library rosidl_generator_py/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[2.695113] (interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/interfaces/interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[2.695197] (interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/interfaces/interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[2.702292] (-) TimerEvent: {}
+[2.718677] (interfaces) StdoutLine: {'line': b'[100%] Built target interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[2.718857] (interfaces) StdoutLine: {'line': b'[100%] Built target interfaces__rosidl_typesupport_c__pyext\n'}
+[2.738178] (interfaces) StdoutLine: {'line': b'[100%] Built target interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[2.745551] (interfaces) CommandEnded: {'returncode': 0}
+[2.771196] (interfaces) JobProgress: {'identifier': 'interfaces', 'progress': 'install'}
+[2.778486] (interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/sycamore/SycaBot_ros/build/interfaces'], 'cwd': '/home/sycamore/SycaBot_ros/build/interfaces', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LANGUAGE', 'en_GB:en'), ('USER', 'sycamore'), ('LC_TIME', 'en_GB.UTF-8'), ('SSH_AGENT_PID', '1972'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/sycamore/ros2_galactic/ros2-linux/opt/yaml_cpp_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/opt/rviz_ogre_vendor/lib:/home/sycamore/ros2_galactic/ros2-linux/lib'), ('HOME', '/home/sycamore'), ('OLDPWD', '/home/sycamore'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_GB.UTF-8'), ('MANAGERPID', '1793'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/sycamore/ros2_galactic/ros2-linux'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'sycamore'), ('JOURNAL_STREAM', '8:57549'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/sycamore/ros2_galactic/ros2-linux/lib/x86_64-linux-gnu/pkgconfig:/home/sycamore/ros2_galactic/ros2-linux/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'sycamore'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/sycamore/ros2_galactic/ros2-linux/bin:/home/sycamore/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/Sycamore-CentralPC:@/tmp/.ICE-unix/2011,unix/Sycamore-CentralPC:/tmp/.ICE-unix/2011'), ('INVOCATION_ID', 'df421e6e4f43445b9add259335c7cddd'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_GB.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/2be768c9_38f4_4011_a782_810ffc2eb814'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_GB.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_GB.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('GNOME_TERMINAL_SERVICE', ':1.2505'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/sycamore/ros2_galactic/ros2-linux'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_GB.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LC_MEASUREMENT', 'en_GB.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'en_GB.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/sycamore/SycaBot_ros/build/interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/sycamore/ros2_galactic/ros2-linux/lib/python3.8/site-packages'), ('LC_NUMERIC', 'en_GB.UTF-8'), ('LC_PAPER', 'en_GB.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/sycamore/ros2_galactic/ros2-linux')]), 'shell': False}
+[2.783271] (interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.783669] (interfaces) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[2.783890] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/share/ament_index/resource_index/rosidl_interfaces/interfaces\n'}
+[2.789103] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/include/interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[2.793764] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/include/interfaces/srv/detail/task__functions.h\n'}
+[2.798409] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/include/interfaces/srv/detail/task__struct.h\n'}
+[2.802382] (-) TimerEvent: {}
+[2.803033] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/include/interfaces/srv/detail/task__type_support.h\n'}
+[2.807837] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/include/interfaces/srv/task.h\n'}
+[2.812741] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/environment/library_path.sh\n'}
+[2.817376] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/environment/library_path.dsv\n'}
+[2.822195] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/include/interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[2.826816] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/include/interfaces/srv/detail/task__rosidl_typesupport_fastrtps_c.h\n'}
+[2.831713] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[2.836767] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/include/interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[2.841514] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/include/interfaces/srv/detail/task__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.846329] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[2.851192] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/include/interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[2.855962] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/include/interfaces/srv/detail/task__rosidl_typesupport_introspection_c.h\n'}
+[2.860833] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/include/interfaces/srv/detail/task__builder.hpp\n'}
+[2.865440] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/include/interfaces/srv/detail/task__struct.hpp\n'}
+[2.870021] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/include/interfaces/srv/detail/task__traits.hpp\n'}
+[2.874735] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/include/interfaces/srv/task.hpp\n'}
+[2.879502] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/include/interfaces/srv/detail/task__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.884087] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/environment/pythonpath.sh\n'}
+[2.888779] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/environment/pythonpath.dsv\n'}
+[2.893667] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/lib/python3.8/site-packages/interfaces/__init__.py\n'}
+[2.898491] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/lib/python3.8/site-packages/interfaces/srv/__init__.py\n'}
+[2.902477] (-) TimerEvent: {}
+[2.903090] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/lib/python3.8/site-packages/interfaces/srv/_task.py\n'}
+[2.907954] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/lib/python3.8/site-packages/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[2.912992] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/lib/python3.8/site-packages/interfaces/interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[2.917853] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/lib/python3.8/site-packages/interfaces/interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[2.922740] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/lib/libinterfaces__python.so\n'}
+[2.927713] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/srv/Task.idl\n'}
+[2.932714] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/srv/Task.srv\n'}
+[2.937632] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/srv/Task_Request.msg\n'}
+[2.942412] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/srv/Task_Response.msg\n'}
+[2.947287] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/share/ament_index/resource_index/package_run_dependencies/interfaces\n'}
+[2.952110] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/share/ament_index/resource_index/parent_prefix_path/interfaces\n'}
+[2.956841] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/environment/ament_prefix_path.sh\n'}
+[2.961655] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/environment/ament_prefix_path.dsv\n'}
+[2.966439] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/environment/path.sh\n'}
+[2.971259] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/environment/path.dsv\n'}
+[2.975961] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/local_setup.bash\n'}
+[2.980715] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/local_setup.sh\n'}
+[2.985518] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/local_setup.zsh\n'}
+[2.990311] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/local_setup.dsv\n'}
+[2.995054] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/package.dsv\n'}
+[2.999754] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/share/ament_index/resource_index/packages/interfaces\n'}
+[3.002571] (-) TimerEvent: {}
+[3.004492] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[3.009209] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[3.013965] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[3.018844] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[3.023891] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[3.028842] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[3.033762] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[3.038469] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/cmake/interfacesConfig.cmake\n'}
+[3.043183] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/cmake/interfacesConfig-version.cmake\n'}
+[3.047990] (interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/package.xml\n'}
+[3.052747] (interfaces) StdoutLine: {'line': b'-- Installing: /home/sycamore/SycaBot_ros/install/interfaces/lib/libinterfaces__rosidl_generator_c.so\n'}
+[3.052928] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/sycamore/SycaBot_ros/install/interfaces/lib/libinterfaces__rosidl_generator_c.so" to ""\n'}
+[3.053014] (interfaces) StdoutLine: {'line': b'-- Installing: /home/sycamore/SycaBot_ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_c.so\n'}
+[3.053195] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/sycamore/SycaBot_ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[3.053323] (interfaces) StdoutLine: {'line': b'-- Installing: /home/sycamore/SycaBot_ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_c.so\n'}
+[3.053392] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/sycamore/SycaBot_ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_c.so" to ""\n'}
+[3.053458] (interfaces) StdoutLine: {'line': b'-- Installing: /home/sycamore/SycaBot_ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[3.053636] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/sycamore/SycaBot_ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[3.053704] (interfaces) StdoutLine: {'line': b'-- Installing: /home/sycamore/SycaBot_ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_cpp.so\n'}
+[3.053846] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/sycamore/SycaBot_ros/install/interfaces/lib/libinterfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[3.072375] (interfaces) StdoutLine: {'line': b"Compiling '/home/sycamore/SycaBot_ros/install/interfaces/lib/python3.8/site-packages/interfaces/__init__.py'...\n"}
+[3.074648] (interfaces) StdoutLine: {'line': b'-- Installing: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/cmake/interfaces__rosidl_generator_cExport.cmake\n'}
+[3.074823] (interfaces) StdoutLine: {'line': b'-- Installing: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/cmake/interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[3.074891] (interfaces) StdoutLine: {'line': b'-- Installing: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[3.074965] (interfaces) StdoutLine: {'line': b'-- Installing: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[3.075026] (interfaces) StdoutLine: {'line': b'-- Installing: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cExport.cmake\n'}
+[3.075082] (interfaces) StdoutLine: {'line': b'-- Installing: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[3.075190] (interfaces) StdoutLine: {'line': b'-- Installing: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/cmake/interfaces__rosidl_generator_cppExport.cmake\n'}
+[3.075269] (interfaces) StdoutLine: {'line': b'-- Installing: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[3.075333] (interfaces) StdoutLine: {'line': b'-- Installing: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[3.075436] (interfaces) StdoutLine: {'line': b'-- Installing: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[3.075566] (interfaces) StdoutLine: {'line': b'-- Installing: /home/sycamore/SycaBot_ros/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[3.076926] (interfaces) CommandEnded: {'returncode': 0}
+[3.102695] (-) TimerEvent: {}
+[3.116678] (interfaces) JobEnded: {'identifier': 'interfaces', 'rc': 0}
+[3.117141] (-) EventReactorShutdown: {}

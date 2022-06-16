@@ -1,0 +1,9 @@
+source;share/jetbot/hook/pythonpath.ps1
+source;share/jetbot/hook/pythonpath.dsv
+source;share/jetbot/hook/pythonpath.sh
+source;share/jetbot/hook/ament_prefix_path.ps1
+source;share/jetbot/hook/ament_prefix_path.dsv
+source;share/jetbot/hook/ament_prefix_path.sh
+source;../../build/jetbot/share/jetbot/hook/pythonpath_develop.ps1
+source;../../build/jetbot/share/jetbot/hook/pythonpath_develop.dsv
+source;../../build/jetbot/share/jetbot/hook/pythonpath_develop.sh

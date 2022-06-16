@@ -1,0 +1,1 @@
+/home/sycamore/ros2_galactic/ros2-linux/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh

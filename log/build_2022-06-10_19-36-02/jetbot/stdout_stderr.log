@@ -1,0 +1,16 @@
+running develop
+running egg_info
+writing jetbot.egg-info/PKG-INFO
+writing dependency_links to jetbot.egg-info/dependency_links.txt
+writing entry points to jetbot.egg-info/entry_points.txt
+writing requirements to jetbot.egg-info/requires.txt
+writing top-level names to jetbot.egg-info/top_level.txt
+reading manifest file 'jetbot.egg-info/SOURCES.txt'
+writing manifest file 'jetbot.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/sycamore/SycaBot_ros/install/jetbot/lib/python3.8/site-packages/jetbot.egg-link (link to .)
+Installing motors script to /home/sycamore/SycaBot_ros/install/jetbot/lib/jetbot
+Installing start script to /home/sycamore/SycaBot_ros/install/jetbot/lib/jetbot
+
+Installed /home/sycamore/SycaBot_ros/build/jetbot
+running install_data
