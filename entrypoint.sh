@@ -16,7 +16,7 @@ source "$ros_workspace_setup"
 echo "ROS_ROOT   $ROS_ROOT"
 echo "ROS_DISTRO $ROS_DISTRO"
 
-FASTRTPS_DEFAULT_PROFILES=ddsconfig.xml
+FASTRTPS_DEFAULT_PROFILES=scripts/ddsconfig.xml
 export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 
 ros2 launch jetbot init.launch.py

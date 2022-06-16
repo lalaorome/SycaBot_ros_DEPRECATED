@@ -4,9 +4,11 @@ ROS_DISTRO="foxy"
 
 # where the project resides inside docker
 DOCKER_ROOT="/syca_ws/src"
+SCRIPTS_ROOT="/syca_ws/scripts"
 
 # generate mount commands
-DEV_VOLUME="--volume $PWD:$DOCKER_ROOT"
+DEV_VOLUME="--volume $PWD/src:$DOCKER_ROOT"
+SCRIPTS_VOLUME="--volume $PWD/scripts:$SCRIPTS_ROOT"
 
 # check for V4L2 devices
 V4L2_DEVICES=" "
@@ -27,6 +29,7 @@ MOUNTS="\
 --volume /etc/timezone:/etc/timezone:ro \
 --volume /etc/localtime:/etc/localtime:ro \
 --volume /dev/shm:/dev/shm \
+$SCRIPTS_VOLUME \
 $DEV_VOLUME \
 $V4L2_DEVICES"
 

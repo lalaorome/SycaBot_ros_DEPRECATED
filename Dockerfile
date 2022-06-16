@@ -24,10 +24,5 @@ RUN sed -i \
 RUN chmod -x /entrypoint.sh
 WORKDIR /syca_ws
 
-COPY ddsconfig.xml /
-
-RUN source ${ROS_ROOT}/install/setup.bash
-
-
 ENTRYPOINT ["/usr/bin/env"]
 CMD ["bash", "/entrypoint.sh"]
