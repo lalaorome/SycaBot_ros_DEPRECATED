@@ -24,6 +24,8 @@ RUN sed -i \
 RUN chmod -x /entrypoint.sh
 WORKDIR /syca_ws
 
+COPY ddsconfig.xml /
+
 RUN source ${ROS_ROOT}/install/setup.bash \
     && FASTRTPS_DEFAULT_PROFILES=ddsconfig.xml \
     && export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
