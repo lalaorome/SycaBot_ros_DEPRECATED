@@ -26,6 +26,7 @@ MOUNTS="\
 --device /dev/bus/usb \
 --volume /etc/timezone:/etc/timezone:ro \
 --volume /etc/localtime:/etc/localtime:ro \
+--volume /dev/shm:/dev/shm \
 $DEV_VOLUME \
 $V4L2_DEVICES"
 
