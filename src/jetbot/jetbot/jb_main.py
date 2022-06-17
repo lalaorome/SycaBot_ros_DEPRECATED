@@ -4,7 +4,9 @@ from rclpy.node import Node
 import numpy as np
 from numpy.linalg import norm
 import math as m
+import time 
 from jetbot.jb_utils import quat2eul
+from jetbot.jb_control import align_with_goal
 
 from geometry_msgs.msg import PoseStamped, Point, Twist
 from std_msgs.msg import Bool
@@ -13,23 +15,24 @@ from interfaces.srv import Task
 
 from message_filters import ApproximateTimeSynchronizer, Subscriber
 
-# SYCABOT_ID = 1
-verbose = True
+SYCABOT_ID = 1
+verbose = False
 
 class jetbot_client(Node):
     def __init__(self):
-        super().__init__('client', namespace = 'Sycabot_W0')
-        self.state = [0,0,0]
+        super().__init__('client')
+        self.state = np.array([0,0,0])
         self.exec_state = False
         self.declare_parameter('id', 1)
         self.id = self.get_parameter('id').value
+        self.goal = None
 
         # Subscribe to pose topic
-        self.pose_sub = self.create_subscription(PoseStamped, '/SycaBot_W'+ str(self.id) +'/pose', self.get_pose_cb, 10)
+        self.pose_sub = self.create_subscription(PoseStamped, '/vrpn_client_node/SycaBot_W'+ str(self.id) +'/pose', self.get_pose_cb, 10)
         # Subscribe to execution state topic
         self.exec_state_sub = self.create_subscription(Bool, '/central_pc/exec_state', self.get_exec_state_cb, 10)
         # Create motor publisher
-        self.vel_cmd_pub = self.create_publisher(Twist, '/SycaBot_W' + str(self.id) + '/cmd_vel', 10)
+        self.vel_cmd_pub = self.create_publisher(Twist, '/SycaBot_W' + str(self.id) + '/cmd_vel', 1)
 
         # Define task service
         self.task_cli = self.create_client(Task, '/central_pc/task_srv')
@@ -91,13 +94,15 @@ def main(args=None):
                     jb_client.get_logger().info(
                         'Service call failed %r' % (e,))
             else:
-                if verbose :
+                if not verbose :
                     jb_client.get_logger().info(
                         'Pose of task is (x=%f, y=%f, z=%f)\n' %(response.task.x, response.task.y, response.task.z))
+                    jb_client.goal = np.array([response.task.x, response.task.y])
             break
     
     i = 0
     while(1):
+        time.sleep(0.5)
         rclpy.spin_once(jb_client)
         start = jb_client.exec_state
         
@@ -105,15 +110,18 @@ def main(args=None):
         if not start : jb_client.get_logger().info('Execution has not started\n')
         
         else : # Do control
-            if i <= 20 :
-                jb_client.get_logger().info('Publishing\n')
+            if i <= 50 :
+                if verbose : jb_client.get_logger().info('Publishing\n')
                 vel = Twist()
-                vel.linear.x = 0.2 + i*0.01
+                vel.linear.x = 0.12
             else :
                 vel.linear.x = 0.0
+            #jb_client.get_logger().info('id : %d\n' %(jb_client.id))
             jb_client.vel_cmd_pub.publish(vel)
             i+=1
-
+            # cmd_vel = Twist()
+            # cmd_vel.angular.z = align_with_goal(jb_client.goal, jb_client.state, cmd_vel)
+            # jb_client.vel_cmd_pub.publish(cmd_vel)
         
     
     rclpy.spin(jb_client)

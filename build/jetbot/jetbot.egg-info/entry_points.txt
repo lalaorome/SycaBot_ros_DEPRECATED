@@ -1,4 +1,0 @@
-[console_scripts]
-motors = jetbot.motors_waveshare:main
-start = jetbot.jb_main:main
-

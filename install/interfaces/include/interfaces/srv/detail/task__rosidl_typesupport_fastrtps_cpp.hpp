@@ -1,1 +1,0 @@
-/home/sycamore/SycaBot_ros/build/interfaces/rosidl_typesupport_fastrtps_cpp/interfaces/srv/detail/task__rosidl_typesupport_fastrtps_cpp.hpp
