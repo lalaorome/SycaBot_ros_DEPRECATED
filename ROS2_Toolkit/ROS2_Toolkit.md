@@ -126,7 +126,7 @@ Nodes can communicate using services in ROS 2. Unlike a topic - a one way commun
 
 You generally don’t want to use a service for continuous calls; topics or even actions would be better suited.
 
-![Untitled](ROS2%20-%20Toolkit%20275a37431c92428a80f28b1469f4f13c/Untitled%201.png)
+![Untitled](ROS2_Toolkit/Untitled%201.png)
 
 ```powershell
 ros2 service type <service_name>
@@ -137,7 +137,7 @@ ros2 service call <service_name> <service_type> <arguments>
 
 ## Custom .msg and .srv files
 
-- .msg and .srv files are used as interfaces (see [publisher/subscriber](https://www.notion.so/ROS2-Toolkit-24cc5b0423454b82aa04823e6190bf05) or [service/client](https://www.notion.so/ROS2-Toolkit-24cc5b0423454b82aa04823e6190bf05) examples)
+- .msg and .srv files are used as interfaces (see publisher/subscriber or service/client examples at the end)
 - It is good practice to keep `.msg` and `.srv` files in their own directories within a package.
 - .msg files :
     - define the type and name of variables inside e.g. : `int64 num [=default]`
@@ -201,7 +201,7 @@ Actions are like services that allow you to execute long running tasks, provide 
 
 A robot system would likely use actions for navigation. An action goal could tell a robot to travel to a position. While the robot navigates to the position, it can send updates along the way (i.e. feedback), and then a final result message once it’s reached its destination.
 
-![Untitled](ROS2%20-%20Toolkit%20275a37431c92428a80f28b1469f4f13c/Untitled%202.png)
+![Untitled](ROS2_Toolkit/Untitled%202.png)
 
 ```powershell
 ros2 action list -t
@@ -324,7 +324,7 @@ ros2 bag play <bag_file_name>
 When making your own nodes you will sometimes need to add parameters that can be set from the launch file.
 
 - Optionally, you can set a descriptor for the parameter. Descriptors allow you to specify a text description of the parameter and parameters constraints, like making it read-only, specifying a range, etc.
-- See the [basic node creation with parameters example](https://www.notion.so/ROS2-Toolkit-24cc5b0423454b82aa04823e6190bf05)
+- See the basic node creation with parameters example
 
 ## Basics code examples
 
