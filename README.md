@@ -42,7 +42,7 @@ rm SycaBot_ros
 cd syca_ws
 ```
 
-CAREFUL : FROM NOW ON YOU SHOULD ALWAYS BE IN SYCA_WS
+CAREFUL : FROM NOW ON YOU SHOULD ALWAYS BE IN SYCA_WS EXCEPT IF YOU FOLLOW OPTION 1
 
 ### Configure the sudo rights so that sudo doesn’t ask for password each time :
 
