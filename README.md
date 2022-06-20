@@ -32,17 +32,11 @@ sudo reboot now
 
 In order for the JetBot to directly launch the Docker at startup we need to tell the system which service files to enable at boot. 
 
-- Make a syca_ws in the home directory to put the files : `mkdir syca_ws`
 - Clone this github repo :
 
 ```powershell
 git clone https://github.com/lalaorome/SycaBot_ros
-cp -r SycaBot_ros/. syca_ws/
-rm SycaBot_ros
-cd syca_ws
 ```
-
-CAREFUL : FROM NOW ON YOU SHOULD ALWAYS BE IN SYCA_WS EXCEPT IF YOU FOLLOW OPTION 1
 
 ### Configure the sudo rights so that sudo doesn’t ask for password each time :
 
@@ -85,6 +79,14 @@ To do so use `i` to pass in insert mode `esc` to echap insert mode and go in com
  `source config_jetbot.sh`
 
 **Option 2 :** Do it manually 
+
+- Copy the previously cloned workspace into a new workspace called syca_ws and enter it :
+
+```powershell
+cp -r SycaBot_ros/. syca_ws/
+rm SycaBot_ros
+cd syca_ws
+```
 
 - Copy the service file robot_boot.service inside /lib/systemd/system and test and the boot_init in /usr/local/bin/ and give mode 755 to allow execution:
 
