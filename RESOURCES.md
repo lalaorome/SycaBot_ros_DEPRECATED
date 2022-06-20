@@ -1,9 +1,5 @@
 # Some useful resources
 
-[1] [https://openarchive.usn.no/usn-xmlui/bitstream/handle/11250/2647304/MasterSolvang2019.pdf?sequence=1&isAllowed=y](https://openarchive.usn.no/usn-xmlui/bitstream/handle/11250/2647304/MasterSolvang2019.pdf?sequence=1&isAllowed=y)
-
-(on PID control - State Space - ....)
-
 ## Better understanding of Docker, L4T and jetson containers:
 
 [NVIDIA L4T Base | NVIDIA NGC](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/l4t-base)
