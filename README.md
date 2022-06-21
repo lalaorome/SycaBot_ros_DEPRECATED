@@ -1,7 +1,7 @@
 # SycaBot_ros
 Package to make decentralized multi-agent control and task assignment using jetbots and ros2. Use with https://github.com/lalaorome/Central_PC
 
-Please also don't hesitate to read the links in RESOURCES.md.
+Please also don't hesitate to read the links in RESOURCES.md and the report.pdf file for further informations.
 
 Have a look at ROS2_Toolkit if you want a catch up on ROS2 basics.
 
