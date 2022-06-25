@@ -3,6 +3,14 @@ FROM dustynv/jetbot_ros:foxy-r32.5.0
 SHELL ["/bin/bash", "-c"] 
 ENV SHELL /bin/bash
 
+# install Fast-RTPS dependencies
+RUN sudo apt install --no-install-recommends -y \
+    libasio-dev \
+    libtinyxml2-dev
+# install Cyclone DDS dependencies
+RUN sudo apt install --no-install-recommends -y \
+    libcunit1-dev
+
 # Create an overlay
 RUN source ${ROS_ROOT}/install/setup.bash \
     && mkdir -p /syca_ws/src \
