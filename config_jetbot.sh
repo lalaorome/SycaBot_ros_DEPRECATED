@@ -1,10 +1,12 @@
 #!/bin/bash
 
+sudo pip3 install Adafruit-MotorHAT Adafruit-SSD1306 pyserial sparkfun-qwiic --verbose
+
 #Create the good directory
 sudo cp -r ./. ../syca_ws/
 
 # Copy service file and make systemctl recgonize it
-echo 'Copying service and boot file'
+echo 'Copying service and boot file...'
 sudo cp robot_boot.service /lib/systemd/system/
 sudo cp boot_init.sh /usr/local/bin/
 echo 'chown /usr/local/bin/boot_init.sh'
@@ -19,14 +21,3 @@ cd ../syca_ws/src/jetbot/launch
 read -p 'SYCABOT_ID : ' ID 
 echo 'changing SYCABOT_ID ...'
 sudo sed -i "s/SYCABOT_ID = 1/SYCABOT_ID = ${ID}/" init.launch.py
-
-# Build package
-cd ~/syca_ws
-echo 'sourcing ROS2 ...'
-source setup_ROS.sh
-echo "building package ..."
-colcon build --symlink-install
-
-#start service
-echo "enabling service ..."
-sudo systemctl enable robot_boot
