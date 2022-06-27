@@ -21,3 +21,4 @@ cd ../syca_ws/src/jetbot/launch
 read -p 'SYCABOT_ID : ' ID 
 echo 'changing SYCABOT_ID ...'
 sudo sed -i "s/SYCABOT_ID = 1/SYCABOT_ID = ${ID}/" init.launch.py
+cd ~/syca_ws
