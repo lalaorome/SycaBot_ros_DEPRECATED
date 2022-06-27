@@ -19,10 +19,11 @@ cd ../syca_ws/src/jetbot/launch
 read -p 'SYCABOT_ID : ' ID 
 echo 'changing SYCABOT_ID'
 sudo sed -i "s/SYCABOT_ID = 1/SYCABOT_ID = ${ID}/" init.launch.py
+
+# Build package
 cd ~/syca_ws
+source setup_ROS.sh
+colcon build --symlink-install
 
-# Build the docker
-echo 'Building docker'
-sudo docker build . -t syca_jb
-
-sudo systemctl start robot_boot
+#start service
+sudo systemctl enable robot_boot
