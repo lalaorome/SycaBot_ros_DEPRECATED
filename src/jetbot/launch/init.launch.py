@@ -30,5 +30,5 @@ def generate_launch_description():
         )
     
     description.append(jb_main)
-    # description.append(motors)
+    description.append(motors)
     return LaunchDescription(description)
