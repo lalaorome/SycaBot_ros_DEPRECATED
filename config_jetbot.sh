@@ -17,6 +17,7 @@ echo 'installing control ...'
 sudo pip3 install control --verbose
 
 #Create the good directory
+cd ../SycaBot_ros
 sudo cp -r ./. ../syca_ws/
 
 # Copy service file and make systemctl recgonize it
