@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pip3 install Adafruit-MotorHAT Adafruit-SSD1306 pyserial sparkfun-qwiic --verbose
+sudo pip3 install Adafruit-MotorHAT Adafruit-SSD1306 pyserial sparkfun-qwiic control --verbose
 
 #Create the good directory
 sudo cp -r ./. ../syca_ws/
