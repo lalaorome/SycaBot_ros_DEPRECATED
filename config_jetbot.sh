@@ -1,7 +1,19 @@
 #!/bin/bash
-echo 'installing adafruit ...\n'
+echo 'installing adafruit ...'
 sudo pip3 install Adafruit-MotorHAT Adafruit-SSD1306 pyserial sparkfun-qwiic --verbose
-echo 'installing control ...\n'
+echo 'install matplotlib ...'
+sudo cp /etc/apt/sources.list /etc/apt/sources.list~
+sudo sed -Ei 's/^# deb-src /deb-src /' /etc/apt/sources.list
+sudo apt-get update
+cd ~/.local/lib/python3.6/site-packages
+git clone -b v3.3.4 --depth 1 https://github.com/matplotlib/matplotlib.git 22
+cd ~/.local/lib/python3.6/site-packages/matplotlib
+sudo apt-get build-dep python3-matplotlib -y
+pip install . -v
+sudo mv /etc/apt/sources.list~ /etc/apt/sources.list
+sudo apt-get update
+
+echo 'installing control ...'
 sudo pip3 install control --verbose
 
 #Create the good directory
