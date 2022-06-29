@@ -2,7 +2,7 @@
 echo 'installing adafruit ...\n'
 sudo pip3 install Adafruit-MotorHAT Adafruit-SSD1306 pyserial sparkfun-qwiic --verbose
 echo 'installing control ...\n'
-sudo pip install control --verbose
+sudo pip3 install control --verbose
 
 #Create the good directory
 sudo cp -r ./. ../syca_ws/
