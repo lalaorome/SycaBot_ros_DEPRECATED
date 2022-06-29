@@ -32,11 +32,11 @@ class jetbot_client(Node):
         self.time_init = time.time()
 
         # Subscribe to pose topic
-        self.pose_sub = self.create_subscription(PoseStamped, '/vrpn_client_node/SycaBot_W'+ str(self.id) +'/pose', self.get_pose_cb)
+        self.pose_sub = self.create_subscription(PoseStamped, '/vrpn_client_node/SycaBot_W'+ str(self.id) +'/pose', self.get_pose_cb, 10)
         # Subscribe to execution state topic
-        self.exec_state_sub = self.create_subscription(Bool, '/exec_state', self.get_exec_state_cb)
+        self.exec_state_sub = self.create_subscription(Bool, '/exec_state', self.get_exec_state_cb, 10)
         # Create motor publisher
-        self.vel_cmd_pub = self.create_publisher(Twist, '/SycaBot_W' + str(self.id) + '/cmd_vel')
+        self.vel_cmd_pub = self.create_publisher(Twist, '/SycaBot_W' + str(self.id) + '/cmd_vel', 10)
 
         # Define task service
         self.task_cli = self.create_client(Task, '/task_srv')
