@@ -12,11 +12,8 @@ def quat2eul(q, axis='z'):
     ------------------------------------------------
     return :
     '''
-    if axis=='x' :
-        angle = 2*m.asin(q[0])
-    if axis=='y' :
-        angle = 2*m.asin(q[1])
     if axis=='z' :
-        angle = 2*m.asin(q[2])
-    
+        t1 = 2. * (q[3]*q[2] + q[0]*q[1])
+        t2 = 1. - 2.*(q[1]*q[1] + q[2]*q[2])
+        angle = m.atan2(t1,t2)
     return angle

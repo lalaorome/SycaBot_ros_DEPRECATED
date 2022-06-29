@@ -10,16 +10,16 @@ def generate_launch_description():
 
     description = []
 
-    # jb_main = Node(
-    #         package= 'jetbot',
-    #         namespace= 'SycaBot_W' + str(SYCABOT_ID),
-    #         executable= 'start',
-    #         output = 'screen',
-    #         emulate_tty=True,
-    #         parameters=[
-    #             {'id': SYCABOT_ID}
-    #         ],
-    #     )
+    jb_main = Node(
+            package= 'jetbot',
+            namespace= 'SycaBot_W' + str(SYCABOT_ID),
+            executable= 'start',
+            output = 'screen',
+            emulate_tty=True,
+            parameters=[
+                {'id': SYCABOT_ID}
+            ],
+        )
 
     motors = Node(
             package= 'jetbot',
@@ -29,6 +29,6 @@ def generate_launch_description():
             emulate_tty=True,
         )
     
-    # description.append(jb_main)
-    description.append(motors)
+    description.append(jb_main)
+    # description.append(motors)
     return LaunchDescription(description)
