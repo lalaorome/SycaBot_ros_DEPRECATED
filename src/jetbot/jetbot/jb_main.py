@@ -28,7 +28,7 @@ class jetbot_client(Node):
         self.exec_state = False
         self.declare_parameter('id', 1)
         self.id = self.get_parameter('id').value
-        self.goal = None
+        self.goal = np.array([-1.,2.])
         self.time_init = time.time()
 
         # Subscribe to pose topic
@@ -39,9 +39,9 @@ class jetbot_client(Node):
         self.vel_cmd_pub = self.create_publisher(Twist, '/SycaBot_W' + str(self.id) + '/cmd_vel', 10)
 
         # Define task service
-        self.task_cli = self.create_client(Task, '/task_srv')
-        while not self.task_cli.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info('service not available, waiting again...\n')
+        # self.task_cli = self.create_client(Task, '/task_srv')
+        # while not self.task_cli.wait_for_service(timeout_sec=1.0):
+        #     self.get_logger().info('service not available, waiting again...\n')
    
     
     def get_exec_state_cb(self, state):
@@ -86,28 +86,29 @@ def main(args=None):
     try :
         rclpy.init(args=args)
         jb_client = jetbot_client()
-        start = False
+        start = True
 
-        # Initialisation : Ask for its initial task
-        jb_client.task_request()
-        while rclpy.ok():
-            rclpy.spin_once(jb_client)
-            if jb_client.future.done():
-                try:
-                    response = jb_client.future.result()
-                except Exception as e:
-                    if verbose :
-                        jb_client.get_logger().info(
-                            'Service call failed %r' % (e,))
-                else:
-                    if not verbose :
-                        jb_client.get_logger().info(
-                            'Pose of task is (x=%f, y=%f, z=%f)\n' %(response.task.x, response.task.y, response.task.z))
-                        jb_client.goal = np.array([response.task.x, response.task.y])
-                        alpha = calculate_angle(jb_client.goal, jb_client.state)
-                break
+        # # Initialisation : Ask for its initial task
+        # jb_client.task_request()
+        # while rclpy.ok():
+        #     rclpy.spin_once(jb_client)
+        #     if jb_client.future.done():
+        #         try:
+        #             response = jb_client.future.result()
+        #         except Exception as e:
+        #             if verbose :
+        #                 jb_client.get_logger().info(
+        #                     'Service call failed %r' % (e,))
+        #         else:
+        #             if not verbose :
+        #                 jb_client.get_logger().info(
+        #                     'Pose of task is (x=%f, y=%f, z=%f)\n' %(response.task.x, response.task.y, response.task.z))
+        #                 jb_client.goal = np.array([response.task.x, response.task.y])
+        #                 alpha = calculate_angle(jb_client.goal, jb_client.state)
+        #         break
 
         # Set LQR
+        alpha = calculate_angle(jb_client.goal, jb_client.state)
         R=60.
         Q=np.array([[100,0],[0,1]])
         LQRw = LQRcontroller(R=R, Q=Q)
