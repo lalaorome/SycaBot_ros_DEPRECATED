@@ -18,7 +18,7 @@ def generate_launch_description():
 
     for i in ids :
         SYCABOT_ID = i
-        jb_main = Node(
+        description.append(Node(
                 package= 'jetbot',
                 namespace= 'SycaBot_W' + str(SYCABOT_ID),
                 executable= 'start',
@@ -27,7 +27,6 @@ def generate_launch_description():
                 parameters=[
                     {'id': SYCABOT_ID}
                 ],
-            )
+            ))
 
-    description.append(jb_main)
     return LaunchDescription(description)
