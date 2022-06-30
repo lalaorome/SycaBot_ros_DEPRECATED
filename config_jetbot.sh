@@ -92,7 +92,11 @@ sudo cp -r ./. ../syca_ws/
 
 # Copy service file and make systemctl recgonize it
 sudo sed -i "s/ros2 launch jetbot init.launch.py/ros2 launch jetbot ${LAUNCH_FILE_NAME}.launch.py/" boot_init.sh
+echo ""
+echo ""
 cat boot_init.sh
+echo ""
+echo ""
 echo 'Copying service and boot file...'
 sudo cp robot_boot.service /lib/systemd/system/
 sudo cp boot_init.sh /usr/local/bin/
@@ -107,6 +111,10 @@ sudo systemctl daemon-reload
 cd ../syca_ws/src/jetbot/launch
 sudo sed -i "s/SYCABOT_ID = 1/SYCABOT_ID = ${ID}/" init.launch.py
 sudo sed -i "s/SYCABOT_ID = 1/SYCABOT_ID = ${ID}/" motors.launch.py
+echo ""
+echo ""
 cat init.launch.py
+echo ""
+echo ""
 cat motors.launch.py
 cd ~/syca_ws
