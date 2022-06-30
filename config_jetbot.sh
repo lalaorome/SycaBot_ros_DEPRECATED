@@ -79,7 +79,7 @@ cd ~/.local/lib/python3.6/site-packages
 git clone -b v3.3.4 --depth 1 https://github.com/matplotlib/matplotlib.git 22
 cd ~/.local/lib/python3.6/site-packages/matplotlib
 sudo apt-get build-dep python3-matplotlib -y
-pip3 install . -v
+# pip3 install . -v
 sudo mv /etc/apt/sources.list~ /etc/apt/sources.list
 sudo apt-get update
 
