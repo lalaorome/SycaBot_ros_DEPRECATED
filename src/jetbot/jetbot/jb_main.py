@@ -19,7 +19,9 @@ from interfaces.srv import Task
 
 from message_filters import ApproximateTimeSynchronizer, Subscriber
 
+SYCABOT_ID = 1
 verbose = False
+plot = True
 
 class jetbot_client(Node):
     def __init__(self):
@@ -28,20 +30,20 @@ class jetbot_client(Node):
         self.exec_state = False
         self.declare_parameter('id', 1)
         self.id = self.get_parameter('id').value
-        self.goal = np.array([-1.,2.])
+        self.goal = None
         self.time_init = time.time()
 
         # Subscribe to pose topic
-        self.pose_sub = self.create_subscription(PoseStamped, '/vrpn_client_node/SycaBot_W'+ str(self.id) +'/pose', self.get_pose_cb, 10)
+        self.pose_sub = self.create_subscription(PoseStamped, '/vrpn_client_node/SycaBot_W'+ str(self.id) +'/pose', self.get_pose_cb, 1)
         # Subscribe to execution state topic
-        self.exec_state_sub = self.create_subscription(Bool, '/exec_state', self.get_exec_state_cb, 10)
+        self.exec_state_sub = self.create_subscription(Bool, '/exec_state', self.get_exec_state_cb, 1)
         # Create motor publisher
         self.vel_cmd_pub = self.create_publisher(Twist, '/SycaBot_W' + str(self.id) + '/cmd_vel', 10)
 
         # Define task service
-        # self.task_cli = self.create_client(Task, '/task_srv')
-        # while not self.task_cli.wait_for_service(timeout_sec=1.0):
-        #     self.get_logger().info('service not available, waiting again...\n')
+        self.task_cli = self.create_client(Task, '/task_srv')
+        while not self.task_cli.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('service not available, waiting again...\n')
    
     
     def get_exec_state_cb(self, state):
@@ -86,29 +88,28 @@ def main(args=None):
     try :
         rclpy.init(args=args)
         jb_client = jetbot_client()
-        start = True
+        start = False
 
-        # # Initialisation : Ask for its initial task
-        # jb_client.task_request()
-        # while rclpy.ok():
-        #     rclpy.spin_once(jb_client)
-        #     if jb_client.future.done():
-        #         try:
-        #             response = jb_client.future.result()
-        #         except Exception as e:
-        #             if verbose :
-        #                 jb_client.get_logger().info(
-        #                     'Service call failed %r' % (e,))
-        #         else:
-        #             if not verbose :
-        #                 jb_client.get_logger().info(
-        #                     'Pose of task is (x=%f, y=%f, z=%f)\n' %(response.task.x, response.task.y, response.task.z))
-        #                 jb_client.goal = np.array([response.task.x, response.task.y])
-        #                 alpha = calculate_angle(jb_client.goal, jb_client.state)
-        #         break
+        # Initialisation : Ask for its initial task
+        jb_client.task_request()
+        while rclpy.ok():
+            rclpy.spin_once(jb_client)
+            if jb_client.future.done():
+                try:
+                    response = jb_client.future.result()
+                except Exception as e:
+                    if verbose :
+                        jb_client.get_logger().info(
+                            'Service call failed %r' % (e,))
+                else:
+                    if not verbose :
+                        jb_client.get_logger().info(
+                            'Pose of task is (x=%f, y=%f, z=%f)\n' %(response.task.x, response.task.y, response.task.z))
+                        jb_client.goal = np.array([response.task.x, response.task.y])
+                        alpha = calculate_angle(jb_client.goal, jb_client.state)
+                break
 
         # Set LQR
-        alpha = calculate_angle(jb_client.goal, jb_client.state)
         R=60.
         Q=np.array([[100,0],[0,1]])
         LQRw = LQRcontroller(R=R, Q=Q)
@@ -157,10 +158,11 @@ def main(args=None):
                 ## Do LQR control
                 vel.angular.z, err, ierr,current_value = LQRw.update(jb_client.state[2])
                 
-                angle.append(jb_client.state[2])
-                pose.append(jb_client.state[0:2])
-                w.append(vel.angular.z)
-                time_serie.append(time.time()-t_init)
+                if plot : 
+                    angle.append(jb_client.state[2])
+                    pose.append(jb_client.state[0:2])
+                    w.append(vel.angular.z)
+                    time_serie.append(time.time()-t_init)
 
                 
                 if abs(jb_client.state[2] - alpha) < 0.2 and abs(jb_client.state[2]-previous_angle) < 0.00001 :
@@ -191,34 +193,36 @@ def main(args=None):
         jb_client.vel_cmd_pub.publish(vel)
         fig,ax = plt.subplots(1,4,figsize=(16,8))
         pose = np.array(pose)
-        ax[0].scatter(pose[:,0], pose[:,1], s=5)
-        ax[0].scatter(jb_client.goal[0], jb_client.goal[1], s=20)
-        ax[0].set_ylabel('x [m]')
-        ax[0].set_xlabel('y [m]')
-        ax[0].set_xlim((-2,2))
-        ax[0].set_ylim((-4,4))
 
-        ax[1].plot(time_serie,w)
-        ax[1].set_ylabel('angular vel. [% max speed]')
-        ax[1].set_xlabel('time [s]')
+        if plot :
+            ax[0].scatter(pose[:,0], pose[:,1], s=5)
+            ax[0].scatter(jb_client.goal[0], jb_client.goal[1], s=20)
+            ax[0].set_ylabel('x [m]')
+            ax[0].set_xlabel('y [m]')
+            ax[0].set_xlim((-2,2))
+            ax[0].set_ylim((-4,4))
 
-        ax[2].plot(time_serie, angle, label='angle value')
-        ax[2].plot(time_serie, [m.pi for i in range(len(time_serie))], label='pi')
-        ax[2].plot(time_serie, [-m.pi for i in range(len(time_serie))], label='-pi')
-        ax[2].plot(time_serie, alpha_sp, label= 'alpha')
-        ax[2].set_ylabel('angle [rad]')
-        ax[2].set_xlabel('time [s]')
-        ax[2].legend()
+            ax[1].plot(time_serie,w)
+            ax[1].set_ylabel('angular vel. [% max speed]')
+            ax[1].set_xlabel('time [s]')
 
-        ierr= np.array(ierr)/np.max(ierr)
-        ax[3].plot(time_serie,err, label='error')
-        # ax[3].plot(time_serie,derr, label='error diff')
-        ax[3].plot(time_serie,ierr, label='error sum')
-        ax[3].set_ylabel('error')
-        ax[3].set_xlabel('time [s]')
-        ax[3].legend()
-        plt.legend()
-        plt.show()
+            ax[2].plot(time_serie, angle, label='angle value')
+            ax[2].plot(time_serie, [m.pi for i in range(len(time_serie))], label='pi')
+            ax[2].plot(time_serie, [-m.pi for i in range(len(time_serie))], label='-pi')
+            ax[2].plot(time_serie, alpha_sp, label= 'alpha')
+            ax[2].set_ylabel('angle [rad]')
+            ax[2].set_xlabel('time [s]')
+            ax[2].legend()
+
+            ierr= np.array(ierr)/np.max(ierr)
+            ax[3].plot(time_serie,err, label='error')
+            # ax[3].plot(time_serie,derr, label='error diff')
+            ax[3].plot(time_serie,ierr, label='error sum')
+            ax[3].set_ylabel('error')
+            ax[3].set_xlabel('time [s]')
+            ax[3].legend()
+            plt.legend()
+            plt.show()
     except KeyboardInterrupt:
         pass
     except ExternalShutdownException:
