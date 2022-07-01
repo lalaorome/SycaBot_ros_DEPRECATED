@@ -16,6 +16,10 @@ from geometry_msgs.msg import PoseStamped, Point, Twist
 from std_msgs.msg import Bool
 from interfaces.srv import Task
 
+from rclpy.qos import QoSProfile
+from rclpy.qos import QoSReliabilityPolicy
+from rclpy.qos import qos_profile_sensor_data
+
 
 from message_filters import ApproximateTimeSynchronizer, Subscriber
 
@@ -32,13 +36,14 @@ class jetbot_client(Node):
         self.id = self.get_parameter('id').value
         self.goal = None
         self.time_init = time.time()
+        qos = qos_profile_sensor_data
 
         # Subscribe to pose topic
-        self.pose_sub = self.create_subscription(PoseStamped, '/vrpn_client_node/SycaBot_W'+ str(self.id) +'/pose', self.get_pose_cb, 1)
+        self.pose_sub = self.create_subscription(PoseStamped, '/vrpn_client_node/SycaBot_W'+ str(self.id) +'/pose', self.get_pose_cb, qos)
         # Subscribe to execution state topic
-        self.exec_state_sub = self.create_subscription(Bool, '/exec_state', self.get_exec_state_cb, 1)
+        self.exec_state_sub = self.create_subscription(Bool, '/exec_state', self.get_exec_state_cb, qos)
         # Create motor publisher
-        self.vel_cmd_pub = self.create_publisher(Twist, '/SycaBot_W' + str(self.id) + '/cmd_vel', 10)
+        self.vel_cmd_pub = self.create_publisher(Twist, '/SycaBot_W' + str(self.id) + '/cmd_vel', qos)
 
         # Define task service
         self.task_cli = self.create_client(Task, '/task_srv')
@@ -110,9 +115,10 @@ def main(args=None):
                 break
 
         # Set LQR
+        Ts=0.1
         R=60.
         Q=np.array([[100,0],[0,1]])
-        LQRw = LQRcontroller(R=R, Q=Q)
+        LQRw = LQRcontroller(R=R, Q=Q, Ts=Ts)
         LQRw.setPoint(alpha)
 
         
@@ -136,7 +142,7 @@ def main(args=None):
         previous_angle = 0
         while(not finish):
             rclpy.spin_once(jb_client)
-            time.sleep(0.01)
+            time.sleep(Ts)
             start = jb_client.exec_state
             
             # Step 1 : Wait for start signal
