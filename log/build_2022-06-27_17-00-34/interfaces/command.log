@@ -1,0 +1,4 @@
+Invoking command in '/home/sycamore/SycaBot_ros/build/interfaces': /usr/bin/cmake --build /home/sycamore/SycaBot_ros/build/interfaces -- -j20 -l20
+Invoked command in '/home/sycamore/SycaBot_ros/build/interfaces' returned '0': /usr/bin/cmake --build /home/sycamore/SycaBot_ros/build/interfaces -- -j20 -l20
+Invoking command in '/home/sycamore/SycaBot_ros/build/interfaces': /usr/bin/cmake --install /home/sycamore/SycaBot_ros/build/interfaces
+Invoked command in '/home/sycamore/SycaBot_ros/build/interfaces' returned '0': /usr/bin/cmake --install /home/sycamore/SycaBot_ros/build/interfaces

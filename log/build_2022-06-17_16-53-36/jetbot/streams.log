@@ -1,0 +1,19 @@
+[0.409s] Invoking command in '/home/sycamore/SycaBot_ros/build/jetbot': PYTHONPATH=/home/sycamore/SycaBot_ros/install/jetbot/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/sycamore/SycaBot_ros/install/jetbot --editable --build-directory /home/sycamore/SycaBot_ros/build/jetbot/build --no-deps install_data --install-dir /home/sycamore/SycaBot_ros/install/jetbot
+[0.552s] running develop
+[0.641s] running egg_info
+[0.641s] writing jetbot.egg-info/PKG-INFO
+[0.641s] writing dependency_links to jetbot.egg-info/dependency_links.txt
+[0.641s] writing entry points to jetbot.egg-info/entry_points.txt
+[0.641s] writing requirements to jetbot.egg-info/requires.txt
+[0.642s] writing top-level names to jetbot.egg-info/top_level.txt
+[0.662s] reading manifest file 'jetbot.egg-info/SOURCES.txt'
+[0.662s] writing manifest file 'jetbot.egg-info/SOURCES.txt'
+[0.683s] running build_ext
+[0.683s] Creating /home/sycamore/SycaBot_ros/install/jetbot/lib/python3.8/site-packages/jetbot.egg-link (link to .)
+[0.684s] Installing motors script to /home/sycamore/SycaBot_ros/install/jetbot/lib/jetbot
+[0.684s] Installing start script to /home/sycamore/SycaBot_ros/install/jetbot/lib/jetbot
+[0.684s] Installing test script to /home/sycamore/SycaBot_ros/install/jetbot/lib/jetbot
+[0.684s] 
+[0.684s] Installed /home/sycamore/SycaBot_ros/build/jetbot
+[0.684s] running install_data
+[0.697s] Invoked command in '/home/sycamore/SycaBot_ros/build/jetbot' returned '0': PYTHONPATH=/home/sycamore/SycaBot_ros/install/jetbot/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/sycamore/SycaBot_ros/install/jetbot --editable --build-directory /home/sycamore/SycaBot_ros/build/jetbot/build --no-deps install_data --install-dir /home/sycamore/SycaBot_ros/install/jetbot

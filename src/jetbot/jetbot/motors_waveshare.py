@@ -36,8 +36,8 @@ class MotorControllerWaveshare(MotorController):
         """
         Sets the motor speeds between [-1.0, 1.0]
         """
-        self._set_pwm(self.MOTOR_LEFT, left, self.left_trim)
-        self._set_pwm(self.MOTOR_RIGHT, right, self.right_trim)
+        self._set_pwm(self.MOTOR_LEFT, -left, self.left_trim)
+        self._set_pwm(self.MOTOR_RIGHT, -right, self.right_trim)
       
     def _set_pwm(self, motor, value, trim):
         # apply trim and convert [-1,1] to PWM value

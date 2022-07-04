@@ -5,6 +5,10 @@ from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from rcl_interfaces.msg import SetParametersResult
 
+from rclpy.qos import QoSProfile
+from rclpy.qos import QoSReliabilityPolicy
+from rclpy.qos import qos_profile_sensor_data
+
 class MotorController(Node):
     """
     Abstract motor controller base node for supporting different JetBots.
@@ -13,8 +17,9 @@ class MotorController(Node):
     """
     def __init__(self):
         super().__init__('motors', namespace = 'Sycabot_W0')
-        
-        self.sub = self.create_subscription(Twist, 'cmd_vel', self.twist_listener, 10)
+        qos = qos_profile_sensor_data
+
+        self.sub = self.create_subscription(Twist, 'cmd_vel', self.twist_listener, qos)
         
         self.declare_parameter('left_trim', 0.0)
         self.declare_parameter('right_trim', 0.0)

@@ -25,6 +25,7 @@ setup(
         'console_scripts': [
             'start = jetbot.jb_main:main',
             'motors = jetbot.motors_waveshare:main',
+            'test = jetbot.jb_testcom:main',
         ],
     },
 )
