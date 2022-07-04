@@ -67,6 +67,13 @@ class jetbot_client(Node):
         
     
     def task_request(self):
+        '''
+        Handle ongoing request of task.
+
+        arguments :
+        ------------------------------------------------
+        return :
+        '''
         self.task_req = Task.Request()
         self.task_req.id = self.id
         self.future = self.task_cli.call_async(self.task_req) 
@@ -120,26 +127,26 @@ def main(args=None):
         Q=np.array([[100,0],[0,1]])
         LQRw = LQRcontroller(R=R, Q=Q, Ts=Ts)
         LQRw.setPoint(alpha)
-
         
-
-
+        
+        # sim variables
+        angle = [jb_client.state[2]]
         stabilized = 0
         turned = False
         finish=False
+        vel = Twist()
+        previous_angle = 0
+        
+        # plot variables
         time_serie = [0]
-        angle = [jb_client.state[2]]
         w = [0]
         alpha_sp = [alpha]
         err=[0]
-        derr=[0]
         ierr=[0]
         pose=[]
 
-        vel = Twist()
-        iter = 0
+        
         t_init = time.time()
-        previous_angle = 0
         while(not finish):
             rclpy.spin_once(jb_client)
             time.sleep(Ts)
@@ -148,20 +155,8 @@ def main(args=None):
             # Step 1 : Wait for start signal
             if not start : jb_client.get_logger().info('Execution has not started\n')
             
-            else : # Do control
-                # vel.linear.x = 0.12
-                # vel.angular.z = 1.5
-                ## Do PID Control
-                #vel.angular.z, sum_error, error_diff, current_value, error = PIDw.update(jb_client.state[2])
-                # offset = 0.85
-                # if vel.angular.z <= offset :
-                #     if vel.angular.z >= 0. : vel.angular.z = offset
-                #     elif vel.angular.z >= -offset : vel.angular.z = -offset
-                # err.append(error)
-                # derr.append(error_diff)
-                # serr.append(sum_error)
-
-                ## Do LQR control
+            # Step 2 : Do LQR control
+            else :
                 vel.angular.z, err, ierr,current_value = LQRw.update(jb_client.state[2])
                 
                 if plot : 
@@ -179,11 +174,6 @@ def main(args=None):
                     vel.linear.x=0.15
                     alpha = calculate_angle(jb_client.goal, jb_client.state)
                     LQRw.setPoint(alpha, reset=False)
-                    # iter += 1
-                    # vel.linear.x=0.
-                    # vel.angular.z=0.
-                    # if iter == 5 : finish = True
-                
 
 
                 if norm(jb_client.state[0:2]-jb_client.goal) < 0.05 or time_serie[-1] > 20: 
@@ -194,6 +184,7 @@ def main(args=None):
                 previous_angle = jb_client.state[2]
                 jb_client.vel_cmd_pub.publish(vel)
         
+        # Execution has finished input 0. velocities to motors
         vel.linear.x=0.
         vel.angular.z=0.
         jb_client.vel_cmd_pub.publish(vel)
@@ -220,9 +211,8 @@ def main(args=None):
             ax[2].set_xlabel('time [s]')
             ax[2].legend()
 
-            ierr= np.array(ierr)/np.max(ierr)
+            ierr= np.array(ierr)/np.max(np.abs(ierr))
             ax[3].plot(time_serie,err, label='error')
-            # ax[3].plot(time_serie,derr, label='error diff')
             ax[3].plot(time_serie,ierr, label='error sum')
             ax[3].set_ylabel('error')
             ax[3].set_xlabel('time [s]')
