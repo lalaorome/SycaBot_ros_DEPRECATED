@@ -1,1 +1,0 @@
-/home/sycamore/SycaBot_ros/src/jetbot/launch/control.launch.py
