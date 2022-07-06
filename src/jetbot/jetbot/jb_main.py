@@ -10,7 +10,7 @@ import math as m
 import time 
 import matplotlib.pyplot as plt
 from jetbot.jb_utils import quat2eul
-from jetbot.jb_control import calculate_angle, PIDController, LQRcontroller
+from jetbot.jb_control import calculate_angle, LQRcontroller
 
 from geometry_msgs.msg import PoseStamped, Point, Twist
 from std_msgs.msg import Bool

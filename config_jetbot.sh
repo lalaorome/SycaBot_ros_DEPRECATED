@@ -17,6 +17,8 @@ show_help() {
     echo "      --id Id of the jetbot being configured. keys : integer"
     echo "             default : 1"
     echo ""
+    echo "      --install Install necessary packages and ROS2 (should be used at first initialization)"
+    echo ""
     echo ""
     echo ""
 
@@ -53,6 +55,27 @@ while :; do
                 die 'ERROR: "--id" requires a non-empty option argument.'
             fi
             ;;
+        --install)
+            echo 'installing adafruit ...'
+            sudo pip3 install Adafruit-MotorHAT Adafruit-SSD1306 pyserial sparkfun-qwiic --verbose
+
+            echo 'install matplotlib ...'
+            # https://forums.developer.nvidia.com/t/jetson-nano-how-can-install-matplotlib/75132/7
+            sudo cp /etc/apt/sources.list /etc/apt/sources.list~
+            sudo sed -Ei 's/^# deb-src /deb-src /' /etc/apt/sources.list
+            sudo apt-get update
+            cd ~/.local/lib/python3.6/site-packages
+            git clone -b v3.3.4 --depth 1 https://github.com/matplotlib/matplotlib.git 22
+            cd ~/.local/lib/python3.6/site-packages/matplotlib
+            sudo apt-get build-dep python3-matplotlib -y
+            # pip3 install . -v
+            sudo mv /etc/apt/sources.list~ /etc/apt/sources.list
+            sudo apt-get update
+
+            echo 'installing control ...'
+            sudo pip3 install control --verbose
+            shift
+            ;;
         --)              # End of all options.
             shift
             break
@@ -65,26 +88,6 @@ while :; do
     esac
     shift
 done
-
-
-echo 'installing adafruit ...'
-sudo pip3 install Adafruit-MotorHAT Adafruit-SSD1306 pyserial sparkfun-qwiic --verbose
-
-echo 'install matplotlib ...'
-# https://forums.developer.nvidia.com/t/jetson-nano-how-can-install-matplotlib/75132/7
-sudo cp /etc/apt/sources.list /etc/apt/sources.list~
-sudo sed -Ei 's/^# deb-src /deb-src /' /etc/apt/sources.list
-sudo apt-get update
-cd ~/.local/lib/python3.6/site-packages
-git clone -b v3.3.4 --depth 1 https://github.com/matplotlib/matplotlib.git 22
-cd ~/.local/lib/python3.6/site-packages/matplotlib
-sudo apt-get build-dep python3-matplotlib -y
-# pip3 install . -v
-sudo mv /etc/apt/sources.list~ /etc/apt/sources.list
-sudo apt-get update
-
-echo 'installing control ...'
-sudo pip3 install control --verbose
 
 #Create the good directory
 cd ~/SycaBot_ros
