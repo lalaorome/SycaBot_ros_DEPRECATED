@@ -26,8 +26,11 @@ show_help() {
 die() {
     printf '%s\n' "$1"
     show_help
+    exit 1
 }
 
+motors=true
+init=false
 LAUNCH_FILE_NAME="init"
 ID="1"
 
@@ -35,13 +38,18 @@ while :; do
     case $1 in
         -h|-\?|--help)
             show_help    # Display a usage synopsis.
+            exit
             ;;
         --file)
             if [ "$2" == "motors" ];then
                 LAUNCH_FILE_NAME="$2"
+                motors=true
+                init=false
                 shift
             elif [ "$2" == "init" ];then
                 LAUNCH_FILE_NAME="$2"
+                motors=false
+                init=true
                 shift
             else
                 die 'ERROR: "--pkg" wrong input argument.'
@@ -94,7 +102,13 @@ cd ~/SycaBot_ros
 sudo cp -r ./. ../syca_ws/
 
 # Copy service file and make systemctl recgonize it
-sudo sed -i "s/ros2 launch jetbot init.launch.py/ros2 launch jetbot ${LAUNCH_FILE_NAME}.launch.py/" boot_init.sh
+# Set the boot file
+if [ "$motors" = true ] ; then
+    sudo sed -i "s/ros2 launch jetbot [a-z].launch.py/ros2 launch jetbot ${LAUNCH_FILE_NAME}.launch.py/" boot_init.sh
+elif [ "$init" = true ] ; then
+    sudo sed -i "s/ros2 launch jetbot [a-z].launch.py/ros2 launch jetbot ${LAUNCH_FILE_NAME}.launch.py/" boot_init.sh
+fi
+
 echo ""
 echo ""
 cat boot_init.sh
@@ -112,8 +126,8 @@ sudo systemctl daemon-reload
 
 # Change SYCABOT_ID number : https://www.geeksforgeeks.org/sed-command-in-linux-unix-with-examples/
 cd ../syca_ws/src/jetbot/launch
-sudo sed -i "s/SYCABOT_ID = 1/SYCABOT_ID = ${ID}/" init.launch.py
-sudo sed -i "s/SYCABOT_ID = 1/SYCABOT_ID = ${ID}/" motors.launch.py
+sudo sed -i "s/SYCABOT_ID = ./SYCABOT_ID = ${ID}/" init.launch.py
+sudo sed -i "s/SYCABOT_ID = ./SYCABOT_ID = ${ID}/" motors.launch.py
 echo ""
 echo ""
 cat init.launch.py
