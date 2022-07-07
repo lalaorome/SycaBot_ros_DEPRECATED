@@ -43,13 +43,11 @@ while :; do
         --file)
             if [ "$2" == "motors" ];then
                 LAUNCH_FILE_NAME="$2"
-                motors=true
-                init=false
+                echo $LAUNCH_FILE_NAME
                 shift
             elif [ "$2" == "init" ];then
                 LAUNCH_FILE_NAME="$2"
-                motors=false
-                init=true
+                echo $LAUNCH_FILE_NAME
                 shift
             else
                 die 'ERROR: "--pkg" wrong input argument.'
@@ -103,12 +101,8 @@ sudo cp -r ./. ../syca_ws/
 
 # Copy service file and make systemctl recgonize it
 # Set the boot file
-if [ "$motors" = true ] ; then
-    sudo sed -i "s/ros2 launch jetbot [a-z].launch.py/ros2 launch jetbot ${LAUNCH_FILE_NAME}.launch.py/" boot_init.sh
-elif [ "$init" = true ] ; then
-    sudo sed -i "s/ros2 launch jetbot [a-z].launch.py/ros2 launch jetbot ${LAUNCH_FILE_NAME}.launch.py/" boot_init.sh
-fi
 
+sudo sed -i "s/ros2 launch jetbot [a-z].launch.py/ros2 launch jetbot ${LAUNCH_FILE_NAME}.launch.py/" boot_init.sh
 echo ""
 echo ""
 cat boot_init.sh
