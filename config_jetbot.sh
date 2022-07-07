@@ -102,7 +102,7 @@ sudo cp -r ./. ../syca_ws/
 # Copy service file and make systemctl recgonize it
 # Set the boot file
 
-sudo sed -i "s/ros2 launch jetbot [a-z].launch.py/ros2 launch jetbot ${LAUNCH_FILE_NAME}.launch.py/" boot_init.sh
+sudo sed -i -r "s/ros2 launch jetbot [a-z]+/ros2 launch jetbot ${LAUNCH_FILE_NAME}.launch.py/" boot_init.sh
 echo ""
 echo ""
 cat boot_init.sh
