@@ -190,16 +190,18 @@ def main(args=None):
                 finish = True
             alpha_sp.append(alpha)
             previous_angle = jb_client.state[2]
+            jb_client.get_logger().info('Sending vel = lin : %f ang : %f'%(vel.linear.x,vel.angular.z))
             jb_client.vel_cmd_pub.publish(vel)
     
     # Execution has finished input 0. velocities to motors
     vel.linear.x=0.
     vel.angular.z=0.
     jb_client.vel_cmd_pub.publish(vel)
-    fig,ax = plt.subplots(1,4,figsize=(16,8))
-    pose = np.array(pose)
+    
 
     if plot :
+        fig,ax = plt.subplots(1,4,figsize=(16,8))
+        pose = np.array(pose)
         ax[0].scatter(pose[:,0], pose[:,1], s=5)
         ax[0].scatter(jb_client.goal[0], jb_client.goal[1], s=20)
         ax[0].set_ylabel('x [m]')
