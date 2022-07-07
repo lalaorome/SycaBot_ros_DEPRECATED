@@ -15,7 +15,6 @@ find_package(geometry_msgs REQUIRED)
 
 set(srv_files
     "srv/Task.srv"
-    "srv/Task2.srv"
 )
 
 rosidl_generate_interfaces(${PROJECT_NAME}

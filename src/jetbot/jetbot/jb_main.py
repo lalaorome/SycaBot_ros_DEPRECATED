@@ -14,7 +14,7 @@ from jetbot.jb_control import calculate_angle, LQRcontroller
 
 from geometry_msgs.msg import PoseStamped, Point, Twist
 from std_msgs.msg import Bool
-from interfaces.srv import Task2
+from interfaces.srv import Task
 
 from rclpy.qos import QoSProfile
 from rclpy.qos import QoSReliabilityPolicy
@@ -48,9 +48,10 @@ class jetbot_client(Node):
         self.vel_cmd_pub = self.create_publisher(Twist, '/SycaBot_W' + str(self.id) + '/cmd_vel', qos)
 
         # Define task service
-        self.task_cli = self.create_client(Task2, '/task_srv')
+        self.task_cli = self.create_client(Task, '/task_srv')
         while not self.task_cli.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('service not available, waiting again...\n')
+    
 
     def get_pose_cb(self, p):
         '''
@@ -92,12 +93,8 @@ class jetbot_client(Node):
         ------------------------------------------------
         return :
         '''
-        self.task_req = Task2.Request()
+        self.task_req = Task.Request()
         self.task_req.id = self.id
-        self.task_req.x = self.state[0]
-        self.task_req.y = self.state[1]
-        self.task_req.theta = self.state[2]
-
         self.future = self.task_cli.call_async(self.task_req) 
 
 
@@ -129,6 +126,7 @@ def main(args=None):
                         'Pose of task is (x=%f, y=%f, z=%f)\n' %(response.task.x, response.task.y, response.task.z))
                     jb_client.goal = np.array([response.task.x, response.task.y])
                     alpha = calculate_angle(jb_client.goal, jb_client.state)
+                    vlin = response.vlin
             break
 
     # Set LQR
@@ -181,12 +179,12 @@ def main(args=None):
                 if stabilized == 10 : turned = True
 
             if turned or time_serie[-1] > 5:
-                vel.linear.x=0.15
+                vel.linear.x=vlin
                 alpha = calculate_angle(jb_client.goal, jb_client.state)
                 LQRw.setPoint(alpha, reset=False)
 
 
-            if norm(jb_client.state[0:2]-jb_client.goal) < 0.05 or time_serie[-1] > 20: 
+            if norm(jb_client.state[0:2]-jb_client.goal) < 0.05 or time_serie[-1] > 20:
                 vel.linear.x=0.
                 vel.angular.z=0.
                 finish = True
