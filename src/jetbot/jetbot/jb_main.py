@@ -25,7 +25,7 @@ from message_filters import ApproximateTimeSynchronizer, Subscriber
 
 SYCABOT_ID = 1
 verbose = True
-plot = True
+plot = False
 
 class jetbot_client(Node):
     def __init__(self):
