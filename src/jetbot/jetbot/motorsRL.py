@@ -19,7 +19,7 @@ class MotorController(Node):
         super().__init__('motors', namespace = 'Sycabot_W0')
         qos = qos_profile_sensor_data
 
-        self.sub = self.create_subscription(Motors, 'cmd_vel', self.twist_listener, qos)
+        self.sub = self.create_subscription(Motor, 'cmd_vel', self.twist_listener, qos)
         
         self.declare_parameter('left_trim', 0.0)
         self.declare_parameter('right_trim', 0.0)
