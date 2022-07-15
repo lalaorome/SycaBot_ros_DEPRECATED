@@ -43,11 +43,16 @@ while :; do
         --file)
             if [ "$2" == "motors" ];then
                 LAUNCH_FILE_NAME="$2"
-                echo $LAUNCH_FILE_NAME
+                sudo sed -i -r "s/from jetbot.motors/from jetbot.motorsRL/" src/jetbot/jetbot/motors_waveshare.py
+                cat src/jetbot/jetbot/motors_waveshare.py
                 shift
             elif [ "$2" == "init" ];then
                 LAUNCH_FILE_NAME="$2"
-                echo $LAUNCH_FILE_NAME
+                shift
+            elif [ "$2" == "motorsRL" ];then
+                LAUNCH_FILE_NAME="motors"
+                sudo sed -i -r "s/from jetbot.motors/from jetbot.motorsRL/" src/jetbot/jetbot/motors_waveshare.py
+                cat src/jetbot/jetbot/motors_waveshare.py
                 shift
             else
                 die 'ERROR: "--pkg" wrong input argument.'

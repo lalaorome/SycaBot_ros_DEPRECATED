@@ -17,8 +17,13 @@ set(srv_files
     "srv/Task.srv"
 )
 
+set(msg_files
+    "msg/Motor.msg"
+)
+
 rosidl_generate_interfaces(${PROJECT_NAME}
     ${srv_files}
+    ${msg_files}
     DEPENDENCIES geometry_msgs
 )
 ament_export_dependencies(rosidl_default_runtime)
