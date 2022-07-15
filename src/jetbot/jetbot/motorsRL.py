@@ -71,6 +71,7 @@ class MotorController(Node):
         self.set_speed(0,0)
 
     def twist_listener(self, msg):
+        self.get_logger().info("Got velocity command : right = %f left = %f"%(msg.right,msg.left))
         self.set_speed(msg.left, msg.right)
 
     
