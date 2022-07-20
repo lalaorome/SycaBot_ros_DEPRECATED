@@ -11,7 +11,7 @@ show_help() {
     echo ""
     echo "      --help          Show this help"
     echo ""
-    echo "      --file Launch file you want to execute at boot. keys : motors, init"
+    echo "      --file Launch file you want to execute at boot. keys : motors, init, motorsRL"
     echo "             default : init"
     echo ""
     echo "      --id Id of the jetbot being configured. keys : integer"
