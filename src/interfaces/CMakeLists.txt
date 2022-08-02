@@ -15,15 +15,26 @@ find_package(geometry_msgs REQUIRED)
 
 set(srv_files
     "srv/Task.srv"
+    "srv/BeaconSrv.srv"
 )
 
 set(msg_files
     "msg/Motor.msg"
+    "msg/BeaconMsg.msg"
+    "msg/Pose2D.msg"
+    "msg/Viz.msg"
+)
+
+set(action_files
+  "action/Deadzone.action"
+  "action/Identification.action"
+  "action/Control.action"
 )
 
 rosidl_generate_interfaces(${PROJECT_NAME}
     ${srv_files}
     ${msg_files}
+    ${action_files}
     DEPENDENCIES geometry_msgs
 )
 ament_export_dependencies(rosidl_default_runtime)

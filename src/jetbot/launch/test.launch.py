@@ -20,7 +20,6 @@ def generate_launch_description():
         SYCABOT_ID = i
         description.append(Node(
                 package= 'jetbot',
-                namespace= 'SycaBot_W' + str(SYCABOT_ID),
                 executable= 'test',
                 output = 'screen',
                 emulate_tty=True,

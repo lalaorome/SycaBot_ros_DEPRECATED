@@ -25,7 +25,11 @@ setup(
         'console_scripts': [
             'start = jetbot.jb_main:main',
             'motors = jetbot.motors_waveshare:main',
+            'DeadzoneActionServer = jetbot.jb_action_deadzone:main',
+            'IdentificationActionServer = jetbot.jb_action_identification:main', 
             'test = jetbot.test:main',
+            'PPCtrllerActionServer = jetbot.PPCtrller:main',
+            'MPCActionServer = jetbot.MPC:main', 
         ],
     },
 )

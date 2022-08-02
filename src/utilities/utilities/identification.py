@@ -117,16 +117,23 @@ def main(args=None):
     rclpy.init(args=args)
     idfier = identifier()
 
-    n_inputs = 500
+    n_inputs = 4000
     Ts = 0.01
-    interpolate = False
+    interpolate = True
     # Geenrate inputs for the identification
-    u1,u2 = generate_inputs(Ts, idfier.deadzones, n=int(n_inputs), input='ramp', Vr_max=0.2, Vl_max=0.2)
-    # u1_1,u2_1 = generate_inputs(Ts, idfier.deadzones, n=int(n_inputs/3), input='random_sine', Vr_max=0.2, Vl_max=0.2)
-    # u1_2,u2_2 = generate_inputs(Ts, idfier.deadzones, n=int(n_inputs/3), input='random_sine_cosine', Vr_max=-0.2, Vl_max=-0.2)
-    # u1_3,u2_3 = generate_inputs(Ts, idfier.deadzones, n=int(n_inputs/3), input='random_sine', Vr_max=-0.2, Vl_max=-0.2)
-    # u1 = np.concatenate((u1_1,u1_2, u1_3))
-    # u2 = np.concatenate((u2_1,u2_2, u2_3))
+    if interpolate :
+        u1_1,u2_1 = generate_inputs(Ts, idfier.deadzones, n=int(750), input='ramp', Vr_max=0.2, Vl_max=0.2)
+        u1_5,u2_5 = generate_inputs(Ts, idfier.deadzones, n=int(750), input='ramp', Vr_max=-0.2, Vl_max=-0.2)
+        u1_2,u2_2 = generate_inputs(Ts, idfier.deadzones, n=int(500), input='random_sine_cosine', Vr_max=-0.2, Vl_max=-0.2)
+        u1_3,u2_3 = generate_inputs(Ts, idfier.deadzones, n=int(1000), input='random_sine', Vr_max=0.2, Vl_max=0.2)
+        u1_4,u2_4 = generate_inputs(Ts, idfier.deadzones, n=int(1000), input='random_sine', Vr_max=-0.2, Vl_max=-0.2)
+        u1 = np.concatenate((u1_1, u1_5, u1_2, u1_3, u1_4))
+        u2 = np.concatenate((u2_1, u2_5,u2_2,u2_3,u2_4))
+    else :   
+        u1_1,u2_1 = generate_inputs(Ts, idfier.deadzones, n=int(n_inputs/2), input='ramp', Vr_max=0.2, Vl_max=0.2)
+        u1_2,u2_2 = generate_inputs(Ts, idfier.deadzones, n=int(n_inputs/2), input='ramp', Vr_max=0., Vl_max=0.2)
+        u1 = np.concatenate((u1_1, u1_2))
+        u2 = np.concatenate((u2_1, u2_2))
            
     # Initialisation : Wait for pose
     while idfier.rob_state[0] == 999. :
@@ -171,10 +178,6 @@ def main(args=None):
         tw = time.time()
         twait.append(tw- tp)
 
-        # Real sampling time
-        Ts_arr.append(time.time()-tic)
-
-        
     # Stop the robot
     cmd_vel.left, cmd_vel.right = 0.,0.
     idfier.vel_cmd_pub.publish(cmd_vel)
