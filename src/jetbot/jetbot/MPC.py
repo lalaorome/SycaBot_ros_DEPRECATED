@@ -54,7 +54,7 @@ class MPC(CtrllerActionServer):
         model = self.export_unicycle_ode_model_with_LocalConstraints()
         ocp.model = model
 
-        Tf = 1.0
+        Tf = 2.0
         nx = model.x.size()[0]
         nu = model.u.size()[0]
         nparam = model.p.size()[0]
@@ -139,22 +139,13 @@ class MPC(CtrllerActionServer):
 
         ocp_solver = AcadosOcpSolver(ocp, json_file = 'acados_ocp.json')
 
-        Nsim = 5 *  N
+        
 
-        simX = np.ndarray((nx, Nsim + 1))
-        simU = np.ndarray((nu, Nsim))
-        simT = np.ndarray((1, Nsim + 1))
-
-        xnext = x0
+        xnext = self.state
         t_sim = 0.0
         Ts = Tf / N
 
-        simT[0,0] = t_sim
-        for j in range(nx):
-            simX[j,0] = xnext[j]
-
         for i in range(Nsim):
-            print("Time ",t_sim)
             # reference
             [state_ref, input_ref] = self.get_reference(t_sim, Ts, N)
 
@@ -195,9 +186,7 @@ class MPC(CtrllerActionServer):
             # x0 = ocp_solver.get(0, "x")
             u0 = ocp_solver.get(0, "u")
 
-            for j in range(nu):
-                simU[j,i] = u0[j]
-
+            t_sim += self.Ts
             # upred = np.zeros((nu,N))
             # xpred  = np.zeros((nx,N + 1))
             # for k in range(N):
@@ -210,14 +199,6 @@ class MPC(CtrllerActionServer):
             # ur_pred = 1.0 / (r_a * WR) * upred[0,:] + WS / (2 * r_a * WR) * upred[1,:]
             # ul_pred = 1.0 / (l_a * WR) * upred[0,:] - WS / (2 * l_a * WR) * upred[1,:]
 
-            # get next state
-            xnext = ocp_solver.get(1, "x") + 0.001 * np.random.randn(3)
-            # print(xnext)
-            t_sim += Ts
-
-            simT[0,i + 1] = t_sim
-            for j in range(nx):
-                simX[j,i + 1] = xnext[j]
         
         time.sleep(self.Ts)
         goal_handle.succeed()

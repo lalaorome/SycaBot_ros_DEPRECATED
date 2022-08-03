@@ -85,6 +85,34 @@ while :; do
 
             echo 'installing control ...'
             sudo pip3 install control --verbose
+
+            echo 'Upgrade pip ...'
+            python3 -m pip install --upgrade pip
+
+            echo 'installing acados ...'
+            git clone https://github.com/acados/acados.git
+            cd acados
+            git submodule update --recursive --init
+            mkdir -p build
+            cd build
+            cmake -DACADOS_WITH_QPOASES=ON ..
+            # add more optional arguments e.g. -DACADOS_WITH_OSQP=OFF/ON -DACADOS_INSTALL_DIR=<path_to_acados_installation_folder> above
+            make install -j4
+            cd
+            ACADOS_ROOT="/home/jetbot/.local/lib/python3.6/site-packages/acados"
+            pip3 install -e "${ACADOS_ROOT}/interfaces/acados_template"
+
+            echo 'Updating tera_renderer ...'
+            cd /home/jetbot
+            mkdir tmp
+            cd tmp
+            git clone https://github.com/acados/tera_renderer
+            cd tera_renderer
+            sudo apt-get -y install cargo
+            cargo build --verbose --release
+            cp target/release/t_renderer $ACADOS_ROOT/bin/
+
+
             shift
             ;;
         --)              # End of all options.

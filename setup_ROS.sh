@@ -11,7 +11,7 @@ show_help() {
     echo ""
     echo "      --help          Show this help"
     echo ""
-    echo "      --pkg Package you want to source. keys : sycabot"
+    echo "      --pkg Package you want to source. keys : sycabot, sycabot_central"
     echo ""
     echo "      --srv Id of the ip adress of the fast dds server."
     echo "            the id is the x in 192.168.1.x"
@@ -38,6 +38,14 @@ while :; do
             if [ "$2" == "sycabot" ];then
                 echo "sourcing sycabot package..."
                 source ~/syca_ws/install/local_setup.bash
+                export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"/home/jetbot/.local/lib/python3.6/site-packages/acados/lib"
+                export ACADOS_SOURCE_DIR="/home/jetbot/.local/lib/python3.6/site-packages/acados"
+                shift
+            elif [ "$2" == "sycabot_central" ];then
+                echo "sourcing sycabot package..."
+                source ~/SycaBot_ros/install/local_setup.bash
+                export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"/home/sycamore/tmp/acados/lib"
+                export ACADOS_SOURCE_DIR="/home/sycamore/tmp/acados"
                 shift
             else
                 die 'ERROR: "--pkg" wrong input argument.'
