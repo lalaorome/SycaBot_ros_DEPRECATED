@@ -11,7 +11,7 @@ show_help() {
     echo ""
     echo "      --help          Show this help"
     echo ""
-    echo "      --file Launch file you want to execute at boot. keys : motors, init, motorsRL"
+    echo "      --file Launch file you want to execute at boot. keys : motors, init, motorsRL, boot"
     echo "             default : init"
     echo ""
     echo "      --id Id of the jetbot being configured. keys : integer"
@@ -49,9 +49,12 @@ while :; do
             elif [ "$2" == "init" ];then
                 LAUNCH_FILE_NAME="$2"
                 shift
+            elif [ "$2" == "boot" ];then
+                LAUNCH_FILE_NAME="$2"
+                shift
             elif [ "$2" == "motorsRL" ];then
                 LAUNCH_FILE_NAME="motors"
-                sudo sed -i -r "s/from jetbot.motors/from jetbot.motorsRL/" src/jetbot/jetbot/motors_waveshare.py
+                sudo sed -i -r "s/from jetbot.motors[A-Z]+/from jetbot.motorsRL/" src/jetbot/jetbot/motors_waveshare.py
                 cat src/jetbot/jetbot/motors_waveshare.py
                 shift
             else

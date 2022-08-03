@@ -13,22 +13,49 @@ def generate_launch_description():
 
     DeadzoneActionServer = Node(
         package= 'jetbot',
-        namespace= 'SycaBot_W' + str(SYCABOT_ID),
+        namespace= f'SycaBot_W{SYCABOT_ID}',
         executable= 'DeadzoneActionServer',
         output = 'screen',
         emulate_tty=True,
         parameters=['config/params_identification.yaml']
     )
-    
 
     IdentificationActionServer = Node(
         package= 'jetbot',
-        namespace= 'SycaBot_W' + str(SYCABOT_ID),
+        namespace= f'SycaBot_W{SYCABOT_ID}',
         executable= 'IdentificationActionServer',
         output = 'screen',
         emulate_tty=True,
         parameters=['config/params_identification.yaml']
     )
+
+    MPCActionServer = Node(
+        package= 'jetbot',
+        namespace= f'SycaBot_W{SYCABOT_ID}',
+        executable= 'MPCActionServer',
+        output = 'screen',
+        emulate_tty=True,
+        parameters=['config/params_identification.yaml'],
+    )
+
+    PPCtrllerActionServer = Node(
+        package= 'jetbot',
+        namespace= f'SycaBot_W{SYCABOT_ID}',
+        executable= 'PPCtrllerActionServer',
+        output = 'screen',
+        emulate_tty=True,
+        parameters=['config/params_identification.yaml'],
+    )
+    motors = Node(
+        package= 'jetbot',
+        namespace= 'SycaBot_W' + str(SYCABOT_ID),
+        executable= 'motors',
+        output = 'screen',
+        emulate_tty=True,
+    )
     description.append(IdentificationActionServer)
     description.append(DeadzoneActionServer)
+    description.append(MPCActionServer)
+    description.append(PPCtrllerActionServer)
+    description.append(motors)
     return LaunchDescription(description)

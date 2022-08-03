@@ -378,7 +378,7 @@ void unicycle_ode_acados_create_5_set_nlp_in(unicycle_ode_solver_capsule* capsul
     if (new_time_steps) {
         unicycle_ode_acados_update_time_steps(capsule, N, new_time_steps);
     } else {// all time_steps are identical
-        double time_step = 0.025;
+        double time_step = 0.05;
         for (int i = 0; i < N; i++)
         {
             ocp_nlp_in_set(nlp_config, nlp_dims, nlp_in, i, "Ts", &time_step);
@@ -397,11 +397,11 @@ void unicycle_ode_acados_create_5_set_nlp_in(unicycle_ode_solver_capsule* capsul
     /**** Cost ****/
     double* W_0 = calloc(NY0*NY0, sizeof(double));
     // change only the non-zero elements:
-    W_0[0+(NY0) * 0] = 100;
-    W_0[1+(NY0) * 1] = 100;
-    W_0[2+(NY0) * 2] = 1;
-    W_0[3+(NY0) * 3] = 0.1;
-    W_0[4+(NY0) * 4] = 0.1;
+    W_0[0+(NY0) * 0] = 1;
+    W_0[1+(NY0) * 1] = 1;
+    W_0[2+(NY0) * 2] = 0.2;
+    W_0[3+(NY0) * 3] = 0.01;
+    W_0[4+(NY0) * 4] = 0.01;
     ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, 0, "W", W_0);
     free(W_0);
 
@@ -411,11 +411,11 @@ void unicycle_ode_acados_create_5_set_nlp_in(unicycle_ode_solver_capsule* capsul
     free(yref_0);
     double* W = calloc(NY*NY, sizeof(double));
     // change only the non-zero elements:
-    W[0+(NY) * 0] = 100;
-    W[1+(NY) * 1] = 100;
-    W[2+(NY) * 2] = 1;
-    W[3+(NY) * 3] = 0.1;
-    W[4+(NY) * 4] = 0.1;
+    W[0+(NY) * 0] = 1;
+    W[1+(NY) * 1] = 1;
+    W[2+(NY) * 2] = 0.2;
+    W[3+(NY) * 3] = 0.01;
+    W[4+(NY) * 4] = 0.01;
 
     double* yref = calloc(NY, sizeof(double));
     // change only the non-zero elements:
@@ -469,7 +469,7 @@ void unicycle_ode_acados_create_5_set_nlp_in(unicycle_ode_solver_capsule* capsul
     double* zl = zlumem+NS*2;
     double* zu = zlumem+NS*3;
     // change only the non-zero elements:
-    zu[0] = 10000;
+    zu[0] = 10;
 
     for (int i = 0; i < N; i++)
     {
@@ -488,9 +488,9 @@ void unicycle_ode_acados_create_5_set_nlp_in(unicycle_ode_solver_capsule* capsul
 
     double* W_e = calloc(NYN*NYN, sizeof(double));
     // change only the non-zero elements:
-    W_e[0+(NYN) * 0] = 100;
-    W_e[1+(NYN) * 1] = 100;
-    W_e[2+(NYN) * 2] = 1;
+    W_e[0+(NYN) * 0] = 1;
+    W_e[1+(NYN) * 1] = 1;
+    W_e[2+(NYN) * 2] = 0.2;
     ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, N, "W", W_e);
     free(W_e);
     double* Vx_e = calloc(NYN*NX, sizeof(double));
@@ -517,7 +517,7 @@ void unicycle_ode_acados_create_5_set_nlp_in(unicycle_ode_solver_capsule* capsul
     
 
     
-    zu_e[0] = 10000;
+    zu_e[0] = 10;
 
     ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, N, "Zl", Zl_e);
     ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, N, "Zu", Zu_e);
@@ -538,12 +538,12 @@ void unicycle_ode_acados_create_5_set_nlp_in(unicycle_ode_solver_capsule* capsul
     double* lbx0 = lubx0;
     double* ubx0 = lubx0 + NBX0;
     // change only the non-zero elements:
-    lbx0[0] = 0.40547122355513615;
-    ubx0[0] = 0.40547122355513615;
-    lbx0[1] = -0.09452877644486386;
-    ubx0[1] = -0.09452877644486386;
-    lbx0[2] = 1.4762675503500329;
-    ubx0[2] = 1.4762675503500329;
+    lbx0[0] = 0.4777531027793884;
+    ubx0[0] = 0.4777531027793884;
+    lbx0[1] = 0.1369577944278717;
+    ubx0[1] = 0.1369577944278717;
+    lbx0[2] = 1.7623897528100827;
+    ubx0[2] = 1.7623897528100827;
 
     ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, 0, "idxbx", idxbx0);
     ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, 0, "lbx", lbx0);
@@ -595,10 +595,10 @@ void unicycle_ode_acados_create_5_set_nlp_in(unicycle_ode_solver_capsule* capsul
     double* ug = lug + NG;
 
     
-    D[0+NG * 0] = 0.9523809523809524;
-    D[0+NG * 1] = 0.05238095238095238;
-    D[1+NG * 0] = 0.9523809523809524;
-    D[1+NG * 1] = -0.05238095238095238;
+    D[0+NG * 0] = 0.9245947129337329;
+    D[0+NG * 1] = 0.04696941141703362;
+    D[1+NG * 0] = 0.9167873293642728;
+    D[1+NG * 1] = -0.04657279633170505;
 
     
 
@@ -630,7 +630,7 @@ void unicycle_ode_acados_create_5_set_nlp_in(unicycle_ode_solver_capsule* capsul
     
 
     
-    uh[0] = 0.0625;
+    uh[0] = 16;
     
     for (int i = 0; i < N; i++)
     {
@@ -682,7 +682,7 @@ void unicycle_ode_acados_create_5_set_nlp_in(unicycle_ode_solver_capsule* capsul
     
 
     
-    uh_e[0] = 0.0625;
+    uh_e[0] = 16;
 
     ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, N, "nl_constr_h_fun_jac", &capsule->nl_constr_h_e_fun_jac);
     ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, N, "nl_constr_h_fun", &capsule->nl_constr_h_e_fun);
@@ -793,9 +793,9 @@ void unicycle_ode_acados_create_7_set_nlp_out(unicycle_ode_solver_capsule* capsu
 
     // initialize with x0
     
-    x0[0] = 0.40547122355513615;
-    x0[1] = -0.09452877644486386;
-    x0[2] = 1.4762675503500329;
+    x0[0] = 0.4777531027793884;
+    x0[1] = 0.1369577944278717;
+    x0[2] = 1.7623897528100827;
 
 
     double* u0 = xu0 + NX;

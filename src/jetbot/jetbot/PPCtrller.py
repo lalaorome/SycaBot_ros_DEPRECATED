@@ -16,10 +16,11 @@ from interfaces.action import Control
 class PPCtrller(CtrllerActionServer):
     # https://blog.actorsfit.com/a?ID=01550-fd216bc6-e1d5-4d16-b901-143d2b19c430
     def __init__(self):
-        super().__init__()
+        super().__init__('PPCtrller')
         self.declare_parameter('LookAhead_dist', 0.1) # [m]
 
         self.LAD = self.get_parameter('LookAhead_dist').value
+        self._action_server.action_name = 'test'
 
     def control_cb(self, goal_handle):
         result = Control.Result()
@@ -100,8 +101,8 @@ class PPCtrller(CtrllerActionServer):
         alpha =self.rob_state[self.THETA] - m.atan2(self.rob_state[self.Y]-target_y,self.rob_state[self.X]-target_x)
 
         R = self.LAD/(2*m.sin(alpha))
-        w = 2*self.max_vel*m.sin(alpha)/self.LAD
-        v = self.max_vel
+        w = 2*self.max_ang_vel*m.sin(alpha)/self.LAD
+        v = self.max_lin_vel
         print(R,v,w)
 
         return v,w

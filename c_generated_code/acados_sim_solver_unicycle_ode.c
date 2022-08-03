@@ -77,7 +77,7 @@ int unicycle_ode_acados_sim_create(sim_solver_capsule * capsule)
     bool tmp_bool;
 
     
-    double Tsim = 0.025;
+    double Tsim = 0.05;
 
     
     // explicit ode
