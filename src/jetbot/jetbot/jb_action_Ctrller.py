@@ -67,8 +67,7 @@ class CtrllerActionServer(Node):
         self.vel_cmd_pub = self.create_publisher(Motor, f'/SycaBot_W{self.id}/cmd_vel', qos, callback_group=cb_group)
 
         self.viz_pathref_pub = self.create_publisher(Pose2D, f'/SycaBot_W{self.id}/visualisation', 10)
-        self.ocp_solver = self.config_ocp()
-
+        
     def get_pose_cb(self, p):
         '''
         Get jetbot positions.
