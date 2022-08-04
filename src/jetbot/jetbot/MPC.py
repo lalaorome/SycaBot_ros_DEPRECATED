@@ -26,8 +26,8 @@ class MPC(CtrllerActionServer):
     # https://blog.actorsfit.com/a?ID=01550-fd216bc6-e1d5-4d16-b901-143d2b19c430
     def __init__(self):
         super().__init__('MPC')
-        self.declare_parameter('Q', [1.,0.,0.,0.,1.,0.,0.,0.,0.1])
-        self.declare_parameter('R', [0.1,0.,0.,0.005])
+        self.declare_parameter('Q', [1.,0.,0.,0.,1.,0.,0.,0.,0.05])
+        self.declare_parameter('R', [0.2,0.,0.,0.005])
         self.declare_parameter('M', 10.)
         self.declare_parameter('radius_safeset', 4.)
         self.declare_parameter('timesteps', 20)
@@ -47,7 +47,7 @@ class MPC(CtrllerActionServer):
         result = Control.Result()
 
         self.wait4pose()
-        mode = 'stop_in_corners'
+        mode = 'ignore_corners'
         # mode = 'ignore_corners'
 
         t_sim = 0
