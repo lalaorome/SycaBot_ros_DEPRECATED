@@ -27,7 +27,7 @@ class MPC(CtrllerActionServer):
     def __init__(self):
         super().__init__('MPC')
         self.declare_parameter('Q', [1.,0.,0.,0.,1.,0.,0.,0.,0.1])
-        self.declare_parameter('R', [0.2,0.,0.,0.01])
+        self.declare_parameter('R', [0.2,0.,0.,0.02])
         self.declare_parameter('M', 10.)
         self.declare_parameter('radius_safeset', 4.)
         self.declare_parameter('timesteps', 20)
@@ -47,8 +47,8 @@ class MPC(CtrllerActionServer):
         result = Control.Result()
 
         self.wait4pose()
-        mode = 'ignore_corners'
         # mode = 'ignore_corners'
+        mode = 'stop_in_corners'
 
         t_sim = 0
         init_pose = Pose2D()
