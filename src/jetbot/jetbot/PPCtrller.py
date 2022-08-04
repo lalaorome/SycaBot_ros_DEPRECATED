@@ -69,8 +69,8 @@ class PPCtrller(CtrllerActionServer):
         Lf = 0.1*self.velocity[self.LINEAR] + self.LAD
 
         # Search look Ahead target Point index 
-        while L<Lf :
-            if idx == len(path_x)-1 : idx = 0
+        while L<Lf and idx != len(path_x)-1:
+            if idx == len(path_x)-1 : idx = len(path_x)-1
             L = d[idx]
             idx +=  1
 
