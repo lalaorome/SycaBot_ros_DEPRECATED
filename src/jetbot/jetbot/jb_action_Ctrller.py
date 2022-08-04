@@ -28,6 +28,8 @@ class CtrllerActionServer(Node):
     Ts = 0.1
     LINEAR = 0
     ANGULAR = 1
+    MOTOR_LEFT = 1      # left motor ID
+    MOTOR_RIGHT = 2     # right motor ID
 
     def __init__(self, name):
         super().__init__(f'{name}_controller')

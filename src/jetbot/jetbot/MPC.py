@@ -24,6 +24,7 @@ from acados_template import AcadosModel
 
 class MPC(CtrllerActionServer):
     # https://blog.actorsfit.com/a?ID=01550-fd216bc6-e1d5-4d16-b901-143d2b19c430
+    
     def __init__(self):
         super().__init__('MPC')
         self.declare_parameter('Q', [1.,0.,0.,0.,1.,0.,0.,0.,0.2])
