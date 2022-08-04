@@ -40,9 +40,6 @@ class MPC(CtrllerActionServer):
         self.N = self.get_parameter('timesteps').value
         self.Tf = self.get_parameter('horizon').value
 
-        self.viz_pathref_pub = self.create_publisher(Pose2D, f'/SycaBot_W{self.id}/visualisation', 10)
-        self.ocp_solver = self.config_ocp()
-
     def control_cb(self, goal_handle):
         result = Control.Result()
 

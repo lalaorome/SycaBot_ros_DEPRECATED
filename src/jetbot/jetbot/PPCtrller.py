@@ -11,6 +11,7 @@ from rclpy.action import ActionServer
 from rclpy.callback_groups import MutuallyExclusiveCallbackGroup, ReentrantCallbackGroup
 from rclpy.executors import MultiThreadedExecutor
 
+from geometry_msgs.msg import Pose2D
 from interfaces.action import Control
 
 class PPCtrller(CtrllerActionServer):
@@ -34,6 +35,9 @@ class PPCtrller(CtrllerActionServer):
 
         while time.time() - t_init < 10. :
             idx = self.get_target(path_x, path_y)
+            path_ref = Pose2D()
+            path_ref.x = path_x[idx]
+            path_ref.y = path_y[idx]
             v,w = self.generatePPinputs(path_x[idx], path_y[idx])
             Vr,Vl = self.velocities2wheelinput(v,w)
             self.sendVelCmd(Vr,Vl)

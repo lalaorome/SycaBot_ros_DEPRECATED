@@ -11,6 +11,7 @@ from rclpy.qos import qos_profile_sensor_data
 from geometry_msgs.msg import PoseStamped
 from interfaces.action import Control
 from interfaces.msg import Motor, Viz
+from geometry_msgs.msg import Pose2D
 
 
 class CtrllerActionServer(Node):
@@ -64,6 +65,9 @@ class CtrllerActionServer(Node):
 
         # Create motor publisher
         self.vel_cmd_pub = self.create_publisher(Motor, f'/SycaBot_W{self.id}/cmd_vel', qos, callback_group=cb_group)
+
+        self.viz_pathref_pub = self.create_publisher(Pose2D, f'/SycaBot_W{self.id}/visualisation', 10)
+        self.ocp_solver = self.config_ocp()
 
     def get_pose_cb(self, p):
         '''
