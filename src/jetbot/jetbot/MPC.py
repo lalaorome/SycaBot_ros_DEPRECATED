@@ -93,8 +93,8 @@ class MPC(CtrllerActionServer):
             
             # get solution
             # x0 = ocp_solver.get(0, "x")
-            u0 = ocp_solver.get(0, "u")
-            self.get_logger().info(f"Control input : {u0}")
+            # u0 = ocp_solver.get(0, "u")
+            # self.get_logger().info(f"Control input : {u0}")
             Vr,Vl = self.velocities2wheelinput(u0[0],u0[1])
             self.sendVelCmd(Vr,Vl)
             path_ref = Pose2D()
