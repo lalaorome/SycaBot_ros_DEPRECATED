@@ -43,6 +43,8 @@ class CtrllerActionServer(Node):
         self.declare_parameter('max_angular_velocity', 4.)
         self.declare_parameter('left_trim', 0.0)
         self.declare_parameter('right_trim', 0.0)
+        self.declare_parameter('max_pwm', 255)
+        self.declare_parameter('max_rpm', 200)  
 
         self.left_trim = self.get_parameter('left_trim').value
         self.right_trim = self.get_parameter('right_trim').value
@@ -53,6 +55,8 @@ class CtrllerActionServer(Node):
         self.L = self.get_parameter('wheel_separation').value
         self.max_lin_vel = self.get_parameter('max_linear_velocity').value
         self.max_ang_vel = self.get_parameter('max_angular_velocity').value
+        self.max_pwm = self.get_parameter('max_pwm').value
+        self.max_rpm = self.get_parameter('max_rpm').value
 
         # open Adafruit MotorHAT driver
         self.driver = Adafruit_MotorHAT(i2c_bus=1)
