@@ -57,47 +57,49 @@ class MPC(CtrllerActionServer):
         Ts_MPC = self.Tf / self.N
         t_init = time.time()
         x0 = self.rob_state
-        while t_sim < 20. :
+        while t_sim < 5. :
 
             t_loop = time.time()
             # update initial condition
-            previous_x0 = x0
-            x0 = self.rob_state
-            x0[2] = np.arctan2(np.sin(x0[2] - previous_x0[2]),np.cos(x0[2] - previous_x0[2])) + previous_x0[2]
+            # previous_x0 = x0
+            # x0 = self.rob_state
+            # x0[2] = np.arctan2(np.sin(x0[2] - previous_x0[2]),np.cos(x0[2] - previous_x0[2])) + previous_x0[2]
 
-            ocp_solver.set(0, "lbx", x0)
-            ocp_solver.set(0, "ubx", x0)
+            # ocp_solver.set(0, "lbx", x0)
+            # ocp_solver.set(0, "ubx", x0)
 
-            # reference
-            [state_ref, input_ref] = self.get_reference(t_sim, Ts_MPC, self.N)
+            # # reference
+            # [state_ref, input_ref] = self.get_reference(t_sim, Ts_MPC, self.N)
 
-            for k in range(self.N):
-                if k == 0:
-                    theta_ref_k = np.arctan2(np.sin(state_ref[2,k] - x0[2]),np.cos(state_ref[2,k] - x0[2])) + x0[2]
-                else:
-                    theta_ref_k = np.arctan2(np.sin(state_ref[2,k] - state_ref[2,k - 1]),np.cos(state_ref[2,k] - state_ref[2,k - 1])) + state_ref[2,k - 1]
-                ocp_solver.set(k, "yref", np.array([state_ref[0,k], state_ref[1,k], theta_ref_k, input_ref[0,k], input_ref[1,k]]))
-                ocp_solver.set(k, "p", np.array([state_ref[0,k], state_ref[1,k]]))
-            theta_ref_N = np.arctan2(np.sin(state_ref[2,self.N] - state_ref[2,self.N - 1]),np.cos(state_ref[2,self.N] - state_ref[2,self.N - 1])) + state_ref[2,self.N - 1]
-            ocp_solver.set(self.N, "yref",np.array([state_ref[0,self.N], state_ref[1,self.N], theta_ref_N]))
-            ocp_solver.set(self.N, "p", np.array([state_ref[0,self.N], state_ref[1,self.N]]))
+            # for k in range(self.N):
+            #     if k == 0:
+            #         theta_ref_k = np.arctan2(np.sin(state_ref[2,k] - x0[2]),np.cos(state_ref[2,k] - x0[2])) + x0[2]
+            #     else:
+            #         theta_ref_k = np.arctan2(np.sin(state_ref[2,k] - state_ref[2,k - 1]),np.cos(state_ref[2,k] - state_ref[2,k - 1])) + state_ref[2,k - 1]
+            #     ocp_solver.set(k, "yref", np.array([state_ref[0,k], state_ref[1,k], theta_ref_k, input_ref[0,k], input_ref[1,k]]))
+            #     ocp_solver.set(k, "p", np.array([state_ref[0,k], state_ref[1,k]]))
+            # theta_ref_N = np.arctan2(np.sin(state_ref[2,self.N] - state_ref[2,self.N - 1]),np.cos(state_ref[2,self.N] - state_ref[2,self.N - 1])) + state_ref[2,self.N - 1]
+            # ocp_solver.set(self.N, "yref",np.array([state_ref[0,self.N], state_ref[1,self.N], theta_ref_N]))
+            # ocp_solver.set(self.N, "p", np.array([state_ref[0,self.N], state_ref[1,self.N]]))
             
-            # feedback rti_phase
-            status = ocp_solver.solve()
-            if status != 0:
-                raise Exception(f'acados returned status {status}.')
+            # # feedback rti_phase
+            # status = ocp_solver.solve()
+            # if status != 0:
+            #     raise Exception(f'acados returned status {status}.')
 
-            # get solution
-            # x0 = ocp_solver.get(0, "x")
-            u0 = ocp_solver.get(0, "u")
+            # # get solution
+            # # x0 = ocp_solver.get(0, "x")
+            # u0 = ocp_solver.get(0, "u")
             solver_time = time.time()
             self.get_logger().info(f"Solver time is {solver_time-t_loop}s")
             # self.get_logger().info(f"Control input : {u0}")
-            Vr,Vl = self.velocities2wheelinput(u0[0],u0[1])
+            # Vr,Vl = self.velocities2wheelinput(u0[0],u0[1])
+            Vr,Vl = self.velocities2wheelinput(0.3,0.3)
+
             self.sendVelCmd(Vr,Vl)
-            path_ref = Pose2D()
-            path_ref.x = state_ref[0,0]
-            path_ref.y = state_ref[1,0]
+            # path_ref = Pose2D()
+            # path_ref.x = state_ref[0,0]
+            # path_ref.y = state_ref[1,0]
             # self.viz_pathref_pub.publish(path_ref)
             other_time = time.time()
             self.get_logger().info(f"Other time is {other_time-solver_time}s")
