@@ -84,8 +84,8 @@ class MPC(CtrllerActionServer):
             
             # feedback rti_phase
             status = ocp_solver.solve()
-            loop_time = time.time() - t_loop
-            self.get_logger().info(f"Solver time is {loop_time}s")
+            solver_time = time.time()
+            self.get_logger().info(f"Solver time is {solver_time-t_loop}s")
 
             if status != 0:
                 raise Exception(f'acados returned status {status}.')
@@ -101,9 +101,9 @@ class MPC(CtrllerActionServer):
             path_ref.x = state_ref[0,0]
             path_ref.y = state_ref[1,0]
             self.viz_pathref_pub.publish(path_ref)
-            other_time = time.time() - loop_time
-            self.get_logger().info(f"Other time is {other_time}s")
-            time.sleep(max(Ts_MPC - loop_time,0))
+            other_time = time.time()
+            self.get_logger().info(f"Other time is {other_time-solver_time}s")
+            time.sleep(max(Ts_MPC - solver_time,0))
             
             t_sim = time.time() - t_init
             # upred = np.zeros((nu,N))
