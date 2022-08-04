@@ -73,7 +73,7 @@ while :; do
             ;;
         --install)
             echo 'installing adafruit ...'
-            sudo pip3 install Adafruit-MotorHAT Adafruit-SSD1306 pyserial sparkfun-qwiic --verbose
+            sudo -H pip3 install Adafruit-MotorHAT Adafruit-SSD1306 pyserial sparkfun-qwiic --verbose
 
             echo 'install matplotlib ...'
             # https://forums.developer.nvidia.com/t/jetson-nano-how-can-install-matplotlib/75132/7
@@ -81,7 +81,7 @@ while :; do
             sudo sed -Ei 's/^# deb-src /deb-src /' /etc/apt/sources.list
             sudo apt-get update
             cd ~/.local/lib/python3.6/site-packages
-            git clone -b v3.3.4 --depth 1 https://github.com/matplotlib/matplotlib.git 22
+            git clone -b v3.3.4 --depth 1 https://github.com/matplotlib/matplotlib.git
             cd ~/.local/lib/python3.6/site-packages/matplotlib
             sudo apt-get build-dep python3-matplotlib -y
             # pip3 install . -v
