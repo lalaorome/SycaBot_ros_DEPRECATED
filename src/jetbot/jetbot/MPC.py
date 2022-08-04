@@ -26,7 +26,7 @@ class MPC(CtrllerActionServer):
     # https://blog.actorsfit.com/a?ID=01550-fd216bc6-e1d5-4d16-b901-143d2b19c430
     def __init__(self):
         super().__init__('MPC')
-        self.declare_parameter('Q', [1.,0.,0.,0.,1.,0.,0.,0.,0.2])
+        self.declare_parameter('Q', [1.,0.,0.,0.,1.,0.,0.,0.,0.1])
         self.declare_parameter('R', [0.2,0.,0.,0.005])
         self.declare_parameter('M', 10.)
         self.declare_parameter('radius_safeset', 4.)
@@ -212,7 +212,7 @@ class MPC(CtrllerActionServer):
         Vx_e[:nx, :nx] = np.eye(nx)
         Vu = np.zeros((ny, nu))
         Vu[nx:,:] = np.eye(2)
-        Vr_max, Vl_max = 0.3,0.3
+        Vr_max, Vl_max = 0.4,0.4
         D = np.array([[1. / (self.f_coefs[0] * self.R), self.L / (2. * self.f_coefs[0] * self.R)], [1. / (self.f_coefs[1] * self.R), -self.L / (2. * self.f_coefs[1] * self.R)]])
 
         ocp.dims.N = self.N
@@ -278,7 +278,7 @@ class MPC(CtrllerActionServer):
                     timed_poses[3,i] = timed_poses[3,i - 1] + 1 / desired_speed * np.sqrt((poses[i].y - poses[i - 1].y) ** 2 + (poses[i].x - poses[i - 1].x) ** 2)
                 else:
                     timed_poses[2,i] = 0
-                    timed_poses[3,i] = t0 + 1.
+                    timed_poses[3,i] = t0
         if mode == 'stop_in_corners':
             timed_poses = np.zeros((4,2 * W))
             for i in range(W):
