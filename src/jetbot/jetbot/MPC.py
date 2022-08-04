@@ -41,6 +41,7 @@ class MPC(CtrllerActionServer):
         self.Tf = self.get_parameter('horizon').value
 
         self.viz_pathref_pub = self.create_publisher(Pose2D, f'/SycaBot_W{self.id}/visualisation', 10)
+        self.ocp_solver = self.config_ocp(self.Q,self.R)
 
     def control_cb(self, goal_handle):
         result = Control.Result()
@@ -52,7 +53,7 @@ class MPC(CtrllerActionServer):
         
         # set cost
         Q,R = self.get_Q_R()
-        ocp_solver = self.config_ocp(Q,R)
+        ocp_solver = self.ocp_solver
         
         Ts_MPC = self.Tf / self.N
         t_init = time.time()
