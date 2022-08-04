@@ -84,16 +84,14 @@ class MPC(CtrllerActionServer):
             
             # feedback rti_phase
             status = ocp_solver.solve()
-            solver_time = time.time()
-            self.get_logger().info(f"Solver time is {solver_time-t_loop}s")
-
             if status != 0:
                 raise Exception(f'acados returned status {status}.')
 
-            
             # get solution
             # x0 = ocp_solver.get(0, "x")
-            # u0 = ocp_solver.get(0, "u")
+            u0 = ocp_solver.get(0, "u")
+            solver_time = time.time()
+            self.get_logger().info(f"Solver time is {solver_time-t_loop}s")
             # self.get_logger().info(f"Control input : {u0}")
             Vr,Vl = self.velocities2wheelinput(u0[0],u0[1])
             self.sendVelCmd(Vr,Vl)
