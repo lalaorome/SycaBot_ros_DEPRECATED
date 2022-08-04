@@ -58,7 +58,7 @@ class MPC(CtrllerActionServer):
         path = goal_handle.request.path
         path.insert(0,init_pose)
         print(path)
-        timed_path = self.add_time_to_wayposes(path, 0., 0.2, mode=mode)
+        timed_path = self.add_time_to_wayposes(path, 0., 0.4, mode=mode)
 
         # [state_plot, input_plot] = self.get_reference(0,0.1,200)
         
@@ -278,7 +278,7 @@ class MPC(CtrllerActionServer):
                     timed_poses[3,i] = timed_poses[3,i - 1] + 1 / desired_speed * np.sqrt((poses[i].y - poses[i - 1].y) ** 2 + (poses[i].x - poses[i - 1].x) ** 2)
                 else:
                     timed_poses[2,i] = 0
-                    timed_poses[3,i] = t0
+                    timed_poses[3,i] = t0 + 1.
         if mode == 'stop_in_corners':
             timed_poses = np.zeros((4,2 * W))
             for i in range(W):
