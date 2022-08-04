@@ -399,9 +399,9 @@ void unicycle_ode_acados_create_5_set_nlp_in(unicycle_ode_solver_capsule* capsul
     // change only the non-zero elements:
     W_0[0+(NY0) * 0] = 1;
     W_0[1+(NY0) * 1] = 1;
-    W_0[2+(NY0) * 2] = 0.2;
-    W_0[3+(NY0) * 3] = 0.5;
-    W_0[4+(NY0) * 4] = 0.5;
+    W_0[2+(NY0) * 2] = 0.1;
+    W_0[3+(NY0) * 3] = 0.1;
+    W_0[4+(NY0) * 4] = 0.005;
     ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, 0, "W", W_0);
     free(W_0);
 
@@ -413,9 +413,9 @@ void unicycle_ode_acados_create_5_set_nlp_in(unicycle_ode_solver_capsule* capsul
     // change only the non-zero elements:
     W[0+(NY) * 0] = 1;
     W[1+(NY) * 1] = 1;
-    W[2+(NY) * 2] = 0.2;
-    W[3+(NY) * 3] = 0.5;
-    W[4+(NY) * 4] = 0.5;
+    W[2+(NY) * 2] = 0.1;
+    W[3+(NY) * 3] = 0.1;
+    W[4+(NY) * 4] = 0.005;
 
     double* yref = calloc(NY, sizeof(double));
     // change only the non-zero elements:
@@ -469,7 +469,7 @@ void unicycle_ode_acados_create_5_set_nlp_in(unicycle_ode_solver_capsule* capsul
     double* zl = zlumem+NS*2;
     double* zu = zlumem+NS*3;
     // change only the non-zero elements:
-    zu[0] = 10;
+    zu[0] = 200;
 
     for (int i = 0; i < N; i++)
     {
@@ -488,9 +488,9 @@ void unicycle_ode_acados_create_5_set_nlp_in(unicycle_ode_solver_capsule* capsul
 
     double* W_e = calloc(NYN*NYN, sizeof(double));
     // change only the non-zero elements:
-    W_e[0+(NYN) * 0] = 1;
-    W_e[1+(NYN) * 1] = 1;
-    W_e[2+(NYN) * 2] = 0.2;
+    W_e[0+(NYN) * 0] = 20;
+    W_e[1+(NYN) * 1] = 20;
+    W_e[2+(NYN) * 2] = 2;
     ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, N, "W", W_e);
     free(W_e);
     double* Vx_e = calloc(NYN*NX, sizeof(double));
@@ -517,7 +517,7 @@ void unicycle_ode_acados_create_5_set_nlp_in(unicycle_ode_solver_capsule* capsul
     
 
     
-    zu_e[0] = 10;
+    zu_e[0] = 200;
 
     ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, N, "Zl", Zl_e);
     ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, N, "Zu", Zu_e);
@@ -589,10 +589,10 @@ void unicycle_ode_acados_create_5_set_nlp_in(unicycle_ode_solver_capsule* capsul
     double* ug = lug + NG;
 
     
-    D[0+NG * 0] = 0.9245947129337329;
-    D[0+NG * 1] = 0.04696941141703362;
-    D[1+NG * 0] = 0.9167873293642728;
-    D[1+NG * 1] = -0.04657279633170505;
+    D[0+NG * 0] = 0.8158001119446153;
+    D[0+NG * 1] = 0.04144264568678646;
+    D[1+NG * 0] = 0.8197292832825647;
+    D[1+NG * 1] = -0.041642247590754286;
 
     
 

@@ -113,7 +113,7 @@ class IdentificationActionServer(Node):
         # Generate inputs for the identification
         for t in input_types :
             n = int(n_inputs/len(input_types))
-            tmp_u1, tmp_u2 = self.generate_inputs(self.Ts, self.deadzones, n=n, input=t, Vr_max=0.2, Vl_max=0.2)
+            tmp_u1, tmp_u2 = self.generate_inputs(self.Ts, self.deadzones, n=n, input=t, Vr_max=0.3, Vl_max=0.3)
             u1 = np.concatenate((u1, tmp_u1))
             u2 = np.concatenate((u2, tmp_u2))
 
