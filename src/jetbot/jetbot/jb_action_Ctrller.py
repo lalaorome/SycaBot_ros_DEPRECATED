@@ -36,7 +36,7 @@ class CtrllerActionServer(Node):
         self.declare_parameter('wheel_separation', 0.1016)  # 4 inches
         self.declare_parameter('wheel_diameter', 0.060325)  # 2 3/8 inches
         self.declare_parameter('max_linear_velocity', 0.2)
-        self.declare_parameter('max_angular_velocity', 4.)
+        self.declare_parameter('max_angular_velocity', 0.2)
 
         self.id = self.get_parameter('id').value
         self.deadzones = self.get_parameter('deadzones').value
