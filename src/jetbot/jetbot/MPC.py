@@ -41,7 +41,7 @@ class MPC(CtrllerActionServer):
         self.Tf = self.get_parameter('horizon').value
 
         self.viz_pathref_pub = self.create_publisher(Pose2D, f'/SycaBot_W{self.id}/visualisation', 10)
-        self.ocp_solver = self.config_ocp(self.Q,self.R_mat)
+        self.ocp_solver = self.config_ocp()
 
     def control_cb(self, goal_handle):
         result = Control.Result()
@@ -52,7 +52,6 @@ class MPC(CtrllerActionServer):
         [state_plot, input_plot] = self.get_reference(0,0.1,200)
         
         # set cost
-        Q,R = self.get_Q_R()
         ocp_solver = self.ocp_solver
         
         Ts_MPC = self.Tf / self.N
@@ -182,7 +181,7 @@ class MPC(CtrllerActionServer):
         R = np.array(self.R_mat).reshape(2,2)
         return Q,R
     
-    def config_ocp(self, Q, R):
+    def config_ocp(self):
 
         # create ocp object to formulate the OCP
         ocp = AcadosOcp()
@@ -190,6 +189,7 @@ class MPC(CtrllerActionServer):
         model = self.export_unicycle_ode_model_with_LocalConstraints()
         ocp.model = model
 
+        Q,R = self.get_Q_R()
         nx = ocp.model.x.size()[0]
         nu = ocp.model.u.size()[0]
         ny = nx + nu
