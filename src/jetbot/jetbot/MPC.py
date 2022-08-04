@@ -100,10 +100,10 @@ class MPC(CtrllerActionServer):
             path_ref = Pose2D()
             path_ref.x = state_ref[0,0]
             path_ref.y = state_ref[1,0]
-            self.viz_pathref_pub.publish(path_ref)
+            # self.viz_pathref_pub.publish(path_ref)
             other_time = time.time()
             self.get_logger().info(f"Other time is {other_time-solver_time}s")
-            time.sleep(max(Ts_MPC - solver_time,0))
+            time.sleep(max(Ts_MPC - solver_time - other_time,0))
             
             t_sim = time.time() - t_init
             # upred = np.zeros((nu,N))
