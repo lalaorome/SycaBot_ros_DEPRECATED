@@ -47,8 +47,8 @@ class MPC(CtrllerActionServer):
         result = Control.Result()
 
         self.wait4pose()
-        # mode = 'ignore_corners'
-        mode = 'stop_in_corners'
+        mode = 'ignore_corners'
+        # mode = 'stop_in_corners'
 
         t_sim = 0
         init_pose = Pose2D()
