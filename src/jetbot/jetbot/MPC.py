@@ -212,7 +212,7 @@ class MPC(CtrllerActionServer):
         Vx_e[:nx, :nx] = np.eye(nx)
         Vu = np.zeros((ny, nu))
         Vu[nx:,:] = np.eye(2)
-        Vr_max, Vl_max = 0.4,0.4
+        Vr_max, Vl_max = 0.3,0.3
         D = np.array([[1. / (self.f_coefs[0] * self.R), self.L / (2. * self.f_coefs[0] * self.R)], [1. / (self.f_coefs[1] * self.R), -self.L / (2. * self.f_coefs[1] * self.R)]])
 
         ocp.dims.N = self.N
