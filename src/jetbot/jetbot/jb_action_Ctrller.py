@@ -41,7 +41,11 @@ class CtrllerActionServer(Node):
         self.declare_parameter('wheel_diameter', 0.060325)  # 2 3/8 inches
         self.declare_parameter('max_linear_velocity', 0.2)
         self.declare_parameter('max_angular_velocity', 4.)
+        self.declare_parameter('left_trim', 0.0)
+        self.declare_parameter('right_trim', 0.0)
 
+        self.left_trim = self.get_parameter('left_trim').value
+        self.right_trim = self.get_parameter('right_trim').value
         self.id = self.get_parameter('id').value
         self.deadzones = self.get_parameter('deadzones').value
         self.f_coefs = self.get_parameter('f_coefs').value
