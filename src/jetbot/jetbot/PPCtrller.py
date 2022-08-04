@@ -65,7 +65,7 @@ class PPCtrller(CtrllerActionServer):
 
         # Search look Ahead target Point index 
         while L<Lf :
-            # if idx == len(path_x)-1 : idx = 0
+            if idx == len(path_x)-1 : idx = 0
             L = d[idx]
             idx +=  1
 
