@@ -27,7 +27,7 @@ class MPC(CtrllerActionServer):
     def __init__(self):
         super().__init__('MPC')
         self.declare_parameter('Q', [1.,0.,0.,0.,1.,0.,0.,0.,0.2])
-        self.declare_parameter('R', [0.2,0.,0.,0.02])
+        self.declare_parameter('R', [0.4,0.,0.,0.1])
         self.declare_parameter('M', 10.)
         self.declare_parameter('radius_safeset', 4.)
         self.declare_parameter('timesteps', 20)
@@ -58,7 +58,7 @@ class MPC(CtrllerActionServer):
         path = goal_handle.request.path
         path.insert(0,init_pose)
         print(path)
-        timed_path = self.add_time_to_wayposes(path, 0., 0.25, mode=mode)
+        timed_path = self.add_time_to_wayposes(path, 0., 0.2, mode=mode)
 
         # [state_plot, input_plot] = self.get_reference(0,0.1,200)
         
