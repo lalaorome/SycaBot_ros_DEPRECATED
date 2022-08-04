@@ -38,6 +38,7 @@ class PPCtrller(CtrllerActionServer):
             path_ref = Pose2D()
             path_ref.x = path_x[idx]
             path_ref.y = path_y[idx]
+            self.viz_pathref_pub.publish(path_ref)
             v,w = self.generatePPinputs(path_x[idx], path_y[idx])
             Vr,Vl = self.velocities2wheelinput(v,w)
             self.sendVelCmd(Vr,Vl)
