@@ -17,7 +17,7 @@ show_help() {
     echo "      --id Id of the jetbot being configured. keys : integer"
     echo "             default : 1"
     echo ""
-    echo "      --install Install necessary packages and ROS2 (should be used at first initialization)"
+    echo "      --install Install necessary packages (should be used at first initialization)"
     echo ""
     echo ""
     echo ""
@@ -147,8 +147,8 @@ cat boot_init.sh
 echo ""
 echo ""
 echo 'Copying service and boot file...'
-cp robot_boot.service /lib/systemd/system/
-cp boot_init.sh /usr/local/bin/
+sudo cp robot_boot.service /lib/systemd/system/
+sudo cp boot_init.sh /usr/local/bin/
 echo 'chown /usr/local/bin/boot_init.sh'
 sudo chown root:root /usr/local/bin/boot_init.sh
 echo 'chmod 755 /usr/local/bin/boot_init.sh'
