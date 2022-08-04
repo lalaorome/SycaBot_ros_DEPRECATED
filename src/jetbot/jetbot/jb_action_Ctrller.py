@@ -2,14 +2,12 @@ import numpy as np
 from jetbot.jb_utils import quat2eul
 import time
 import math as m
-from Adafruit_MotorHAT import Adafruit_MotorHAT
 
 from rclpy.node import Node
 from rclpy.action import ActionServer
 from rclpy.callback_groups import ReentrantCallbackGroup
 from rclpy.qos import qos_profile_sensor_data
 
-from rcl_interfaces.msg import SetParametersResult
 from geometry_msgs.msg import PoseStamped
 from interfaces.action import Control
 from interfaces.msg import Motor, Viz
@@ -28,8 +26,6 @@ class CtrllerActionServer(Node):
     Ts = 0.1
     LINEAR = 0
     ANGULAR = 1
-    MOTOR_LEFT = 1      # left motor ID
-    MOTOR_RIGHT = 2     # right motor ID
 
     def __init__(self, name):
         super().__init__(f'{name}_controller')
@@ -41,13 +37,7 @@ class CtrllerActionServer(Node):
         self.declare_parameter('wheel_diameter', 0.060325)  # 2 3/8 inches
         self.declare_parameter('max_linear_velocity', 0.2)
         self.declare_parameter('max_angular_velocity', 4.)
-        self.declare_parameter('left_trim', 0.0)
-        self.declare_parameter('right_trim', 0.0)
-        self.declare_parameter('max_pwm', 255)
-        self.declare_parameter('max_rpm', 200)  
 
-        self.left_trim = self.get_parameter('left_trim').value
-        self.right_trim = self.get_parameter('right_trim').value
         self.id = self.get_parameter('id').value
         self.deadzones = self.get_parameter('deadzones').value
         self.f_coefs = self.get_parameter('f_coefs').value
@@ -55,22 +45,6 @@ class CtrllerActionServer(Node):
         self.L = self.get_parameter('wheel_separation').value
         self.max_lin_vel = self.get_parameter('max_linear_velocity').value
         self.max_ang_vel = self.get_parameter('max_angular_velocity').value
-        self.max_pwm = self.get_parameter('max_pwm').value
-        self.max_rpm = self.get_parameter('max_rpm').value
-
-        # open Adafruit MotorHAT driver
-        self.driver = Adafruit_MotorHAT(i2c_bus=1)
-        
-        # get motor objects from driver
-        self.motors = {
-            self.MOTOR_LEFT : self.driver.getMotor(self.MOTOR_LEFT),
-            self.MOTOR_RIGHT : self.driver.getMotor(self.MOTOR_RIGHT)
-        }
-        
-        self.pwm_channels = {
-            self.MOTOR_LEFT : (1, 0),
-            self.MOTOR_RIGHT : (2, 3)
-        }
 
         cb_group = ReentrantCallbackGroup()
         qos = qos_profile_sensor_data
@@ -116,13 +90,13 @@ class CtrllerActionServer(Node):
         '''
         raise NotImplementedError('CtrllerActionServer subclasses should implement control_cb()')
 
-    def sendVelCmd_deprecated(self,Vr,Vl):
+    def sendVelCmd(self,Vr,Vl):
         vel_cmd = Motor()
         vel_cmd.right = Vr
         vel_cmd.left = Vl
         self.vel_cmd_pub.publish(vel_cmd)
     
-    def stop_deprecated(self):
+    def stop(self):
         vel_cmd = Motor()
         vel_cmd.right = 0.
         vel_cmd.left = 0.
@@ -150,56 +124,6 @@ class CtrllerActionServer(Node):
         v = np.linalg.norm(self.rob_state[0:2]-self.previous_state[0:2])/self.Ts
         w = m.atan2(m.sin(self.rob_state[2]-self.previous_state[2]),m.cos(self.rob_state[2]-self.previous_state[2]))/self.Ts
         return np.array([v,w])
-    
-    def destroy_node(self):
-        self.get_logger().info(f"shutting down, stopping robot...")
-        self.stop()
-        
-    def parameters_callback(self, params):
-        for param in params:
-            if param.name == 'left_trim':
-                self.left_trim = param.value
-            elif param.name == 'right_trim':
-                self.right_trim = param.value
-            elif param.name == 'max_pwm':
-                self.max_pwm = param.value
-            elif param.name == 'wheel_separation':
-                self.wheel_separation = param.value
-            else:
-                raise ValueError(f'unknown parameter {param.name}')
-                
-        return SetParametersResult(successful=True)
-
-    def stop(self):
-        self.set_speed(0,0)
-    
-    def set_speed(self, right, left):
-        """
-        Sets the motor speeds between [-1.0, 1.0]
-        """
-        self._set_pwm(self.MOTOR_LEFT, -left, self.left_trim)
-        self._set_pwm(self.MOTOR_RIGHT, -right, self.right_trim)
-      
-    def _set_pwm(self, motor, value, trim):
-        # apply trim and convert [-1,1] to PWM value
-        pwm = int(min(max((abs(value) + trim) * self.max_pwm, 0), self.max_pwm))
-        self.motors[motor].setSpeed(pwm)
-
-        # set the motor direction
-        ina, inb = self.pwm_channels[motor]
-        
-        if value > 0:
-            self.motors[motor].run(Adafruit_MotorHAT.FORWARD)
-            self.driver._pwm.setPWM(ina, 0, pwm * 16)
-            self.driver._pwm.setPWM(inb, 0, 0)
-        elif value < 0:
-            self.motors[motor].run(Adafruit_MotorHAT.BACKWARD)
-            self.driver._pwm.setPWM(ina, 0, 0)
-            self.driver._pwm.setPWM(inb, 0, pwm * 16)
-        else:
-            self.motors[motor].run(Adafruit_MotorHAT.RELEASE)
-            self.driver._pwm.setPWM(ina, 0, 0)
-            self.driver._pwm.setPWM(inb, 0, 0)
 
 
 if __name__ == '__main__':

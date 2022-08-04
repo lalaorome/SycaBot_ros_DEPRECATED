@@ -24,7 +24,6 @@ from acados_template import AcadosModel
 
 class MPC(CtrllerActionServer):
     # https://blog.actorsfit.com/a?ID=01550-fd216bc6-e1d5-4d16-b901-143d2b19c430
-    
     def __init__(self):
         super().__init__('MPC')
         self.declare_parameter('Q', [1.,0.,0.,0.,1.,0.,0.,0.,0.2])
@@ -96,10 +95,10 @@ class MPC(CtrllerActionServer):
             self.get_logger().info(f"Solver time is {solver_time-t_loop}s")
             # self.get_logger().info(f"Control input : {u0}")
             Vr,Vl = self.velocities2wheelinput(u0[0],u0[1])
-            self.set_speed(Vl,Vr)
-            # path_ref = Pose2D()
-            # path_ref.x = state_ref[0,0]
-            # path_ref.y = state_ref[1,0]
+            self.sendVelCmd(Vr,Vl)
+            path_ref = Pose2D()
+            path_ref.x = state_ref[0,0]
+            path_ref.y = state_ref[1,0]
             # self.viz_pathref_pub.publish(path_ref)
             other_time = time.time()
             self.get_logger().info(f"Other time is {other_time-solver_time}s")
