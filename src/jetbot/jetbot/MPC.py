@@ -27,10 +27,10 @@ class MPC(CtrllerActionServer):
     def __init__(self):
         super().__init__('MPC')
         self.declare_parameter('Q', [1.,0.,0.,0.,1.,0.,0.,0.,0.2])
-        self.declare_parameter('R', [0.01,0.,0.,0.01])
+        self.declare_parameter('R', [0.1,0.,0.,0.1])
         self.declare_parameter('M', 10.)
         self.declare_parameter('radius_safeset', 4.)
-        self.declare_parameter('timesteps', 40)
+        self.declare_parameter('timesteps', 20)
         self.declare_parameter('horizon', 2.)
 
         self.Q=self.get_parameter('Q').value
@@ -88,7 +88,7 @@ class MPC(CtrllerActionServer):
             # ocp_solver.options_set('rti_phase', 2)
             status = ocp_solver.solve()
             loop_time = time.time() - t_loop
-            print("Solver time is",loop_time,"s")
+            self.get_logger().info(f"Solver time is {loop_time}s")
 
             if status != 0:
                 raise Exception(f'acados returned status {status}.')
@@ -97,14 +97,14 @@ class MPC(CtrllerActionServer):
             # get solution
             # x0 = ocp_solver.get(0, "x")
             u0 = ocp_solver.get(0, "u")
-            print(f"Control input : {u0}")
+            self.get_logger().info(f"Control input : {u0}")
             Vr,Vl = self.velocities2wheelinput(u0[0],u0[1])
             self.sendVelCmd(Vr,Vl)
             path_ref = Pose2D()
             path_ref.x = state_ref[0,0]
             path_ref.y = state_ref[1,0]
             self.viz_pathref_pub.publish(path_ref)
-            time.sleep(Ts_MPC - loop_time)
+            time.sleep(max(Ts_MPC - loop_time,0))
             
             t_sim = time.time() - t_init
             # upred = np.zeros((nu,N))

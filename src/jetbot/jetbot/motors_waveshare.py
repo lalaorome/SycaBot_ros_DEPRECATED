@@ -1,7 +1,7 @@
 import rclpy
 
 from rclpy.node import Node
-from jetbot.motors import MotorController
+from jetbot.motorsRL import MotorController
 
 from Adafruit_MotorHAT import Adafruit_MotorHAT
 

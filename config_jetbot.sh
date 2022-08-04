@@ -50,6 +50,8 @@ while :; do
                 LAUNCH_FILE_NAME="$2"
                 shift
             elif [ "$2" == "boot" ];then
+                sudo sed -i -r "s/from jetbot.motors[A-Z]+/from jetbot.motorsRL/" src/jetbot/jetbot/motors_waveshare.py
+                cat src/jetbot/jetbot/motors_waveshare.py
                 LAUNCH_FILE_NAME="$2"
                 shift
             elif [ "$2" == "motorsRL" ];then
@@ -133,7 +135,7 @@ done
 
 #Create the good directory
 cd ~/SycaBot_ros
-sudo cp -r ./. ../syca_ws/
+cp -r ./. ../syca_ws/
 
 # Copy service file and make systemctl recgonize it
 # Set the boot file
@@ -145,8 +147,8 @@ cat boot_init.sh
 echo ""
 echo ""
 echo 'Copying service and boot file...'
-sudo cp robot_boot.service /lib/systemd/system/
-sudo cp boot_init.sh /usr/local/bin/
+cp robot_boot.service /lib/systemd/system/
+cp boot_init.sh /usr/local/bin/
 echo 'chown /usr/local/bin/boot_init.sh'
 sudo chown root:root /usr/local/bin/boot_init.sh
 echo 'chmod 755 /usr/local/bin/boot_init.sh'
