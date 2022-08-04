@@ -27,7 +27,7 @@ class PPCtrller(CtrllerActionServer):
         result = Control.Result()
 
         path = goal_handle.request.path # Array of Pose2D
-        interpolate = False
+        interpolate = True
         path_x, path_y = self.get_path_x_y(path, interpolate)
         idx = 0
         self.wait4pose()
