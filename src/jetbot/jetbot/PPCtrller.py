@@ -33,7 +33,7 @@ class PPCtrller(CtrllerActionServer):
         self.wait4pose()
         t_init = time.time()
 
-        while time.time() - t_init < 1000. :
+        while time.time() - t_init < 100. :
             idx = self.get_target(path_x, path_y)
             path_ref = Pose2D()
             path_ref.x = path_x[idx]
