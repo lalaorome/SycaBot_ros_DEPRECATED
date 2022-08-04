@@ -63,7 +63,7 @@
 #define UNICYCLE_ODE_NY0    5
 #define UNICYCLE_ODE_NY     5
 #define UNICYCLE_ODE_NYN    3
-#define UNICYCLE_ODE_N      40
+#define UNICYCLE_ODE_N      20
 #define UNICYCLE_ODE_NH     1
 #define UNICYCLE_ODE_NPHI   0
 #define UNICYCLE_ODE_NHN    1

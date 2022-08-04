@@ -91,7 +91,6 @@ class DeadzoneActionServer(Node):
                 moved = False
                 while not moved :
                     states.append(self.rob_state)
-                    print(self.rob_state)
                     if abs(states[-1][2] - states[-2][2]) > 0.2 : # If robot has moved
                         if j%2 == self.RIGHT_WHEEL : deadzone.append(cmd_vel.right)
                         else : deadzone.append(cmd_vel.left)

@@ -27,7 +27,7 @@ class MPC(CtrllerActionServer):
     def __init__(self):
         super().__init__('MPC')
         self.declare_parameter('Q', [1.,0.,0.,0.,1.,0.,0.,0.,0.2])
-        self.declare_parameter('R', [0.1,0.,0.,0.1])
+        self.declare_parameter('R', [0.5,0.,0.,0.5])
         self.declare_parameter('M', 10.)
         self.declare_parameter('radius_safeset', 4.)
         self.declare_parameter('timesteps', 20)
@@ -81,11 +81,8 @@ class MPC(CtrllerActionServer):
             theta_ref_N = np.arctan2(np.sin(state_ref[2,self.N] - state_ref[2,self.N - 1]),np.cos(state_ref[2,self.N] - state_ref[2,self.N - 1])) + state_ref[2,self.N - 1]
             ocp_solver.set(self.N, "yref",np.array([state_ref[0,self.N], state_ref[1,self.N], theta_ref_N]))
             ocp_solver.set(self.N, "p", np.array([state_ref[0,self.N], state_ref[1,self.N]]))
-
-            print(f"x0, theta ref : {x0[2]}, {theta_ref_k}, {theta_ref_N}")
             
             # feedback rti_phase
-            # ocp_solver.options_set('rti_phase', 2)
             status = ocp_solver.solve()
             loop_time = time.time() - t_loop
             self.get_logger().info(f"Solver time is {loop_time}s")
@@ -104,6 +101,8 @@ class MPC(CtrllerActionServer):
             path_ref.x = state_ref[0,0]
             path_ref.y = state_ref[1,0]
             self.viz_pathref_pub.publish(path_ref)
+            other_time = time.time() - loop_time
+            self.get_logger().info(f"Other time is {other_time}s")
             time.sleep(max(Ts_MPC - loop_time,0))
             
             t_sim = time.time() - t_init

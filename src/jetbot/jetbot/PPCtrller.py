@@ -103,8 +103,6 @@ class PPCtrller(CtrllerActionServer):
         R = self.LAD/(2*m.sin(alpha))
         w = 2*self.max_ang_vel*m.sin(alpha)/self.LAD
         v = self.max_lin_vel
-        print(R,v,w)
-
         return v,w
 
 

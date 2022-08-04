@@ -378,7 +378,7 @@ void unicycle_ode_acados_create_5_set_nlp_in(unicycle_ode_solver_capsule* capsul
     if (new_time_steps) {
         unicycle_ode_acados_update_time_steps(capsule, N, new_time_steps);
     } else {// all time_steps are identical
-        double time_step = 0.05;
+        double time_step = 0.1;
         for (int i = 0; i < N; i++)
         {
             ocp_nlp_in_set(nlp_config, nlp_dims, nlp_in, i, "Ts", &time_step);
@@ -400,8 +400,8 @@ void unicycle_ode_acados_create_5_set_nlp_in(unicycle_ode_solver_capsule* capsul
     W_0[0+(NY0) * 0] = 1;
     W_0[1+(NY0) * 1] = 1;
     W_0[2+(NY0) * 2] = 0.2;
-    W_0[3+(NY0) * 3] = 0.01;
-    W_0[4+(NY0) * 4] = 0.01;
+    W_0[3+(NY0) * 3] = 0.5;
+    W_0[4+(NY0) * 4] = 0.5;
     ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, 0, "W", W_0);
     free(W_0);
 
@@ -414,8 +414,8 @@ void unicycle_ode_acados_create_5_set_nlp_in(unicycle_ode_solver_capsule* capsul
     W[0+(NY) * 0] = 1;
     W[1+(NY) * 1] = 1;
     W[2+(NY) * 2] = 0.2;
-    W[3+(NY) * 3] = 0.01;
-    W[4+(NY) * 4] = 0.01;
+    W[3+(NY) * 3] = 0.5;
+    W[4+(NY) * 4] = 0.5;
 
     double* yref = calloc(NY, sizeof(double));
     // change only the non-zero elements:
@@ -538,12 +538,6 @@ void unicycle_ode_acados_create_5_set_nlp_in(unicycle_ode_solver_capsule* capsul
     double* lbx0 = lubx0;
     double* ubx0 = lubx0 + NBX0;
     // change only the non-zero elements:
-    lbx0[0] = 0.4777531027793884;
-    ubx0[0] = 0.4777531027793884;
-    lbx0[1] = 0.1369577944278717;
-    ubx0[1] = 0.1369577944278717;
-    lbx0[2] = 1.7623897528100827;
-    ubx0[2] = 1.7623897528100827;
 
     ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, 0, "idxbx", idxbx0);
     ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, 0, "lbx", lbx0);
@@ -793,9 +787,6 @@ void unicycle_ode_acados_create_7_set_nlp_out(unicycle_ode_solver_capsule* capsu
 
     // initialize with x0
     
-    x0[0] = 0.4777531027793884;
-    x0[1] = 0.1369577944278717;
-    x0[2] = 1.7623897528100827;
 
 
     double* u0 = xu0 + NX;

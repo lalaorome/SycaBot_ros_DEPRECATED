@@ -86,22 +86,22 @@ input_note = strcat(input_note, num2str(i_in), ') ubx_0 - upper bound on x for s
                     ' size [3]\n ');
 i_in = i_in + 1;
 input_note = strcat(input_note, num2str(i_in), ') parameters - concatenated for all shooting nodes 0 to N+1,',...
-                    ' size [82]\n ');
+                    ' size [42]\n ');
 i_in = i_in + 1;
 input_note = strcat(input_note, num2str(i_in), ') y_ref_0, size [5]\n ');
 i_in = i_in + 1;
 input_note = strcat(input_note, num2str(i_in), ') y_ref - concatenated for shooting nodes 1 to N-1,',...
-                    ' size [195]\n ');
+                    ' size [95]\n ');
 i_in = i_in + 1;
 input_note = strcat(input_note, num2str(i_in), ') y_ref_e, size [3]\n ');
 i_in = i_in + 1;
-input_note = strcat(input_note, num2str(i_in), ') lg for shooting nodes 0 to N-1, size [80]\n ');
+input_note = strcat(input_note, num2str(i_in), ') lg for shooting nodes 0 to N-1, size [40]\n ');
 i_in = i_in + 1;
-input_note = strcat(input_note, num2str(i_in), ') ug for shooting nodes 0 to N-1, size [80]\n ');
+input_note = strcat(input_note, num2str(i_in), ') ug for shooting nodes 0 to N-1, size [40]\n ');
 i_in = i_in + 1;
-input_note = strcat(input_note, num2str(i_in), ') lh for shooting nodes 0 to N-1, size [40]\n ');
+input_note = strcat(input_note, num2str(i_in), ') lh for shooting nodes 0 to N-1, size [20]\n ');
 i_in = i_in + 1;
-input_note = strcat(input_note, num2str(i_in), ') uh for shooting nodes 0 to N-1, size [40]\n ');
+input_note = strcat(input_note, num2str(i_in), ') uh for shooting nodes 0 to N-1, size [20]\n ');
 i_in = i_in + 1;
 input_note = strcat(input_note, num2str(i_in), ') lh_e, size [1]\n ');
 i_in = i_in + 1;

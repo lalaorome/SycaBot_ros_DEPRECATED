@@ -176,7 +176,6 @@ class IdentificationActionServer(Node):
         else :
             # Get velocity from measured inputs
             self.Ts_arr = [self.time_stamps[i+1]-self.time_stamps[i] for i in range(len(self.time_stamps)-1)]
-            print(self.Ts_arr)
             velocities = np.zeros((n-1,2))
             for i in range(0,n-1) :
                 idx = i
