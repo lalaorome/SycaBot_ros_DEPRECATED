@@ -58,7 +58,7 @@ class MPC(CtrllerActionServer):
         path = goal_handle.request.path
         path.insert(0,init_pose)
         print(path)
-        timed_path = self.add_time_to_wayposes(path, 0., 0.3, mode=mode)
+        timed_path = self.add_time_to_wayposes(path, 0., 0.2, mode=mode)
 
         # [state_plot, input_plot] = self.get_reference(0,0.1,200)
         
