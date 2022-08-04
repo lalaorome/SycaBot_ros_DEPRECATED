@@ -6,6 +6,7 @@ import math as m
 from rclpy.node import Node
 from rclpy.action import ActionServer
 from rclpy.callback_groups import ReentrantCallbackGroup
+from rclpy.qos import qos_profile_sensor_data
 
 from geometry_msgs.msg import PoseStamped
 from interfaces.action import Control
@@ -46,6 +47,7 @@ class CtrllerActionServer(Node):
         self.max_ang_vel = self.get_parameter('max_angular_velocity').value
 
         cb_group = ReentrantCallbackGroup()
+        qos = qos_profile_sensor_data
 
         self._action_server = ActionServer(
             self,
@@ -61,7 +63,7 @@ class CtrllerActionServer(Node):
         self.pose_sub = self.create_subscription(PoseStamped, f'/mocap_node/SycaBot_W{self.id}/pose', self.get_pose_cb, 1, callback_group=cb_group)
 
         # Create motor publisher
-        self.vel_cmd_pub = self.create_publisher(Motor, f'/SycaBot_W{self.id}/cmd_vel', 10, callback_group=cb_group)
+        self.vel_cmd_pub = self.create_publisher(Motor, f'/SycaBot_W{self.id}/cmd_vel', qos, callback_group=cb_group)
 
     def get_pose_cb(self, p):
         '''
