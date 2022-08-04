@@ -30,8 +30,8 @@ class MPC(CtrllerActionServer):
         self.declare_parameter('R', [0.5,0.,0.,0.5])
         self.declare_parameter('M', 10.)
         self.declare_parameter('radius_safeset', 4.)
-        self.declare_parameter('timesteps', 20)
-        self.declare_parameter('horizon', 2.)
+        self.declare_parameter('timesteps', 40)
+        self.declare_parameter('horizon', 4.)
 
         self.Q=self.get_parameter('Q').value
         self.R_mat=self.get_parameter('R').value
@@ -101,9 +101,8 @@ class MPC(CtrllerActionServer):
             path_ref.y = state_ref[1,0]
             # self.viz_pathref_pub.publish(path_ref)
             other_time = time.time()
-            self.get_logger().info(f"Other time is {other_time-solver_time}s")
             time.sleep(max(Ts_MPC - solver_time - other_time,0))
-            
+            self.get_logger().info(f"Other time is {other_time-t_loop}s")
             t_sim = time.time() - t_init
             # upred = np.zeros((nu,N))
             # xpred  = np.zeros((nx,N + 1))
