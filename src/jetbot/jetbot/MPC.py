@@ -51,8 +51,9 @@ class MPC(CtrllerActionServer):
         result = Control.Result()
 
         self.wait4pose()
-        mode = 'ignore_corners'
-        # mode = 'stop_in_corners'
+        # mode = 'ignore_corners'
+        mode = 'stop_in_corners'
+
 
         t_run = 0
         init_pose = Pose2D()
@@ -62,7 +63,12 @@ class MPC(CtrllerActionServer):
         path = goal_handle.request.path
         path.insert(0,init_pose)
         print(path)
-        timed_path = self.add_time_to_wayposes(path, 0., 0.2, mode=mode)
+        # timed_path = self.add_time_to_wayposes(path, 0., 0.2, mode=mode)
+        
+        timed_poses = []
+        for p in path:
+            timed_poses = self.add_syncronised_waypose(timed_poses, 0., np.array([p[0],p[1]]), 15.)
+        print(timed_poses)
 
         # [state_plot, input_plot] = self.get_reference(0,0.1,200)
         
@@ -325,6 +331,49 @@ class MPC(CtrllerActionServer):
                 else:
                     timed_poses[2,i  * 2 + 1] = timed_poses[2,i  * 2]
                     timed_poses[3,i  * 2 + 1] = t0 + LargeTime             
+        return timed_poses
+
+    def add_syncronised_waypose(current_timed_poses,current_t,next_waypoint,next_travel_duration):
+        timed_poses = np.zeros((4,1))
+        timed_poses[0,0] = next_waypoint[0]
+        timed_poses[1,0] = next_waypoint[1]
+        timed_poses[2,0] = 0.
+        timed_poses[3,0] = current_t 
+        if np.any(current_timed_poses):
+            current_waypose_times = current_timed_poses[3,:]
+            idx_poses_after_t = np.argwhere(current_waypose_times > current_t)
+            if idx_poses_after_t.size > 0:
+                idx_next = idx_poses_after_t[0]
+                if idx_next > 1: #if there are more than one waypoint in list that have been passed
+                    reduced_timed_posed = current_timed_poses[:,idx_next - 1:]
+                else:
+                    reduced_timed_posed = current_timed_poses
+            else:
+                reduced_timed_posed = current_timed_poses
+
+            reduced_times = reduced_timed_posed[3,:]
+            W = len(reduced_times)    
+
+            rounds = 3
+
+            timed_poses = np.zeros((4,W + 2 + rounds * 4))
+            timed_poses[:,:W] = reduced_timed_posed
+            timed_poses[0,W] = reduced_timed_posed[0,-1]
+            timed_poses[1,W] = reduced_timed_posed[1,-1]
+            timed_poses[2,W] = np.arctan2(next_waypoint[1] - reduced_timed_posed[1,-1], next_waypoint[0] - reduced_timed_posed[0,-1])
+            timed_poses[3,W] = reduced_timed_posed[3,-1] + 1
+            timed_poses[0,W + 1] = next_waypoint[0]
+            timed_poses[1,W + 1] = next_waypoint[1]
+            timed_poses[2,W + 1] = timed_poses[2,W]
+            timed_poses[3,W + 1] = timed_poses[3,W] + next_travel_duration
+            
+
+            dir = np.sign(np.random.randn(1))
+            for ts in range(rounds * 4):
+                timed_poses[0,W + 2 + ts] = next_waypoint[0]
+                timed_poses[1,W + 2 + ts] = next_waypoint[1]
+                timed_poses[2,W + 2 + ts] = np.remainder(timed_poses[2,W + 2 + ts - 1] + dir * math.pi / 2 + math.pi,2 * math.pi) - math.pi
+                timed_poses[3,W + 2 + ts] = timed_poses[3,W + 2 + ts - 1] + 0.5  
         return timed_poses
 
     def generate_reference_trajectory_from_timed_wayposes(self, current_state, timed_poses,t,Ts,N,mode = 'ignore_corners'):
