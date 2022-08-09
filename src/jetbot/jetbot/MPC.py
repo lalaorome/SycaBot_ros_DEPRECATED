@@ -33,7 +33,8 @@ class MPC(CtrllerActionServer):
         self.declare_parameter('radius_safeset', 4.)
         self.declare_parameter('timesteps', 20)
         self.declare_parameter('horizon', 2.)
-
+        self.declare_parameter('delay', 0.5)
+        
         self.Q=self.get_parameter('Q').value
         self.R_mat=self.get_parameter('R').value
         self.M=self.get_parameter('M').value
@@ -73,6 +74,8 @@ class MPC(CtrllerActionServer):
         Ts_MPC = self.Tf / self.N
         t_init = time.time()
         x0 = self.rob_state
+        x_pf = x0
+        u0 = np.zeros(2,)
         while t_sim < 100. :
 
             t_loop = time.time()
@@ -81,11 +84,19 @@ class MPC(CtrllerActionServer):
             x0 = self.rob_state
             x0[2] = np.arctan2(np.sin(x0[2] - previous_x0[2]),np.cos(x0[2] - previous_x0[2])) + previous_x0[2]
 
+            # predict state after estimated delay
+            t_prediction_feedback = time.time()
             acados_integrator.set("x",x0)
-             
+            acados_integrator.set("u",u0)
+            sim_status = acados_integrator.solve()             
+            x_simulated = acados_integrator.get("x") 
+            x_pf[0] = x_simulated[0]
+            x_pf[1] = x_simulated[1] 
+            thetanext_wind = np.arctan2(np.sin(x_simulated[2] - x_pf[2]), np.cos(x_simulated[2] - x_pf[2])) + x_pf[2]
+            x_pf[2] = thetanext_wind
 
-            ocp_solver.set(0, "lbx", x0)
-            ocp_solver.set(0, "ubx", x0)
+            ocp_solver.set(0, "lbx", x_pf)
+            ocp_solver.set(0, "ubx", x_pf)
 
             # reference
             [state_ref, input_ref] = self.generate_reference_trajectory_from_timed_wayposes(x0, timed_path, t_sim,Ts_MPC, self.N, mode=mode)
