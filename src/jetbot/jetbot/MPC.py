@@ -19,6 +19,7 @@ from interfaces.action import Control
 from geometry_msgs.msg import Pose2D
 
 from acados_template import AcadosOcp, AcadosOcpSolver
+from acados_template import AcadosSim, AcadosSimSolver
 from acados_template import AcadosModel
 
 
@@ -26,8 +27,8 @@ class MPC(CtrllerActionServer):
     # https://blog.actorsfit.com/a?ID=01550-fd216bc6-e1d5-4d16-b901-143d2b19c430
     def __init__(self):
         super().__init__('MPC')
-        self.declare_parameter('Q', [1.,0.,0.,0.,1.,0.,0.,0.,0.2])
-        self.declare_parameter('R', [0.4,0.,0.,0.1])
+        self.declare_parameter('Q', [1.,0.,0.,0.,1.,0.,0.,0.,0.1])
+        self.declare_parameter('R', [0.5,0.,0.,0.1])
         self.declare_parameter('M', 10.)
         self.declare_parameter('radius_safeset', 4.)
         self.declare_parameter('timesteps', 20)
@@ -39,8 +40,10 @@ class MPC(CtrllerActionServer):
         self.sr = self.get_parameter('radius_safeset').value
         self.N = self.get_parameter('timesteps').value
         self.Tf = self.get_parameter('horizon').value
+        self.expected_delay = self.get_parameter('delay').value
 
         self.ocp_solver = self.config_ocp()
+        self.acados_integrator = self.config_delay_compensation_predictor()
 
 
     def control_cb(self, goal_handle):
@@ -64,6 +67,8 @@ class MPC(CtrllerActionServer):
         
         # set cost
         ocp_solver = self.ocp_solver
+
+        acados_integrator = self.acados_integrator
         
         Ts_MPC = self.Tf / self.N
         t_init = time.time()
@@ -75,6 +80,9 @@ class MPC(CtrllerActionServer):
             previous_x0 = x0
             x0 = self.rob_state
             x0[2] = np.arctan2(np.sin(x0[2] - previous_x0[2]),np.cos(x0[2] - previous_x0[2])) + previous_x0[2]
+
+            acados_integrator.set("x",x0)
+             
 
             ocp_solver.set(0, "lbx", x0)
             ocp_solver.set(0, "ubx", x0)
@@ -262,6 +270,14 @@ class MPC(CtrllerActionServer):
         ocp.solver_options.tf = self.Tf
         ocp_solver = AcadosOcpSolver(ocp, json_file = 'acados_ocp.json')
         return ocp_solver
+
+    def config_delay_compensation_predictor(self):
+        sim_delayCompensation = AcadosSim()
+        sim_delayCompensation.model = self.export_unicycle_ode_model_with_LocalConstraints()
+        sim_delayCompensation.solver_options.T = self.expected_delay
+        acados_integrator_delayCompensation = AcadosSimSolver(sim_delayCompensation)
+        return acados_integrator_delayCompensation
+
 
     def add_time_to_wayposes(self, poses,t0,desired_speed,mode = 'ignore_corners'):
         LargeTime = 1000
