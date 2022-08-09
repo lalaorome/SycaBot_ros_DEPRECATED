@@ -34,7 +34,7 @@ class MPC(CtrllerActionServer):
         self.declare_parameter('timesteps', 20)
         self.declare_parameter('horizon', 2.)
         self.declare_parameter('delay', 0.5)
-        
+
         self.Q=self.get_parameter('Q').value
         self.R_mat=self.get_parameter('R').value
         self.M=self.get_parameter('M').value
@@ -54,7 +54,7 @@ class MPC(CtrllerActionServer):
         mode = 'ignore_corners'
         # mode = 'stop_in_corners'
 
-        t_sim = 0
+        t_run = 0
         init_pose = Pose2D()
         init_pose.x = self.rob_state[0]
         init_pose.y = self.rob_state[1]
@@ -76,7 +76,7 @@ class MPC(CtrllerActionServer):
         x0 = self.rob_state
         x_pf = x0
         u0 = np.zeros(2,)
-        while t_sim < 100. :
+        while t_run < 100. :
 
             t_loop = time.time()
             # update initial condition
@@ -94,12 +94,12 @@ class MPC(CtrllerActionServer):
             x_pf[1] = x_simulated[1] 
             thetanext_wind = np.arctan2(np.sin(x_simulated[2] - x_pf[2]), np.cos(x_simulated[2] - x_pf[2])) + x_pf[2]
             x_pf[2] = thetanext_wind
-
+            
             ocp_solver.set(0, "lbx", x_pf)
             ocp_solver.set(0, "ubx", x_pf)
 
             # reference
-            [state_ref, input_ref] = self.generate_reference_trajectory_from_timed_wayposes(x0, timed_path, t_sim,Ts_MPC, self.N, mode=mode)
+            [state_ref, input_ref] = self.generate_reference_trajectory_from_timed_wayposes(x0, timed_path, t_run,Ts_MPC, self.N, mode=mode)
 
             for k in range(self.N):
                 if k == 0:
@@ -121,8 +121,8 @@ class MPC(CtrllerActionServer):
             # get solution
             # x0 = ocp_solver.get(0, "x")
             u0 = ocp_solver.get(0, "u")
-            solver_time = time.time()
-            self.get_logger().info(f"Solver time is {solver_time-t_loop}s")
+            t_solver_finished = time.time()
+            self.get_logger().info(f"Solver time is {t_solver_finished - t_loop}s")
             # self.get_logger().info(f"Control input : {u0}")
             Vr,Vl = self.velocities2wheelinput(u0[0],u0[1])
             self.sendVelCmd(Vr,Vl)
@@ -131,10 +131,10 @@ class MPC(CtrllerActionServer):
             path_ref.y = state_ref[1,0]
             path_ref.theta = theta_ref_N
             self.viz_pathref_pub.publish(path_ref)
-            other_time = time.time()
-            time.sleep(max(Ts_MPC - solver_time - other_time,0))
-            self.get_logger().info(f"Other time is {other_time-t_loop}s")
-            t_sim = time.time() - t_init
+            t_publishing_finished = time.time()
+            time.sleep(max(Ts_MPC - (t_publishing_finished - t_loop),0))
+            self.get_logger().info(f"Publishing time is {t_publishing_finished - t_solver_finished}s")
+            t_run = time.time() - t_init
             # upred = np.zeros((nu,N))
             # xpred  = np.zeros((nx,N + 1))
             # for k in range(N):
